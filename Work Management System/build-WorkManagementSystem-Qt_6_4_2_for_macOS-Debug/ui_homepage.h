@@ -344,6 +344,7 @@ public:
         joinCodeLabel->setFont(font2);
         joinCodeLabel->setLayoutDirection(Qt::RightToLeft);
         joinCodeLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        joinCodeLabel->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         joinCodeLayout->addWidget(joinCodeLabel);
 
@@ -1432,7 +1433,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(HomePage);
