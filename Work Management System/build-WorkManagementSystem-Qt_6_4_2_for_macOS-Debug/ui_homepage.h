@@ -1432,7 +1432,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(5);
+        stackedWidget->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(HomePage);
