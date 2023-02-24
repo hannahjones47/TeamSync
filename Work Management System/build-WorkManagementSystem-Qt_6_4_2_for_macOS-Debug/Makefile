@@ -740,12 +740,12 @@ moc_homepage.cpp: ../WorkManagementSystem/Headers/Screens/homepage.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../WorkManagementSystem/Headers/project.h \
+		../WorkManagementSystem/Headers/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/workitemdaointerface.h \
 		../WorkManagementSystem/Headers/acceptancecriteria.h \
 		../WorkManagementSystem/Headers/epic.h \
@@ -833,12 +833,12 @@ createaccountwindow.o: ../WorkManagementSystem/Sources/Screens/createaccountwind
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../WorkManagementSystem/Headers/Screens/homepage.h \
 		../WorkManagementSystem/Headers/project.h \
+		../WorkManagementSystem/Headers/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/workitemdaointerface.h \
 		../WorkManagementSystem/Headers/acceptancecriteria.h \
 		../WorkManagementSystem/Headers/epic.h \
@@ -869,12 +869,12 @@ homepage.o: ../WorkManagementSystem/Sources/Screens/homepage.cpp ../WorkManageme
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../WorkManagementSystem/Headers/project.h \
+		../WorkManagementSystem/Headers/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/workitemdaointerface.h \
 		../WorkManagementSystem/Headers/acceptancecriteria.h \
 		../WorkManagementSystem/Headers/epic.h \
@@ -889,12 +889,6 @@ homepage.o: ../WorkManagementSystem/Sources/Screens/homepage.cpp ../WorkManageme
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
 		../WorkManagementSystem/Headers/global.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/epicdao.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/storydao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/subtaskdao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/projectdao.h \
 		../WorkManagementSystem/Headers/team.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/acceptancecriteriadao.h \
@@ -919,12 +913,12 @@ loginwindow.o: ../WorkManagementSystem/Sources/Screens/loginwindow.cpp ui_loginw
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../WorkManagementSystem/Headers/project.h \
+		../WorkManagementSystem/Headers/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/workitemdaointerface.h \
 		../WorkManagementSystem/Headers/acceptancecriteria.h \
 		../WorkManagementSystem/Headers/epic.h \
@@ -1036,10 +1030,10 @@ projectdao.o: ../WorkManagementSystem/Sources/DataAccessLayer/projectdao.cpp ../
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../WorkManagementSystem/Headers/project.h \
+		../WorkManagementSystem/Headers/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/workitemdaointerface.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
@@ -1130,12 +1124,12 @@ epicdao.o: ../WorkManagementSystem/Sources/DataAccessLayer/epicdao.cpp ../WorkMa
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epicdao.o ../WorkManagementSystem/Sources/DataAccessLayer/epicdao.cpp
 
 project.o: ../WorkManagementSystem/Sources/project.cpp ../WorkManagementSystem/Headers/project.h \
+		../WorkManagementSystem/Headers/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/workitemdaointerface.h \
 		../WorkManagementSystem/Headers/acceptancecriteria.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o project.o ../WorkManagementSystem/Sources/project.cpp
@@ -1224,12 +1218,12 @@ subtask.o: ../WorkManagementSystem/Sources/subtask.cpp ../WorkManagementSystem/H
 
 daofactory.o: ../WorkManagementSystem/Sources/DataAccessLayer/daofactory.cpp ../WorkManagementSystem/Headers/DataAccessLayer/daofactory.h \
 		../WorkManagementSystem/Headers/project.h \
+		../WorkManagementSystem/Headers/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
 		../WorkManagementSystem/Headers/DataAccessLayer/workitemdaointerface.h \
 		../WorkManagementSystem/Headers/acceptancecriteria.h \
 		../WorkManagementSystem/Headers/epic.h \
