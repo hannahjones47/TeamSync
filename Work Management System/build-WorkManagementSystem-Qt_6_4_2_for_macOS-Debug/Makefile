@@ -750,6 +750,7 @@ qrc_Icons.cpp: ../WorkManagementSystem/Icons.qrc \
 		../WorkManagementSystem/Icons/info.png \
 		../WorkManagementSystem/Icons/team.png.sb-484b4cca-iwIVuA \
 		../WorkManagementSystem/Icons/profile.png \
+		../WorkManagementSystem/Icons/edit.png \
 		../WorkManagementSystem/Icons/profileGrey.png \
 		../WorkManagementSystem/Icons/projects.png \
 		../WorkManagementSystem/Icons/inbox.png \
@@ -763,6 +764,8 @@ compiler_moc_header_clean:
 moc_homepage.cpp: ../WorkManagementSystem/Headers/Presentation/homepage.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
 		../WorkManagementSystem/Headers/DataTransfer/project.h \
 		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
@@ -843,17 +846,20 @@ createteamwindow.o: ../WorkManagementSystem/Sources/Presentation/createteamwindo
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
-		ui_createteamwindow.h \
-		../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
-		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../WorkManagementSystem/Headers/Business/teambl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
 		../WorkManagementSystem/Headers/DataAccess/userdao.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/DataTransfer/team.h \
-		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		ui_createteamwindow.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
 		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
 		../WorkManagementSystem/Headers/global.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
@@ -864,6 +870,8 @@ createaccountwindow.o: ../WorkManagementSystem/Sources/Presentation/createaccoun
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
 		../WorkManagementSystem/Headers/DataTransfer/project.h \
 		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
@@ -895,6 +903,7 @@ createaccountwindow.o: ../WorkManagementSystem/Sources/Presentation/createaccoun
 		../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h \
 		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
 		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
 		../WorkManagementSystem/Headers/global.h \
 		ui_createaccountwindow.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
@@ -906,6 +915,8 @@ createaccountwindow.o: ../WorkManagementSystem/Sources/Presentation/createaccoun
 homepage.o: ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
 		../WorkManagementSystem/Headers/DataTransfer/project.h \
 		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
@@ -963,6 +974,8 @@ loginwindow.o: ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ui_l
 		../WorkManagementSystem/Headers/Presentation/homepage.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
 		../WorkManagementSystem/Headers/DataTransfer/project.h \
 		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
@@ -984,6 +997,7 @@ loginwindow.o: ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ui_l
 		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
 		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
 		../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
 		../WorkManagementSystem/Headers/DataAccess/userdao.h \
 		../WorkManagementSystem/Headers/global.h \
@@ -1007,6 +1021,7 @@ uservalidator.o: ../WorkManagementSystem/Sources/Presentation/Validation/userval
 		../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
 		../WorkManagementSystem/Headers/DataTransfer/team.h \
 		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qregularexpression.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o uservalidator.o ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp
@@ -1040,6 +1055,9 @@ teamvalidator.o: ../WorkManagementSystem/Sources/Presentation/Validation/teamval
 		../WorkManagementSystem/Headers/DataTransfer/team.h \
 		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
 		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../WorkManagementSystem/Headers/Business/teambl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teamvalidator.o ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp
@@ -1339,7 +1357,9 @@ acceptancecriteriabl.o: ../WorkManagementSystem/Sources/Business/acceptancecrite
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
 		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o acceptancecriteriabl.o ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp
 
 main.o: ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Headers/Presentation/loginwindow.h \
