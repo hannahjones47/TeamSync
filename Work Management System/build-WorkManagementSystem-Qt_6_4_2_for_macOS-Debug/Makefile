@@ -78,10 +78,10 @@ SOURCES       = ../WorkManagementSystem/Sources/Presentation/createteamwindow.cp
 		../WorkManagementSystem/Sources/DataTransfer/user.cpp \
 		../WorkManagementSystem/Sources/DataTransfer/team.cpp \
 		../WorkManagementSystem/Sources/DataTransfer/subtask.cpp \
-		../WorkManagementSystem/Sources/DataAccess/daofactory.cpp \
 		../WorkManagementSystem/Sources/Business/projectbl.cpp \
 		../WorkManagementSystem/main.cpp \
-		../WorkManagementSystem/Sources/Business/userbl.cpp qrc_Icons.cpp \
+		../WorkManagementSystem/Sources/Business/userbl.cpp \
+		../WorkManagementSystem/Sources/Business/teambl.cpp qrc_Icons.cpp \
 		moc_homepage.cpp \
 		moc_loginwindow.cpp \
 		moc_createaccountwindow.cpp \
@@ -112,10 +112,10 @@ OBJECTS       = createteamwindow.o \
 		user.o \
 		team.o \
 		subtask.o \
-		daofactory.o \
 		projectbl.o \
 		main.o \
 		userbl.o \
+		teambl.o \
 		qrc_Icons.o \
 		moc_homepage.o \
 		moc_loginwindow.o \
@@ -295,9 +295,9 @@ DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
 		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
 		../WorkManagementSystem/Headers/DataTransfer/story.h \
 		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
-		../WorkManagementSystem/Headers/DataAccess/daofactory.h \
 		../WorkManagementSystem/Headers/Business/projectbl.h \
-		../WorkManagementSystem/Headers/Business/userbl.h ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/Business/teambl.h ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/homepage.cpp \
 		../WorkManagementSystem/Sources/Presentation/loginwindow.cpp \
@@ -323,10 +323,10 @@ DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
 		../WorkManagementSystem/Sources/DataTransfer/user.cpp \
 		../WorkManagementSystem/Sources/DataTransfer/team.cpp \
 		../WorkManagementSystem/Sources/DataTransfer/subtask.cpp \
-		../WorkManagementSystem/Sources/DataAccess/daofactory.cpp \
 		../WorkManagementSystem/Sources/Business/projectbl.cpp \
 		../WorkManagementSystem/main.cpp \
-		../WorkManagementSystem/Sources/Business/userbl.cpp
+		../WorkManagementSystem/Sources/Business/userbl.cpp \
+		../WorkManagementSystem/Sources/Business/teambl.cpp
 QMAKE_TARGET  = WorkManagementSystem
 DESTDIR       = 
 TARGET        = WorkManagementSystem.app/Contents/MacOS/WorkManagementSystem
@@ -686,8 +686,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/Icons.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../WorkManagementSystem/Headers/Presentation/homepage.h ../WorkManagementSystem/Headers/Presentation/loginwindow.h ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h ../WorkManagementSystem/Headers/Presentation/createteamwindow.h ../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h ../WorkManagementSystem/Headers/Presentation/Validation/validator.h ../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h ../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h ../WorkManagementSystem/Headers/DataAccess/databaseconnection.h ../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h ../WorkManagementSystem/Headers/DataAccess/epicdao.h ../WorkManagementSystem/Headers/DataAccess/storydao.h ../WorkManagementSystem/Headers/DataAccess/teamdao.h ../WorkManagementSystem/Headers/DataAccess/userdao.h ../WorkManagementSystem/Headers/DataAccess/projectdao.h ../WorkManagementSystem/Headers/DataAccess/subtaskdao.h ../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h ../WorkManagementSystem/Headers/global.h ../WorkManagementSystem/Headers/DataTransfer/enum.h ../WorkManagementSystem/Headers/DataTransfer/project.h ../WorkManagementSystem/Headers/DataTransfer/user.h ../WorkManagementSystem/Headers/DataTransfer/team.h ../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h ../WorkManagementSystem/Headers/DataTransfer/epic.h ../WorkManagementSystem/Headers/DataTransfer/workitem.h ../WorkManagementSystem/Headers/DataTransfer/story.h ../WorkManagementSystem/Headers/DataTransfer/subtask.h ../WorkManagementSystem/Headers/DataAccess/daofactory.h ../WorkManagementSystem/Headers/Business/projectbl.h ../WorkManagementSystem/Headers/Business/userbl.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Sources/DataAccess/daofactory.cpp ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Sources/Business/userbl.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../WorkManagementSystem/Headers/Presentation/homepage.h ../WorkManagementSystem/Headers/Presentation/loginwindow.h ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h ../WorkManagementSystem/Headers/Presentation/createteamwindow.h ../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h ../WorkManagementSystem/Headers/Presentation/Validation/validator.h ../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h ../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h ../WorkManagementSystem/Headers/DataAccess/databaseconnection.h ../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h ../WorkManagementSystem/Headers/DataAccess/epicdao.h ../WorkManagementSystem/Headers/DataAccess/storydao.h ../WorkManagementSystem/Headers/DataAccess/teamdao.h ../WorkManagementSystem/Headers/DataAccess/userdao.h ../WorkManagementSystem/Headers/DataAccess/projectdao.h ../WorkManagementSystem/Headers/DataAccess/subtaskdao.h ../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h ../WorkManagementSystem/Headers/global.h ../WorkManagementSystem/Headers/DataTransfer/enum.h ../WorkManagementSystem/Headers/DataTransfer/project.h ../WorkManagementSystem/Headers/DataTransfer/user.h ../WorkManagementSystem/Headers/DataTransfer/team.h ../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h ../WorkManagementSystem/Headers/DataTransfer/epic.h ../WorkManagementSystem/Headers/DataTransfer/workitem.h ../WorkManagementSystem/Headers/DataTransfer/story.h ../WorkManagementSystem/Headers/DataTransfer/subtask.h ../WorkManagementSystem/Headers/Business/projectbl.h ../WorkManagementSystem/Headers/Business/userbl.h ../WorkManagementSystem/Headers/Business/teambl.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Sources/Business/teambl.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/UI/homepage.ui ../WorkManagementSystem/UI/loginwindow.ui ../WorkManagementSystem/UI/createaccountwindow.ui ../WorkManagementSystem/UI/createteamwindow.ui $(DISTDIR)/
 
 
@@ -916,9 +916,12 @@ homepage.o: ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkMan
 		ui_homepage.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
 		../WorkManagementSystem/Headers/DataAccess/userdao.h \
-		../WorkManagementSystem/Headers/global.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/Business/teambl.h \
 		../WorkManagementSystem/Headers/DataTransfer/team.h \
 		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/global.h \
 		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
 		../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h \
 		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
@@ -1126,6 +1129,7 @@ userdao.o: ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagem
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
 		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
@@ -1267,29 +1271,6 @@ subtask.o: ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManag
 		../WorkManagementSystem/Headers/DataTransfer/story.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtask.o ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp
 
-daofactory.o: ../WorkManagementSystem/Sources/DataAccess/daofactory.cpp ../WorkManagementSystem/Headers/DataAccess/daofactory.h \
-		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
-		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/DataTransfer/project.h \
-		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/DataTransfer/enum.h \
-		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
-		../WorkManagementSystem/Headers/DataTransfer/epic.h \
-		../WorkManagementSystem/Headers/DataAccess/storydao.h \
-		../WorkManagementSystem/Headers/DataTransfer/story.h \
-		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
-		../WorkManagementSystem/Headers/DataTransfer/subtask.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o daofactory.o ../WorkManagementSystem/Sources/DataAccess/daofactory.cpp
-
 projectbl.o: ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/Headers/Business/projectbl.h \
 		../WorkManagementSystem/Headers/DataTransfer/team.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
@@ -1328,8 +1309,31 @@ main.o: ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Headers/Present
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../WorkManagementSystem/main.cpp
 
-userbl.o: ../WorkManagementSystem/Sources/Business/userbl.cpp 
+userbl.o: ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/global.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o userbl.o ../WorkManagementSystem/Sources/Business/userbl.cpp
+
+teambl.o: ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementSystem/Headers/Business/teambl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teambl.o ../WorkManagementSystem/Sources/Business/teambl.cpp
 
 qrc_Icons.o: qrc_Icons.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_Icons.o qrc_Icons.cpp
