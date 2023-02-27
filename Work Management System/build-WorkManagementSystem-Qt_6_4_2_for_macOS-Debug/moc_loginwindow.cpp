@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../WorkManagementSystem/Headers/Screens/loginwindow.h"
+#include "../WorkManagementSystem/Headers/Presentation/loginwindow.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'loginwindow.h' doesn't include <QObject>."

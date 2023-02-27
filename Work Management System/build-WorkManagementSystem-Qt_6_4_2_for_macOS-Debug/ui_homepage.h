@@ -344,6 +344,7 @@ public:
         joinCodeLabel->setFont(font2);
         joinCodeLabel->setLayoutDirection(Qt::RightToLeft);
         joinCodeLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        joinCodeLabel->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         joinCodeLayout->addWidget(joinCodeLabel);
 
@@ -629,9 +630,12 @@ public:
 
         descriptionLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         descriptionLabel->setObjectName("descriptionLabel");
-        sizePolicy1.setHeightForWidth(descriptionLabel->sizePolicy().hasHeightForWidth());
-        descriptionLabel->setSizePolicy(sizePolicy1);
-        descriptionLabel->setMinimumSize(QSize(100, 30));
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Minimum);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(descriptionLabel->sizePolicy().hasHeightForWidth());
+        descriptionLabel->setSizePolicy(sizePolicy4);
+        descriptionLabel->setMinimumSize(QSize(0, 0));
         descriptionLabel->setMaximumSize(QSize(16777214, 16777215));
         QFont font6;
         font6.setFamilies({QString::fromUtf8("Avenir")});
@@ -862,9 +866,9 @@ public:
 
         epicDescriptionLabel = new QLabel(epicDetailScrollAreaContents);
         epicDescriptionLabel->setObjectName("epicDescriptionLabel");
-        sizePolicy1.setHeightForWidth(epicDescriptionLabel->sizePolicy().hasHeightForWidth());
-        epicDescriptionLabel->setSizePolicy(sizePolicy1);
-        epicDescriptionLabel->setMinimumSize(QSize(100, 30));
+        sizePolicy4.setHeightForWidth(epicDescriptionLabel->sizePolicy().hasHeightForWidth());
+        epicDescriptionLabel->setSizePolicy(sizePolicy4);
+        epicDescriptionLabel->setMinimumSize(QSize(0, 0));
         epicDescriptionLabel->setMaximumSize(QSize(16777214, 16777215));
         epicDescriptionLabel->setFont(font6);
         epicDescriptionLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
@@ -1110,12 +1114,9 @@ public:
 
         storyDescriptionLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyDescriptionLabel->setObjectName("storyDescriptionLabel");
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
         sizePolicy4.setHeightForWidth(storyDescriptionLabel->sizePolicy().hasHeightForWidth());
         storyDescriptionLabel->setSizePolicy(sizePolicy4);
-        storyDescriptionLabel->setMinimumSize(QSize(100, 0));
+        storyDescriptionLabel->setMinimumSize(QSize(0, 0));
         storyDescriptionLabel->setMaximumSize(QSize(16777214, 16777215));
         storyDescriptionLabel->setFont(font6);
         storyDescriptionLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);

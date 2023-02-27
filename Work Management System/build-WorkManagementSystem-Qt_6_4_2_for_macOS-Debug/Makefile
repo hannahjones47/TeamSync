@@ -16,8 +16,8 @@ CC            = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains
 CXX           = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g $(EXPORT_ARCH_ARGS) -isysroot /Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=10.14 -Wall -Wextra $(DEFINES)
-CXXFLAGS      = -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=10.14 -Wall -Wextra $(DEFINES)
-INCPATH       = -I../WorkManagementSystem -I. -I../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib
+CXXFLAGS      = -pipe -stdlib=libc++ -g -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=10.14 -Wall -Wextra $(DEFINES)
+INCPATH       = -I../WorkManagementSystem -I. -I../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib
 QMAKE         = /Volumes/T7/Applications/Qt/6.4.2/macos/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = WorkManagementSystem1.0.0
-DISTDIR = /Volumes/T7/CPPprojects/Work\ Management\ System/build-WorkManagementSystem-Qt_6_4_2_for_macOS-Debug/.tmp/WorkManagementSystem1.0.0
+DISTDIR = /Volumes/T7/CPPprojects/TeamSync/Work\ Management\ System/build-WorkManagementSystem-Qt_6_4_2_for_macOS-Debug/.tmp/WorkManagementSystem1.0.0
 LINK          = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -isysroot /Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=10.14 -Wl,-rpath,@executable_path/../Frameworks -Wl,-rpath,/Volumes/T7/Applications/Qt/6.4.2/macos/lib
 LIBS          = $(SUBLIBS) -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtSql -framework QtCore -framework IOKit -framework DiskArbitration -framework AGL -framework OpenGL   
@@ -52,33 +52,40 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../WorkManagementSystem/Sources/Screens/createteamwindow.cpp \
-		../WorkManagementSystem/Sources/Screens/createaccountwindow.cpp \
-		../WorkManagementSystem/Sources/Screens/homepage.cpp \
-		../WorkManagementSystem/Sources/Screens/loginwindow.cpp \
-		../WorkManagementSystem/Sources/Validation/uservalidator.cpp \
-		../WorkManagementSystem/Sources/Validation/validator.cpp \
-		../WorkManagementSystem/Sources/Validation/validationexception.cpp \
-		../WorkManagementSystem/Sources/Validation/teamvalidator.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/subtaskdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/teamdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/projectdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/storydao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/acceptancecriteriadao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/databaseconnection.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/userdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/epicdao.cpp \
-		../WorkManagementSystem/Sources/project.cpp \
-		../WorkManagementSystem/Sources/acceptancecriteria.cpp \
-		../WorkManagementSystem/Sources/enum.cpp \
-		../WorkManagementSystem/Sources/epic.cpp \
-		../WorkManagementSystem/Sources/workitem.cpp \
+SOURCES       = ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
+		../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp \
+		../WorkManagementSystem/Sources/Presentation/homepage.cpp \
+		../WorkManagementSystem/Sources/Presentation/loginwindow.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp \
+		../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/teamdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/projectdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/storydao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp \
+		../WorkManagementSystem/Sources/DataAccess/userdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/epicdao.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/project.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/enum.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/epic.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/workitem.cpp \
 		../WorkManagementSystem/Sources/global.cpp \
-		../WorkManagementSystem/Sources/story.cpp \
-		../WorkManagementSystem/Sources/user.cpp \
-		../WorkManagementSystem/Sources/team.cpp \
-		../WorkManagementSystem/Sources/subtask.cpp \
-		../WorkManagementSystem/main.cpp qrc_Icons.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/story.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/user.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/team.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/subtask.cpp \
+		../WorkManagementSystem/Sources/Business/projectbl.cpp \
+		../WorkManagementSystem/Sources/Business/epicbl.cpp \
+		../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp \
+		../WorkManagementSystem/main.cpp \
+		../WorkManagementSystem/Sources/Business/userbl.cpp \
+		../WorkManagementSystem/Sources/Business/teambl.cpp \
+		../WorkManagementSystem/Sources/Business/storybl.cpp \
+		../WorkManagementSystem/Sources/Business/subtaskbl.cpp qrc_Icons.cpp \
 		moc_homepage.cpp \
 		moc_loginwindow.cpp \
 		moc_createaccountwindow.cpp \
@@ -109,211 +116,233 @@ OBJECTS       = createteamwindow.o \
 		user.o \
 		team.o \
 		subtask.o \
+		projectbl.o \
+		epicbl.o \
+		acceptancecriteriabl.o \
 		main.o \
+		userbl.o \
+		teambl.o \
+		storybl.o \
+		subtaskbl.o \
 		qrc_Icons.o \
 		moc_homepage.o \
 		moc_loginwindow.o \
 		moc_createaccountwindow.o \
 		moc_createteamwindow.o
 DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_pre.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/device_config.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/unix.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/mac.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/macx.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/sanitize.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base-mac.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang-mac.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/qconfig.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_freetype.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libjpeg.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libpng.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_freetype_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_png_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_tools_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_functions.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_config.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_post.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_pre.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/device_config.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/unix.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/mac.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/macx.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/sanitize.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base-mac.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang-mac.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/qconfig.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_freetype.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libjpeg.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libpng.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_freetype_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_png_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_tools_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_functions.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_config.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_post.prf \
 		../WorkManagementSystem/.qmake.stash \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/exclusive_builds.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/sdk.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/toolchain.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/toolchain.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_pre.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_pre.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/resolve_config.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_post.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_post.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/objective_c.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qml_debug.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/mac.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/warn_on.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources_functions.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/moc.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/opengl.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/uic.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/thread.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qmake_use.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/file_copies.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/rez.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/asset_catalogs.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/testcase_targets.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/exceptions.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/yacc.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/lex.prf \
-		../WorkManagementSystem/WorkManagementSystem.pro ../WorkManagementSystem/Headers/Screens/homepage.h \
-		../WorkManagementSystem/Headers/Screens/loginwindow.h \
-		../WorkManagementSystem/Headers/Screens/createaccountwindow.h \
-		../WorkManagementSystem/Headers/Screens/createteamwindow.h \
-		../WorkManagementSystem/Headers/Validation/uservalidator.h \
-		../WorkManagementSystem/Headers/Validation/validator.h \
-		../WorkManagementSystem/Headers/Validation/validationexception.h \
-		../WorkManagementSystem/Headers/Validation/teamvalidator.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/acceptancecriteriadao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/epicdao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/storydao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/projectdao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/subtaskdao.h \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/exclusive_builds.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/sdk.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/toolchain.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/toolchain.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_pre.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_pre.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resolve_config.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_post.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_post.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/objective_c.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qml_debug.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/mac.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/warn_on.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources_functions.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/moc.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/opengl.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/uic.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/thread.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qmake_use.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/file_copies.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/rez.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/asset_catalogs.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/testcase_targets.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/exceptions.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/yacc.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/lex.prf \
+		../WorkManagementSystem/WorkManagementSystem.pro ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../WorkManagementSystem/Headers/Presentation/loginwindow.h \
+		../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
+		../WorkManagementSystem/Headers/Presentation/createteamwindow.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
 		../WorkManagementSystem/Headers/global.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/project.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/team.h \
-		../WorkManagementSystem/Headers/acceptancecriteria.h \
-		../WorkManagementSystem/Headers/epic.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../WorkManagementSystem/Headers/story.h \
-		../WorkManagementSystem/Headers/subtask.h ../WorkManagementSystem/Sources/Screens/createteamwindow.cpp \
-		../WorkManagementSystem/Sources/Screens/createaccountwindow.cpp \
-		../WorkManagementSystem/Sources/Screens/homepage.cpp \
-		../WorkManagementSystem/Sources/Screens/loginwindow.cpp \
-		../WorkManagementSystem/Sources/Validation/uservalidator.cpp \
-		../WorkManagementSystem/Sources/Validation/validator.cpp \
-		../WorkManagementSystem/Sources/Validation/validationexception.cpp \
-		../WorkManagementSystem/Sources/Validation/teamvalidator.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/subtaskdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/teamdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/projectdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/storydao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/acceptancecriteriadao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/databaseconnection.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/userdao.cpp \
-		../WorkManagementSystem/Sources/DataAccessLayer/epicdao.cpp \
-		../WorkManagementSystem/Sources/project.cpp \
-		../WorkManagementSystem/Sources/acceptancecriteria.cpp \
-		../WorkManagementSystem/Sources/enum.cpp \
-		../WorkManagementSystem/Sources/epic.cpp \
-		../WorkManagementSystem/Sources/workitem.cpp \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/Business/teambl.h \
+		../WorkManagementSystem/Headers/Business/epicbl.h \
+		../WorkManagementSystem/Headers/Business/storybl.h \
+		../WorkManagementSystem/Headers/Business/subtaskbl.h \
+		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
+		../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp \
+		../WorkManagementSystem/Sources/Presentation/homepage.cpp \
+		../WorkManagementSystem/Sources/Presentation/loginwindow.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp \
+		../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp \
+		../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/teamdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/projectdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/storydao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp \
+		../WorkManagementSystem/Sources/DataAccess/userdao.cpp \
+		../WorkManagementSystem/Sources/DataAccess/epicdao.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/project.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/enum.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/epic.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/workitem.cpp \
 		../WorkManagementSystem/Sources/global.cpp \
-		../WorkManagementSystem/Sources/story.cpp \
-		../WorkManagementSystem/Sources/user.cpp \
-		../WorkManagementSystem/Sources/team.cpp \
-		../WorkManagementSystem/Sources/subtask.cpp \
-		../WorkManagementSystem/main.cpp
+		../WorkManagementSystem/Sources/DataTransfer/story.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/user.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/team.cpp \
+		../WorkManagementSystem/Sources/DataTransfer/subtask.cpp \
+		../WorkManagementSystem/Sources/Business/projectbl.cpp \
+		../WorkManagementSystem/Sources/Business/epicbl.cpp \
+		../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp \
+		../WorkManagementSystem/main.cpp \
+		../WorkManagementSystem/Sources/Business/userbl.cpp \
+		../WorkManagementSystem/Sources/Business/teambl.cpp \
+		../WorkManagementSystem/Sources/Business/storybl.cpp \
+		../WorkManagementSystem/Sources/Business/subtaskbl.cpp
 QMAKE_TARGET  = WorkManagementSystem
 DESTDIR       = 
 TARGET        = WorkManagementSystem.app/Contents/MacOS/WorkManagementSystem
@@ -322,12 +351,12 @@ TARGET        = WorkManagementSystem.app/Contents/MacOS/WorkManagementSystem
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 13.1
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Volumes/T7/Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = /Volumes/T7/CPPprojects/Work Management System/build-WorkManagementSystem-Qt_6_4_2_for_macOS-Debug/.qmake.stash
+EXPORT__QMAKE_STASH_ = /Volumes/T7/CPPprojects/TeamSync/Work Management System/build-WorkManagementSystem-Qt_6_4_2_for_macOS-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ARCHS), $(EXPORT_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
-EXPORT__PRO_FILE_ = /Volumes/T7/CPPprojects/Work Management System/WorkManagementSystem/WorkManagementSystem.pro
+EXPORT__PRO_FILE_ = /Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem/WorkManagementSystem.pro
 
 
 include /Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/features/mac/sdk.mk
@@ -338,311 +367,311 @@ WorkManagementSystem.app/Contents/MacOS/WorkManagementSystem: ui_homepage.h ui_l
 	@test -d WorkManagementSystem.app/Contents/MacOS/ || mkdir -p WorkManagementSystem.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET)  $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: ../WorkManagementSystem/WorkManagementSystem.pro ../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf ../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_pre.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/device_config.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/unix.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/mac.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/macx.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/sanitize.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base-mac.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang-mac.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/qconfig.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_freetype.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libjpeg.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libpng.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_freetype_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_png_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_tools_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uiplugin.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml_private.pri \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_functions.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_config.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_post.prf \
+Makefile: ../WorkManagementSystem/WorkManagementSystem.pro ../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf ../../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_pre.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/device_config.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/unix.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/mac.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/macx.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/sanitize.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base-mac.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang-mac.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/qconfig.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_freetype.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libjpeg.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libpng.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_fb_support_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_freetype_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_jpeg_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_png_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldom_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_tools_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml_private.pri \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_functions.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_config.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_post.prf \
 		.qmake.stash \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/exclusive_builds.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/sdk.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/toolchain.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/toolchain.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_pre.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_pre.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/resolve_config.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_post.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_post.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/objective_c.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qml_debug.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/mac.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/warn_on.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources_functions.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/moc.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/opengl.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/uic.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/thread.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/qmake_use.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/file_copies.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/rez.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/asset_catalogs.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/testcase_targets.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/exceptions.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/yacc.prf \
-		../../../Applications/Qt/6.4.2/macos/mkspecs/features/lex.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/exclusive_builds.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/sdk.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/toolchain.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/toolchain.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_pre.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_pre.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resolve_config.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_post.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_post.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/objective_c.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qml_debug.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/mac.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/warn_on.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources_functions.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/moc.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/opengl.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/uic.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/thread.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qmake_use.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/file_copies.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/rez.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/asset_catalogs.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/testcase_targets.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/exceptions.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/yacc.prf \
+		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/lex.prf \
 		../WorkManagementSystem/WorkManagementSystem.pro \
 		../WorkManagementSystem/Icons.qrc \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl \
-		../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Resources/QtGui.prl \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Resources/QtSql.prl \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Resources/QtCore.prl
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Resources/QtGui.prl \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Resources/QtSql.prl \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Resources/QtCore.prl
 	$(QMAKE) -o Makefile ../WorkManagementSystem/WorkManagementSystem.pro -spec macx-clang CONFIG+=debug CONFIG+=qml_debug
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_pre.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/device_config.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/unix.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/mac.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/macx.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/sanitize.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base-mac.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang-mac.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/qconfig.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_freetype.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libjpeg.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libpng.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designercomponents_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_fb_support_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_freetype_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_jpeg_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_png_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldebug_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldom_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickparticles_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickshapes_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_tools_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uiplugin.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml_private.pri:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_functions.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_config.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_post.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_pre.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/device_config.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/unix.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/mac.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/macx.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/sanitize.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/gcc-base-mac.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/common/clang-mac.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/qconfig.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_freetype.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libjpeg.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_ext_libpng.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_concurrent_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_core_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_dbus_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designer_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_designercomponents_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_fb_support_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_freetype_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_gui_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_harfbuzz_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_help_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_jpeg_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsanimation_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labsqmlmodels_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssettings_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labssharedimage_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_linguist_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_network_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_opengl_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_openglwidgets_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_packetprotocol_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_png_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_printsupport_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qml_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcompiler_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlcore_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldebug_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmldom_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlintegration_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmllocalstorage_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlmodels_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmltest_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlworkerscript_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quick_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicklayouts_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickparticles_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickshapes_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_sql_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svg_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_svgwidgets_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_testlib_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_tools_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uiplugin.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_uitools_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_widgets_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/modules/qt_lib_xml_private.pri:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_functions.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt_config.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/qmake.conf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_post.prf:
 .qmake.stash:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/exclusive_builds.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/sdk.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/toolchain.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/toolchain.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_pre.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_pre.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/resolve_config.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_post.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_post.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/objective_c.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/qml_debug.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/mac.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/warn_on.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources_functions.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/moc.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/opengl.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/uic.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/thread.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/qmake_use.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/file_copies.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/rez.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/asset_catalogs.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/testcase_targets.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/exceptions.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/yacc.prf:
-../../../Applications/Qt/6.4.2/macos/mkspecs/features/lex.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/exclusive_builds.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/sdk.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/toolchain.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/toolchain.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_pre.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_pre.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resolve_config.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/default_post.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/default_post.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/objective_c.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qml_debug.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/mac.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/warn_on.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qt.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources_functions.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/resources.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/moc.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/opengl.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/uic.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/unix/thread.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/qmake_use.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/file_copies.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/rez.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/mac/asset_catalogs.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/testcase_targets.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/exceptions.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/yacc.prf:
+../../../../Applications/Qt/6.4.2/macos/mkspecs/features/lex.prf:
 ../WorkManagementSystem/WorkManagementSystem.pro:
 ../WorkManagementSystem/Icons.qrc:
-../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl:
-../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Resources/QtGui.prl:
-../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Resources/QtSql.prl:
-../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Resources/QtCore.prl:
+../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl:
+../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Resources/QtGui.prl:
+../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Resources/QtSql.prl:
+../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Resources/QtCore.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ../WorkManagementSystem/WorkManagementSystem.pro -spec macx-clang CONFIG+=debug CONFIG+=qml_debug
 
@@ -659,7 +688,7 @@ WorkManagementSystem.app/Contents/Resources/empty.lproj:
 WorkManagementSystem.app/Contents/Info.plist: 
 	@test -d WorkManagementSystem.app/Contents || mkdir -p WorkManagementSystem.app/Contents
 	@$(DEL_FILE) WorkManagementSystem.app/Contents/Info.plist
-	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,Hannah.WorkManagementSystem,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},Hannah.WorkManagementSystem,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},10.14,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},,g" -e "s,@EXECUTABLE@,WorkManagementSystem,g" -e "s,@LIBRARY@,WorkManagementSystem,g" -e "s,\$${EXECUTABLE_NAME},WorkManagementSystem,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" ../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/Info.plist.app >WorkManagementSystem.app/Contents/Info.plist
+	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,Hannah.WorkManagementSystem,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},Hannah.WorkManagementSystem,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},10.14,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},,g" -e "s,@EXECUTABLE@,WorkManagementSystem,g" -e "s,@LIBRARY@,WorkManagementSystem,g" -e "s,\$${EXECUTABLE_NAME},WorkManagementSystem,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" ../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang/Info.plist.app >WorkManagementSystem.app/Contents/Info.plist
 
 all: Makefile \
 		WorkManagementSystem.app/Contents/PkgInfo \
@@ -673,8 +702,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/Icons.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../WorkManagementSystem/Headers/Screens/homepage.h ../WorkManagementSystem/Headers/Screens/loginwindow.h ../WorkManagementSystem/Headers/Screens/createaccountwindow.h ../WorkManagementSystem/Headers/Screens/createteamwindow.h ../WorkManagementSystem/Headers/Validation/uservalidator.h ../WorkManagementSystem/Headers/Validation/validator.h ../WorkManagementSystem/Headers/Validation/validationexception.h ../WorkManagementSystem/Headers/Validation/teamvalidator.h ../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h ../WorkManagementSystem/Headers/DataAccessLayer/acceptancecriteriadao.h ../WorkManagementSystem/Headers/DataAccessLayer/epicdao.h ../WorkManagementSystem/Headers/DataAccessLayer/storydao.h ../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h ../WorkManagementSystem/Headers/DataAccessLayer/userdao.h ../WorkManagementSystem/Headers/DataAccessLayer/projectdao.h ../WorkManagementSystem/Headers/DataAccessLayer/subtaskdao.h ../WorkManagementSystem/Headers/global.h ../WorkManagementSystem/Headers/enum.h ../WorkManagementSystem/Headers/project.h ../WorkManagementSystem/Headers/user.h ../WorkManagementSystem/Headers/team.h ../WorkManagementSystem/Headers/acceptancecriteria.h ../WorkManagementSystem/Headers/epic.h ../WorkManagementSystem/Headers/workitem.h ../WorkManagementSystem/Headers/story.h ../WorkManagementSystem/Headers/subtask.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Screens/createteamwindow.cpp ../WorkManagementSystem/Sources/Screens/createaccountwindow.cpp ../WorkManagementSystem/Sources/Screens/homepage.cpp ../WorkManagementSystem/Sources/Screens/loginwindow.cpp ../WorkManagementSystem/Sources/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Validation/validator.cpp ../WorkManagementSystem/Sources/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccessLayer/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccessLayer/teamdao.cpp ../WorkManagementSystem/Sources/DataAccessLayer/projectdao.cpp ../WorkManagementSystem/Sources/DataAccessLayer/storydao.cpp ../WorkManagementSystem/Sources/DataAccessLayer/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccessLayer/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccessLayer/userdao.cpp ../WorkManagementSystem/Sources/DataAccessLayer/epicdao.cpp ../WorkManagementSystem/Sources/project.cpp ../WorkManagementSystem/Sources/acceptancecriteria.cpp ../WorkManagementSystem/Sources/enum.cpp ../WorkManagementSystem/Sources/epic.cpp ../WorkManagementSystem/Sources/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/story.cpp ../WorkManagementSystem/Sources/user.cpp ../WorkManagementSystem/Sources/team.cpp ../WorkManagementSystem/Sources/subtask.cpp ../WorkManagementSystem/main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../WorkManagementSystem/Headers/Presentation/homepage.h ../WorkManagementSystem/Headers/Presentation/loginwindow.h ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h ../WorkManagementSystem/Headers/Presentation/createteamwindow.h ../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h ../WorkManagementSystem/Headers/Presentation/Validation/validator.h ../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h ../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h ../WorkManagementSystem/Headers/DataAccess/databaseconnection.h ../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h ../WorkManagementSystem/Headers/DataAccess/epicdao.h ../WorkManagementSystem/Headers/DataAccess/storydao.h ../WorkManagementSystem/Headers/DataAccess/teamdao.h ../WorkManagementSystem/Headers/DataAccess/userdao.h ../WorkManagementSystem/Headers/DataAccess/projectdao.h ../WorkManagementSystem/Headers/DataAccess/subtaskdao.h ../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h ../WorkManagementSystem/Headers/global.h ../WorkManagementSystem/Headers/DataTransfer/enum.h ../WorkManagementSystem/Headers/DataTransfer/project.h ../WorkManagementSystem/Headers/DataTransfer/user.h ../WorkManagementSystem/Headers/DataTransfer/team.h ../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h ../WorkManagementSystem/Headers/DataTransfer/epic.h ../WorkManagementSystem/Headers/DataTransfer/workitem.h ../WorkManagementSystem/Headers/DataTransfer/story.h ../WorkManagementSystem/Headers/DataTransfer/subtask.h ../WorkManagementSystem/Headers/Business/projectbl.h ../WorkManagementSystem/Headers/Business/userbl.h ../WorkManagementSystem/Headers/Business/teambl.h ../WorkManagementSystem/Headers/Business/epicbl.h ../WorkManagementSystem/Headers/Business/storybl.h ../WorkManagementSystem/Headers/Business/subtaskbl.h ../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/Sources/Business/epicbl.cpp ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagementSystem/Sources/Business/subtaskbl.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/UI/homepage.ui ../WorkManagementSystem/UI/loginwindow.ui ../WorkManagementSystem/UI/createaccountwindow.ui ../WorkManagementSystem/UI/createteamwindow.ui $(DISTDIR)/
 
 
@@ -706,7 +735,7 @@ compiler_rcc_make_all: qrc_Icons.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) qrc_Icons.cpp
 qrc_Icons.cpp: ../WorkManagementSystem/Icons.qrc \
-		../../../Applications/Qt/6.4.2/macos/libexec/rcc \
+		../../../../Applications/Qt/6.4.2/macos/libexec/rcc \
 		../WorkManagementSystem/Icons/logoName.png \
 		../WorkManagementSystem/Icons/arrow-left.png \
 		../WorkManagementSystem/Icons/team.png \
@@ -731,39 +760,49 @@ qrc_Icons.cpp: ../WorkManagementSystem/Icons.qrc \
 compiler_moc_header_make_all: moc_homepage.cpp moc_loginwindow.cpp moc_createaccountwindow.cpp moc_createteamwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_homepage.cpp moc_loginwindow.cpp moc_createaccountwindow.cpp moc_createteamwindow.cpp
-moc_homepage.cpp: ../WorkManagementSystem/Headers/Screens/homepage.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
-		../WorkManagementSystem/Headers/project.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../WorkManagementSystem/Headers/epic.h \
-		../WorkManagementSystem/Headers/story.h \
-		../WorkManagementSystem/Headers/subtask.h \
-		../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Screens/homepage.h -o moc_homepage.cpp
+moc_homepage.cpp: ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../../../../Applications/Qt/6.4.2/macos/libexec/moc
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/homepage.h -o moc_homepage.cpp
 
-moc_loginwindow.cpp: ../WorkManagementSystem/Headers/Screens/loginwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Screens/loginwindow.h -o moc_loginwindow.cpp
+moc_loginwindow.cpp: ../WorkManagementSystem/Headers/Presentation/loginwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/libexec/moc
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/loginwindow.h -o moc_loginwindow.cpp
 
-moc_createaccountwindow.cpp: ../WorkManagementSystem/Headers/Screens/createaccountwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
-		../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Screens/createaccountwindow.h -o moc_createaccountwindow.cpp
+moc_createaccountwindow.cpp: ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/libexec/moc
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h -o moc_createaccountwindow.cpp
 
-moc_createteamwindow.cpp: ../WorkManagementSystem/Headers/Screens/createteamwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
-		../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Screens/createteamwindow.h -o moc_createteamwindow.cpp
+moc_createteamwindow.cpp: ../WorkManagementSystem/Headers/Presentation/createteamwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/libexec/moc
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/createteamwindow.h -o moc_createteamwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -773,19 +812,19 @@ compiler_uic_make_all: ui_homepage.h ui_loginwindow.h ui_createaccountwindow.h u
 compiler_uic_clean:
 	-$(DEL_FILE) ui_homepage.h ui_loginwindow.h ui_createaccountwindow.h ui_createteamwindow.h
 ui_homepage.h: ../WorkManagementSystem/UI/homepage.ui \
-		../../../Applications/Qt/6.4.2/macos/libexec/uic
+		../../../../Applications/Qt/6.4.2/macos/libexec/uic
 	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/uic ../WorkManagementSystem/UI/homepage.ui -o ui_homepage.h
 
 ui_loginwindow.h: ../WorkManagementSystem/UI/loginwindow.ui \
-		../../../Applications/Qt/6.4.2/macos/libexec/uic
+		../../../../Applications/Qt/6.4.2/macos/libexec/uic
 	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/uic ../WorkManagementSystem/UI/loginwindow.ui -o ui_loginwindow.h
 
 ui_createaccountwindow.h: ../WorkManagementSystem/UI/createaccountwindow.ui \
-		../../../Applications/Qt/6.4.2/macos/libexec/uic
+		../../../../Applications/Qt/6.4.2/macos/libexec/uic
 	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/uic ../WorkManagementSystem/UI/createaccountwindow.ui -o ui_createaccountwindow.h
 
 ui_createteamwindow.h: ../WorkManagementSystem/UI/createteamwindow.ui \
-		../../../Applications/Qt/6.4.2/macos/libexec/uic
+		../../../../Applications/Qt/6.4.2/macos/libexec/uic
 	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/uic ../WorkManagementSystem/UI/createteamwindow.ui -o ui_createteamwindow.h
 
 compiler_rez_source_make_all:
@@ -800,402 +839,589 @@ compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-createteamwindow.o: ../WorkManagementSystem/Sources/Screens/createteamwindow.cpp ../WorkManagementSystem/Headers/Screens/createteamwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
-		../WorkManagementSystem/Headers/Screens/createaccountwindow.h \
+createteamwindow.o: ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Headers/Presentation/createteamwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
 		ui_createteamwindow.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
-		../WorkManagementSystem/Headers/team.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/Validation/teamvalidator.h \
-		../WorkManagementSystem/Headers/Validation/validator.h \
-		../WorkManagementSystem/Headers/Validation/validationexception.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
 		../WorkManagementSystem/Headers/global.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o createteamwindow.o ../WorkManagementSystem/Sources/Screens/createteamwindow.cpp
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o createteamwindow.o ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp
 
-createaccountwindow.o: ../WorkManagementSystem/Sources/Screens/createaccountwindow.cpp ../WorkManagementSystem/Headers/Screens/createaccountwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
-		../WorkManagementSystem/Headers/Screens/homepage.h \
-		../WorkManagementSystem/Headers/project.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../WorkManagementSystem/Headers/epic.h \
-		../WorkManagementSystem/Headers/story.h \
-		../WorkManagementSystem/Headers/subtask.h \
-		../WorkManagementSystem/Headers/Screens/loginwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		../WorkManagementSystem/Headers/Screens/createteamwindow.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
-		../WorkManagementSystem/Headers/team.h \
-		../WorkManagementSystem/Headers/Validation/uservalidator.h \
-		../WorkManagementSystem/Headers/Validation/validator.h \
-		../WorkManagementSystem/Headers/Validation/validationexception.h \
+createaccountwindow.o: ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../WorkManagementSystem/Headers/Presentation/loginwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../WorkManagementSystem/Headers/Presentation/createteamwindow.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
 		../WorkManagementSystem/Headers/global.h \
 		ui_createaccountwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o createaccountwindow.o ../WorkManagementSystem/Sources/Screens/createaccountwindow.cpp
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o createaccountwindow.o ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp
 
-homepage.o: ../WorkManagementSystem/Sources/Screens/homepage.cpp ../WorkManagementSystem/Headers/Screens/homepage.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
-		../WorkManagementSystem/Headers/project.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../WorkManagementSystem/Headers/epic.h \
-		../WorkManagementSystem/Headers/story.h \
-		../WorkManagementSystem/Headers/subtask.h \
-		../WorkManagementSystem/Headers/Screens/loginwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+homepage.o: ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../WorkManagementSystem/Headers/Presentation/loginwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		ui_homepage.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/user.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/Business/teambl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Business/epicbl.h \
+		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/Business/storybl.h \
+		../WorkManagementSystem/Headers/Business/subtaskbl.h \
+		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
+		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
 		../WorkManagementSystem/Headers/global.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
-		../WorkManagementSystem/Headers/team.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/epicdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/storydao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/subtaskdao.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/projectdao.h \
-		../WorkManagementSystem/Headers/acceptancecriteria.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/acceptancecriteriadao.h \
-		../WorkManagementSystem/Headers/Validation/uservalidator.h \
-		../WorkManagementSystem/Headers/Validation/validator.h \
-		../WorkManagementSystem/Headers/Validation/validationexception.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o homepage.o ../WorkManagementSystem/Sources/Screens/homepage.cpp
+		../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o homepage.o ../WorkManagementSystem/Sources/Presentation/homepage.cpp
 
-loginwindow.o: ../WorkManagementSystem/Sources/Screens/loginwindow.cpp ui_loginwindow.h \
-		../WorkManagementSystem/Headers/Screens/loginwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		../WorkManagementSystem/Headers/Screens/homepage.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
-		../WorkManagementSystem/Headers/project.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../WorkManagementSystem/Headers/epic.h \
-		../WorkManagementSystem/Headers/story.h \
-		../WorkManagementSystem/Headers/subtask.h \
-		../WorkManagementSystem/Headers/Screens/createaccountwindow.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+loginwindow.o: ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ui_loginwindow.h \
+		../WorkManagementSystem/Headers/Presentation/loginwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
 		../WorkManagementSystem/Headers/global.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPixmap \
-		../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpixmap.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o loginwindow.o ../WorkManagementSystem/Sources/Screens/loginwindow.cpp
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpixmap.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o loginwindow.o ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp
 
-uservalidator.o: ../WorkManagementSystem/Sources/Validation/uservalidator.cpp ../WorkManagementSystem/Headers/Validation/uservalidator.h \
-		../WorkManagementSystem/Headers/Validation/validator.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/Validation/validationexception.h \
-		../WorkManagementSystem/Headers/Validation/teamvalidator.h \
-		../WorkManagementSystem/Headers/team.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qregularexpression.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o uservalidator.o ../WorkManagementSystem/Sources/Validation/uservalidator.cpp
+uservalidator.o: ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qregularexpression.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o uservalidator.o ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp
 
-validator.o: ../WorkManagementSystem/Sources/Validation/validator.cpp ../WorkManagementSystem/Headers/Validation/validator.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/Validation/teamvalidator.h \
-		../WorkManagementSystem/Headers/team.h \
-		../WorkManagementSystem/Headers/Validation/validationexception.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qregularexpression.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validator.o ../WorkManagementSystem/Sources/Validation/validator.cpp
+validator.o: ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QRegularExpression \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qregularexpression.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validator.o ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp
 
-validationexception.o: ../WorkManagementSystem/Sources/Validation/validationexception.cpp ../WorkManagementSystem/Headers/Validation/validationexception.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validationexception.o ../WorkManagementSystem/Sources/Validation/validationexception.cpp
+validationexception.o: ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o validationexception.o ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp
 
-teamvalidator.o: ../WorkManagementSystem/Sources/Validation/teamvalidator.cpp ../WorkManagementSystem/Headers/Validation/teamvalidator.h \
-		../WorkManagementSystem/Headers/Validation/validator.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/team.h \
-		../WorkManagementSystem/Headers/Validation/validationexception.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teamvalidator.o ../WorkManagementSystem/Sources/Validation/teamvalidator.cpp
+teamvalidator.o: ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teamvalidator.o ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp
 
-subtaskdao.o: ../WorkManagementSystem/Sources/DataAccessLayer/subtaskdao.cpp ../WorkManagementSystem/Headers/DataAccessLayer/subtaskdao.h \
-		../WorkManagementSystem/Headers/subtask.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtaskdao.o ../WorkManagementSystem/Sources/DataAccessLayer/subtaskdao.cpp
+subtaskdao.o: ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtaskdao.o ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp
 
-teamdao.o: ../WorkManagementSystem/Sources/DataAccessLayer/teamdao.cpp ../WorkManagementSystem/Headers/DataAccessLayer/teamdao.h \
-		../WorkManagementSystem/Headers/team.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/user.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teamdao.o ../WorkManagementSystem/Sources/DataAccessLayer/teamdao.cpp
+teamdao.o: ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teamdao.o ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp
 
-projectdao.o: ../WorkManagementSystem/Sources/DataAccessLayer/projectdao.cpp ../WorkManagementSystem/Headers/DataAccessLayer/projectdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
-		../WorkManagementSystem/Headers/acceptancecriteria.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/project.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectdao.o ../WorkManagementSystem/Sources/DataAccessLayer/projectdao.cpp
+projectdao.o: ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectdao.o ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp
 
-storydao.o: ../WorkManagementSystem/Sources/DataAccessLayer/storydao.cpp ../WorkManagementSystem/Headers/DataAccessLayer/storydao.h \
-		../WorkManagementSystem/Headers/story.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o storydao.o ../WorkManagementSystem/Sources/DataAccessLayer/storydao.cpp
+storydao.o: ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o storydao.o ../WorkManagementSystem/Sources/DataAccess/storydao.cpp
 
-acceptancecriteriadao.o: ../WorkManagementSystem/Sources/DataAccessLayer/acceptancecriteriadao.cpp ../WorkManagementSystem/Headers/DataAccessLayer/acceptancecriteriadao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/acceptancecriteria.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o acceptancecriteriadao.o ../WorkManagementSystem/Sources/DataAccessLayer/acceptancecriteriadao.cpp
+acceptancecriteriadao.o: ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o acceptancecriteriadao.o ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp
 
-databaseconnection.o: ../WorkManagementSystem/Sources/DataAccessLayer/databaseconnection.cpp ../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o databaseconnection.o ../WorkManagementSystem/Sources/DataAccessLayer/databaseconnection.cpp
+databaseconnection.o: ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o databaseconnection.o ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp
 
-userdao.o: ../WorkManagementSystem/Sources/DataAccessLayer/userdao.cpp ../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../WorkManagementSystem/Headers/user.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QCryptographicHash \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qcryptographichash.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o userdao.o ../WorkManagementSystem/Sources/DataAccessLayer/userdao.cpp
+userdao.o: ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QCryptographicHash \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qcryptographichash.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o userdao.o ../WorkManagementSystem/Sources/DataAccess/userdao.cpp
 
-epicdao.o: ../WorkManagementSystem/Sources/DataAccessLayer/epicdao.cpp ../WorkManagementSystem/Headers/DataAccessLayer/epicdao.h \
-		../WorkManagementSystem/Headers/epic.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epicdao.o ../WorkManagementSystem/Sources/DataAccessLayer/epicdao.cpp
+epicdao.o: ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlError \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlerror.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epicdao.o ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp
 
-project.o: ../WorkManagementSystem/Sources/project.cpp ../WorkManagementSystem/Headers/project.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o project.o ../WorkManagementSystem/Sources/project.cpp
+project.o: ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o project.o ../WorkManagementSystem/Sources/DataTransfer/project.cpp
 
-acceptancecriteria.o: ../WorkManagementSystem/Sources/acceptancecriteria.cpp ../WorkManagementSystem/Headers/acceptancecriteria.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o acceptancecriteria.o ../WorkManagementSystem/Sources/acceptancecriteria.cpp
+acceptancecriteria.o: ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o acceptancecriteria.o ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp
 
-enum.o: ../WorkManagementSystem/Sources/enum.cpp ../WorkManagementSystem/Headers/enum.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o enum.o ../WorkManagementSystem/Sources/enum.cpp
+enum.o: ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o enum.o ../WorkManagementSystem/Sources/DataTransfer/enum.cpp
 
-epic.o: ../WorkManagementSystem/Sources/epic.cpp ../WorkManagementSystem/Headers/epic.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epic.o ../WorkManagementSystem/Sources/epic.cpp
+epic.o: ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epic.o ../WorkManagementSystem/Sources/DataTransfer/epic.cpp
 
-workitem.o: ../WorkManagementSystem/Sources/workitem.cpp ../WorkManagementSystem/Headers/workitem.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o workitem.o ../WorkManagementSystem/Sources/workitem.cpp
+workitem.o: ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o workitem.o ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp
 
 global.o: ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Headers/global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o global.o ../WorkManagementSystem/Sources/global.cpp
 
-story.o: ../WorkManagementSystem/Sources/story.cpp ../WorkManagementSystem/Headers/story.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o story.o ../WorkManagementSystem/Sources/story.cpp
+story.o: ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o story.o ../WorkManagementSystem/Sources/DataTransfer/story.cpp
 
-user.o: ../WorkManagementSystem/Sources/user.cpp ../WorkManagementSystem/Headers/user.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+user.o: ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
 		../WorkManagementSystem/Headers/global.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o user.o ../WorkManagementSystem/Sources/user.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o user.o ../WorkManagementSystem/Sources/DataTransfer/user.cpp
 
-team.o: ../WorkManagementSystem/Sources/team.cpp ../WorkManagementSystem/Headers/team.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o team.o ../WorkManagementSystem/Sources/team.cpp
+team.o: ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o team.o ../WorkManagementSystem/Sources/DataTransfer/team.cpp
 
-subtask.o: ../WorkManagementSystem/Sources/subtask.cpp ../WorkManagementSystem/Headers/subtask.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
-		../WorkManagementSystem/Headers/enum.h \
-		../WorkManagementSystem/Headers/workitem.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtask.o ../WorkManagementSystem/Sources/subtask.cpp
+subtask.o: ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtask.o ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp
 
-main.o: ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Headers/Screens/loginwindow.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/databaseconnection.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-		../WorkManagementSystem/Headers/user.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../WorkManagementSystem/Headers/DataAccessLayer/userdao.h \
+projectbl.o: ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectbl.o ../WorkManagementSystem/Sources/Business/projectbl.cpp
+
+epicbl.o: ../WorkManagementSystem/Sources/Business/epicbl.cpp ../WorkManagementSystem/Headers/Business/epicbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epicbl.o ../WorkManagementSystem/Sources/Business/epicbl.cpp
+
+acceptancecriteriabl.o: ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp ../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
+		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o acceptancecriteriabl.o ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp
+
+main.o: ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Headers/Presentation/loginwindow.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../WorkManagementSystem/Headers/DataAccess/databaseconnection.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
 		../WorkManagementSystem/Headers/global.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QApplication \
-		../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qapplication.h \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
-		../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QApplication \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qapplication.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlQuery \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqlquery.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../WorkManagementSystem/main.cpp
+
+userbl.o: ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/global.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o userbl.o ../WorkManagementSystem/Sources/Business/userbl.cpp
+
+teambl.o: ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementSystem/Headers/Business/teambl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teambl.o ../WorkManagementSystem/Sources/Business/teambl.cpp
+
+storybl.o: ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagementSystem/Headers/Business/storybl.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o storybl.o ../WorkManagementSystem/Sources/Business/storybl.cpp
+
+subtaskbl.o: ../WorkManagementSystem/Sources/Business/subtaskbl.cpp ../WorkManagementSystem/Headers/Business/subtaskbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtaskbl.o ../WorkManagementSystem/Sources/Business/subtaskbl.cpp
 
 qrc_Icons.o: qrc_Icons.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_Icons.o qrc_Icons.cpp
