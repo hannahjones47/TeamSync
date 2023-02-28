@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_HomePage_t {
-    uint offsetsAndSizes[90];
+    uint offsetsAndSizes[98];
     char stringdata0[9];
     char stringdata1[25];
     char stringdata2[1];
@@ -72,6 +72,10 @@ struct qt_meta_stringdata_HomePage_t {
     char stringdata42[25];
     char stringdata43[26];
     char stringdata44[28];
+    char stringdata45[23];
+    char stringdata46[21];
+    char stringdata47[20];
+    char stringdata48[23];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_HomePage_t::offsetsAndSizes) + ofs), len 
@@ -121,7 +125,11 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
         QT_MOC_LITERAL(886, 9),  // "WorkItem*"
         QT_MOC_LITERAL(896, 24),  // "on_addEpicButton_clicked"
         QT_MOC_LITERAL(921, 25),  // "on_addStoryButton_clicked"
-        QT_MOC_LITERAL(947, 27)   // "on_addSubTaskButton_clicked"
+        QT_MOC_LITERAL(947, 27),  // "on_addSubTaskButton_clicked"
+        QT_MOC_LITERAL(975, 22),  // "onDeleteSubTaskClicked"
+        QT_MOC_LITERAL(998, 20),  // "onDeleteStoryClicked"
+        QT_MOC_LITERAL(1019, 19),  // "onDeleteEpicClicked"
+        QT_MOC_LITERAL(1039, 22)   // "onDeleteProjectClicked"
     },
     "HomePage",
     "on_profileButton_clicked",
@@ -167,7 +175,11 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "WorkItem*",
     "on_addEpicButton_clicked",
     "on_addStoryButton_clicked",
-    "on_addSubTaskButton_clicked"
+    "on_addSubTaskButton_clicked",
+    "onDeleteSubTaskClicked",
+    "onDeleteStoryClicked",
+    "onDeleteEpicClicked",
+    "onDeleteProjectClicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -178,7 +190,7 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      37,   14, // methods
+      41,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -186,43 +198,47 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  236,    2, 0x08,    1 /* Private */,
-       3,    0,  237,    2, 0x08,    2 /* Private */,
-       4,    1,  238,    2, 0x08,    3 /* Private */,
-       6,    0,  241,    2, 0x08,    5 /* Private */,
-       7,    0,  242,    2, 0x08,    6 /* Private */,
-       8,    0,  243,    2, 0x08,    7 /* Private */,
-       9,    0,  244,    2, 0x08,    8 /* Private */,
-      10,    1,  245,    2, 0x08,    9 /* Private */,
-      12,    1,  248,    2, 0x08,   11 /* Private */,
-      14,    0,  251,    2, 0x08,   13 /* Private */,
-      15,    0,  252,    2, 0x08,   14 /* Private */,
-      16,    1,  253,    2, 0x08,   15 /* Private */,
-      18,    0,  256,    2, 0x08,   17 /* Private */,
-      19,    1,  257,    2, 0x08,   18 /* Private */,
-      21,    0,  260,    2, 0x08,   20 /* Private */,
-      22,    0,  261,    2, 0x08,   21 /* Private */,
-      23,    0,  262,    2, 0x08,   22 /* Private */,
-      24,    0,  263,    2, 0x08,   23 /* Private */,
-      25,    0,  264,    2, 0x08,   24 /* Private */,
-      26,    0,  265,    2, 0x08,   25 /* Private */,
-      27,    0,  266,    2, 0x08,   26 /* Private */,
-      28,    0,  267,    2, 0x08,   27 /* Private */,
-      29,    0,  268,    2, 0x08,   28 /* Private */,
-      30,    0,  269,    2, 0x08,   29 /* Private */,
-      31,    0,  270,    2, 0x08,   30 /* Private */,
-      32,    0,  271,    2, 0x08,   31 /* Private */,
-      33,    0,  272,    2, 0x08,   32 /* Private */,
-      34,    0,  273,    2, 0x08,   33 /* Private */,
-      35,    0,  274,    2, 0x08,   34 /* Private */,
-      36,    0,  275,    2, 0x08,   35 /* Private */,
-      37,    0,  276,    2, 0x08,   36 /* Private */,
-      38,    0,  277,    2, 0x08,   37 /* Private */,
-      39,    0,  278,    2, 0x08,   38 /* Private */,
-      40,    0,  279,    2, 0x08,   39 /* Private */,
-      42,    0,  280,    2, 0x08,   40 /* Private */,
-      43,    0,  281,    2, 0x08,   41 /* Private */,
-      44,    0,  282,    2, 0x08,   42 /* Private */,
+       1,    0,  260,    2, 0x08,    1 /* Private */,
+       3,    0,  261,    2, 0x08,    2 /* Private */,
+       4,    1,  262,    2, 0x08,    3 /* Private */,
+       6,    0,  265,    2, 0x08,    5 /* Private */,
+       7,    0,  266,    2, 0x08,    6 /* Private */,
+       8,    0,  267,    2, 0x08,    7 /* Private */,
+       9,    0,  268,    2, 0x08,    8 /* Private */,
+      10,    1,  269,    2, 0x08,    9 /* Private */,
+      12,    1,  272,    2, 0x08,   11 /* Private */,
+      14,    0,  275,    2, 0x08,   13 /* Private */,
+      15,    0,  276,    2, 0x08,   14 /* Private */,
+      16,    1,  277,    2, 0x08,   15 /* Private */,
+      18,    0,  280,    2, 0x08,   17 /* Private */,
+      19,    1,  281,    2, 0x08,   18 /* Private */,
+      21,    0,  284,    2, 0x08,   20 /* Private */,
+      22,    0,  285,    2, 0x08,   21 /* Private */,
+      23,    0,  286,    2, 0x08,   22 /* Private */,
+      24,    0,  287,    2, 0x08,   23 /* Private */,
+      25,    0,  288,    2, 0x08,   24 /* Private */,
+      26,    0,  289,    2, 0x08,   25 /* Private */,
+      27,    0,  290,    2, 0x08,   26 /* Private */,
+      28,    0,  291,    2, 0x08,   27 /* Private */,
+      29,    0,  292,    2, 0x08,   28 /* Private */,
+      30,    0,  293,    2, 0x08,   29 /* Private */,
+      31,    0,  294,    2, 0x08,   30 /* Private */,
+      32,    0,  295,    2, 0x08,   31 /* Private */,
+      33,    0,  296,    2, 0x08,   32 /* Private */,
+      34,    0,  297,    2, 0x08,   33 /* Private */,
+      35,    0,  298,    2, 0x08,   34 /* Private */,
+      36,    0,  299,    2, 0x08,   35 /* Private */,
+      37,    0,  300,    2, 0x08,   36 /* Private */,
+      38,    0,  301,    2, 0x08,   37 /* Private */,
+      39,    0,  302,    2, 0x08,   38 /* Private */,
+      40,    0,  303,    2, 0x08,   39 /* Private */,
+      42,    0,  304,    2, 0x08,   40 /* Private */,
+      43,    0,  305,    2, 0x08,   41 /* Private */,
+      44,    0,  306,    2, 0x08,   42 /* Private */,
+      45,    1,  307,    2, 0x08,   43 /* Private */,
+      46,    1,  310,    2, 0x08,   45 /* Private */,
+      47,    1,  313,    2, 0x08,   47 /* Private */,
+      48,    1,  316,    2, 0x08,   49 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -262,6 +278,10 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 20,    2,
+    QMetaType::Void, 0x80000000 | 17,    2,
+    QMetaType::Void, 0x80000000 | 13,    2,
+    QMetaType::Void, 0x80000000 | 11,    2,
 
        0        // eod
 };
@@ -353,7 +373,19 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         // method 'on_addStoryButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_addSubTaskButton_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onDeleteSubTaskClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<SubTask, std::false_type>,
+        // method 'onDeleteStoryClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Story, std::false_type>,
+        // method 'onDeleteEpicClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Epic, std::false_type>,
+        // method 'onDeleteProjectClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Project, std::false_type>
     >,
     nullptr
 } };
@@ -405,6 +437,10 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 34: _t->on_addEpicButton_clicked(); break;
         case 35: _t->on_addStoryButton_clicked(); break;
         case 36: _t->on_addSubTaskButton_clicked(); break;
+        case 37: _t->onDeleteSubTaskClicked((*reinterpret_cast< std::add_pointer_t<SubTask>>(_a[1]))); break;
+        case 38: _t->onDeleteStoryClicked((*reinterpret_cast< std::add_pointer_t<Story>>(_a[1]))); break;
+        case 39: _t->onDeleteEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic>>(_a[1]))); break;
+        case 40: _t->onDeleteProjectClicked((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
         default: ;
         }
     }
@@ -429,13 +465,13 @@ int HomePage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 37)
+        if (_id < 41)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 37;
+        _id -= 41;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 37)
+        if (_id < 41)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 37;
+        _id -= 41;
     }
     return _id;
 }

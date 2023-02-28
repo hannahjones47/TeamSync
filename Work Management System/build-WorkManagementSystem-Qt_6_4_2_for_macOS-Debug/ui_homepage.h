@@ -612,7 +612,7 @@ public:
         projectDetailScrollArea->setWidgetResizable(true);
         projectDetailScrollAreaWidgetContents = new QWidget();
         projectDetailScrollAreaWidgetContents->setObjectName("projectDetailScrollAreaWidgetContents");
-        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, -209, 647, 700));
+        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 647, 700));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -630,7 +630,7 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(projectNameLabel->sizePolicy().hasHeightForWidth());
         projectNameLabel->setSizePolicy(sizePolicy2);
-        projectNameLabel->setMinimumSize(QSize(0, 45));
+        projectNameLabel->setMinimumSize(QSize(0, 60));
         projectNameLabel->setFont(font);
 
         horizontalLayout_3->addWidget(projectNameLabel);
@@ -991,8 +991,6 @@ public:
         backButton->raise();
         projectDetailScrollArea->raise();
         locationDesc_2->raise();
-        addEpicButton->raise();
-        epicLabel->raise();
         epicDetailsPage = new QWidget();
         epicDetailsPage->setObjectName("epicDetailsPage");
         epicDetailScrollArea = new QScrollArea(epicDetailsPage);
@@ -1078,7 +1076,7 @@ public:
         epicNameLabel->setObjectName("epicNameLabel");
         sizePolicy2.setHeightForWidth(epicNameLabel->sizePolicy().hasHeightForWidth());
         epicNameLabel->setSizePolicy(sizePolicy2);
-        epicNameLabel->setMinimumSize(QSize(0, 45));
+        epicNameLabel->setMinimumSize(QSize(0, 60));
         epicNameLabel->setFont(font);
 
         horizontalLayout_5->addWidget(epicNameLabel);
@@ -1434,8 +1432,6 @@ public:
         epicDetailScrollArea->raise();
         epicBackButton->raise();
         locationDesc->raise();
-        storyLabel->raise();
-        addStoryButton->raise();
         storyDetailsPage = new QWidget();
         storyDetailsPage->setObjectName("storyDetailsPage");
         storyDetailScrollArea = new QScrollArea(storyDetailsPage);
@@ -1521,7 +1517,7 @@ public:
         storyNameLabel->setObjectName("storyNameLabel");
         sizePolicy2.setHeightForWidth(storyNameLabel->sizePolicy().hasHeightForWidth());
         storyNameLabel->setSizePolicy(sizePolicy2);
-        storyNameLabel->setMinimumSize(QSize(0, 45));
+        storyNameLabel->setMinimumSize(QSize(0, 60));
         storyNameLabel->setFont(font);
 
         horizontalLayout->addWidget(storyNameLabel);
@@ -1882,8 +1878,6 @@ public:
         storyDetailScrollArea->raise();
         storyBackButton->raise();
         locationDesc_3->raise();
-        addSubTaskButton->raise();
-        subtaskLabel->raise();
         Profile = new QWidget();
         Profile->setObjectName("Profile");
         profileTitleLabel = new QLabel(Profile);
@@ -2134,8 +2128,8 @@ public:
         horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget1->raise();
-        layoutWidget1->raise();
+        layoutWidget->raise();
+        layoutWidget->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -2143,7 +2137,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(5);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(HomePage);

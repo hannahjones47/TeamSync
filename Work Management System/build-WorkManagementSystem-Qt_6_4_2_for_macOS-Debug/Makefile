@@ -738,6 +738,7 @@ qrc_Icons.cpp: ../WorkManagementSystem/Icons.qrc \
 		../../../../Applications/Qt/6.4.2/macos/libexec/rcc \
 		../WorkManagementSystem/Icons/logoName.png \
 		../WorkManagementSystem/Icons/arrow-left.png \
+		../WorkManagementSystem/Icons/bin.png \
 		../WorkManagementSystem/Icons/team.png \
 		../WorkManagementSystem/Icons/check.png \
 		../WorkManagementSystem/Icons/homeBlue.png \
