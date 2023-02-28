@@ -179,9 +179,9 @@ public:
     QPushButton *logOutButton;
     QPushButton *logoButton;
     QLabel *navBarBackground;
-    QWidget *widget;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_6;
-    QWidget *widget1;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_7;
 
     void setupUi(QDialog *HomePage)
@@ -550,7 +550,7 @@ public:
         projectDetailScrollArea->setWidgetResizable(true);
         projectDetailScrollAreaWidgetContents = new QWidget();
         projectDetailScrollAreaWidgetContents->setObjectName("projectDetailScrollAreaWidgetContents");
-        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 647, 700));
+        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, -209, 647, 700));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -1387,7 +1387,7 @@ public:
         storyDetailScrollArea->setWidgetResizable(true);
         storyDetailScrollAreaWidgetContents = new QWidget();
         storyDetailScrollAreaWidgetContents->setObjectName("storyDetailScrollAreaWidgetContents");
-        storyDetailScrollAreaWidgetContents->setGeometry(QRect(0, -209, 647, 700));
+        storyDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 659, 700));
         sizePolicy1.setHeightForWidth(storyDetailScrollAreaWidgetContents->sizePolicy().hasHeightForWidth());
         storyDetailScrollAreaWidgetContents->setSizePolicy(sizePolicy1);
         storyDetailScrollAreaWidgetContents->setMinimumSize(QSize(0, 700));
@@ -1970,18 +1970,20 @@ public:
 "/*border-width: 1px;\n"
 "border-style: solid;*/\n"
 ""));
-        widget = new QWidget(HomePage);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_6 = new QHBoxLayout(widget);
+        layoutWidget1 = new QWidget(HomePage);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_6 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_6->setObjectName("horizontalLayout_6");
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
-        widget1 = new QWidget(HomePage);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_7 = new QHBoxLayout(widget1);
+        layoutWidget2 = new QWidget(HomePage);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
+        layoutWidget->raise();
+        layoutWidget->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -1989,7 +1991,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(HomePage);
