@@ -45,8 +45,11 @@ public:
     QLabel *companyNameLabel_2;
     QWidget *projectPage;
     QLabel *projectTitle;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *verticalLayout_4;
     QScrollArea *projectScrollArea;
     QWidget *projectScrollAreaWidgetContents;
+    QPushButton *addNewProjectButton;
     QWidget *projectDetailsPage;
     QPushButton *backButton;
     QScrollArea *projectDetailScrollArea;
@@ -78,9 +81,14 @@ public:
     QLabel *descriptionLabel;
     QLabel *ACLabel;
     QVBoxLayout *acceptanceCriteriaLayout;
+    QHBoxLayout *horizontalLayout_9;
     QLabel *epicLabel;
+    QSpacerItem *horizontalSpacer_16;
+    QPushButton *addEpicButton;
     QVBoxLayout *epicLayout;
+    QSpacerItem *verticalSpacer_2;
     QLabel *locationDesc_2;
+    QLabel *colourLocationLabel_2;
     QWidget *epicDetailsPage;
     QScrollArea *epicDetailScrollArea;
     QWidget *epicDetailScrollAreaContents;
@@ -111,10 +119,15 @@ public:
     QLabel *epicDescriptionLabel;
     QLabel *epicACLabel;
     QVBoxLayout *epicAcceptanceCriteriaLayout;
+    QHBoxLayout *horizontalLayout_10;
     QLabel *storyLabel;
+    QSpacerItem *horizontalSpacer_17;
+    QPushButton *addStoryButton;
     QVBoxLayout *storyLayout;
+    QSpacerItem *verticalSpacer;
     QPushButton *epicBackButton;
     QLabel *locationDesc;
+    QLabel *colourLocationLabel;
     QWidget *storyDetailsPage;
     QScrollArea *storyDetailScrollArea;
     QWidget *storyDetailScrollAreaWidgetContents;
@@ -145,10 +158,15 @@ public:
     QLabel *storyDescriptionLabel;
     QLabel *storyACLabel;
     QVBoxLayout *storyAcceptanceCriteriaLayout;
+    QHBoxLayout *horizontalLayout_11;
     QLabel *subtaskLabel;
+    QSpacerItem *horizontalSpacer_18;
+    QPushButton *addSubTaskButton;
     QVBoxLayout *subTaskLayout;
+    QSpacerItem *verticalSpacer_3;
     QPushButton *storyBackButton;
     QLabel *locationDesc_3;
+    QLabel *colourLocationLabel_3;
     QWidget *Profile;
     QLabel *profileTitleLabel;
     QGroupBox *profileGroupBox;
@@ -401,9 +419,14 @@ public:
         projectTitle->setObjectName("projectTitle");
         projectTitle->setGeometry(QRect(40, 50, 191, 51));
         projectTitle->setFont(font);
-        projectScrollArea = new QScrollArea(projectPage);
+        verticalLayoutWidget_2 = new QWidget(projectPage);
+        verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
+        verticalLayoutWidget_2->setGeometry(QRect(40, 110, 661, 471));
+        verticalLayout_4 = new QVBoxLayout(verticalLayoutWidget_2);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+        projectScrollArea = new QScrollArea(verticalLayoutWidget_2);
         projectScrollArea->setObjectName("projectScrollArea");
-        projectScrollArea->setGeometry(QRect(40, 110, 661, 471));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
         palette2.setBrush(QPalette::Active, QPalette::Base, brush1);
@@ -444,12 +467,51 @@ public:
 "}\n"
 "QScrollBar::sub-line:vertical {\n"
 "    background: none;\n"
-"}"));
+"}\n"
+"QScrollBar:vertical {\n"
+"    border: none;\n"
+"    background: none;\n"
+"    width: 10px;\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"    background-color: #666666;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"QScrollBar::handle:vertical:hover {\n"
+"    background-color: #b8b8b8;\n"
+"}\n"
+"QScrollBar::add-line:vertical {\n"
+"    background: none;\n"
+"}\n"
+"QScrollBar::sub-line:vertical {\n"
+"    background: none;\n"
+"}\n"
+"QPushButton {\n"
+"    border: 1px solid #8f8"
+                        "f91;\n"
+"    border-radius: 3px;\n"
+"    padding: 5px 10px;\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);\n"
+"	font-size: 20px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(218, 230, 255), stop:1 #f6f7fa);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(172, 181, 224), stop:1 #c4c6ca);\n"
+"}\n"
+""));
         projectScrollArea->setWidgetResizable(true);
         projectScrollAreaWidgetContents = new QWidget();
         projectScrollAreaWidgetContents->setObjectName("projectScrollAreaWidgetContents");
-        projectScrollAreaWidgetContents->setGeometry(QRect(0, 0, 657, 467));
+        projectScrollAreaWidgetContents->setGeometry(QRect(0, 0, 655, 465));
         projectScrollArea->setWidget(projectScrollAreaWidgetContents);
+
+        verticalLayout_4->addWidget(projectScrollArea);
+
+        addNewProjectButton = new QPushButton(projectPage);
+        addNewProjectButton->setObjectName("addNewProjectButton");
+        addNewProjectButton->setGeometry(QRect(600, 70, 100, 32));
         stackedWidget->addWidget(projectPage);
         projectDetailsPage = new QWidget();
         projectDetailsPage->setObjectName("projectDetailsPage");
@@ -872,6 +934,8 @@ public:
 
         verticalLayout->addLayout(acceptanceCriteriaLayout);
 
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName("horizontalLayout_9");
         epicLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         epicLabel->setObjectName("epicLabel");
         sizePolicy3.setHeightForWidth(epicLabel->sizePolicy().hasHeightForWidth());
@@ -880,7 +944,20 @@ public:
         epicLabel->setMaximumSize(QSize(300, 16777215));
         epicLabel->setFont(font3);
 
-        verticalLayout->addWidget(epicLabel);
+        horizontalLayout_9->addWidget(epicLabel);
+
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_16);
+
+        addEpicButton = new QPushButton(projectDetailScrollAreaWidgetContents);
+        addEpicButton->setObjectName("addEpicButton");
+        addEpicButton->setMinimumSize(QSize(80, 0));
+
+        horizontalLayout_9->addWidget(addEpicButton);
+
+
+        verticalLayout->addLayout(horizontalLayout_9);
 
         epicLayout = new QVBoxLayout();
         epicLayout->setSpacing(0);
@@ -888,6 +965,10 @@ public:
         epicLayout->setSizeConstraint(QLayout::SetMinimumSize);
 
         verticalLayout->addLayout(epicLayout);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_2);
 
         projectDetailScrollArea->setWidget(projectDetailScrollAreaWidgetContents);
         locationDesc_2 = new QLabel(projectDetailsPage);
@@ -900,7 +981,18 @@ public:
         locationDesc_2->setFont(font6);
         locationDesc_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         locationDesc_2->setWordWrap(true);
+        colourLocationLabel_2 = new QLabel(projectDetailsPage);
+        colourLocationLabel_2->setObjectName("colourLocationLabel_2");
+        colourLocationLabel_2->setGeometry(QRect(628, 30, 71, 24));
+        colourLocationLabel_2->setStyleSheet(QString::fromUtf8("background-color: rgb(204, 255, 234);\n"
+"border-radius: 5px 5px 5px 5px;"));
         stackedWidget->addWidget(projectDetailsPage);
+        colourLocationLabel_2->raise();
+        backButton->raise();
+        projectDetailScrollArea->raise();
+        locationDesc_2->raise();
+        addEpicButton->raise();
+        epicLabel->raise();
         epicDetailsPage = new QWidget();
         epicDetailsPage->setObjectName("epicDetailsPage");
         epicDetailScrollArea = new QScrollArea(epicDetailsPage);
@@ -1266,6 +1358,8 @@ public:
 
         verticalLayout_2->addLayout(epicAcceptanceCriteriaLayout);
 
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName("horizontalLayout_10");
         storyLabel = new QLabel(epicDetailScrollAreaContents);
         storyLabel->setObjectName("storyLabel");
         sizePolicy3.setHeightForWidth(storyLabel->sizePolicy().hasHeightForWidth());
@@ -1274,7 +1368,20 @@ public:
         storyLabel->setMaximumSize(QSize(300, 16777215));
         storyLabel->setFont(font3);
 
-        verticalLayout_2->addWidget(storyLabel);
+        horizontalLayout_10->addWidget(storyLabel);
+
+        horizontalSpacer_17 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_17);
+
+        addStoryButton = new QPushButton(epicDetailScrollAreaContents);
+        addStoryButton->setObjectName("addStoryButton");
+        addStoryButton->setMinimumSize(QSize(80, 0));
+
+        horizontalLayout_10->addWidget(addStoryButton);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_10);
 
         storyLayout = new QVBoxLayout();
         storyLayout->setSpacing(0);
@@ -1282,6 +1389,10 @@ public:
         storyLayout->setSizeConstraint(QLayout::SetMinimumSize);
 
         verticalLayout_2->addLayout(storyLayout);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer);
 
         epicDetailScrollArea->setWidget(epicDetailScrollAreaContents);
         epicBackButton = new QPushButton(epicDetailsPage);
@@ -1313,7 +1424,18 @@ public:
         locationDesc->setFont(font6);
         locationDesc->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         locationDesc->setWordWrap(true);
+        colourLocationLabel = new QLabel(epicDetailsPage);
+        colourLocationLabel->setObjectName("colourLocationLabel");
+        colourLocationLabel->setGeometry(QRect(647, 30, 51, 24));
+        colourLocationLabel->setStyleSheet(QString::fromUtf8("background-color: rgb(204, 255, 234);\n"
+"border-radius: 5px 5px 5px 5px;"));
         stackedWidget->addWidget(epicDetailsPage);
+        colourLocationLabel->raise();
+        epicDetailScrollArea->raise();
+        epicBackButton->raise();
+        locationDesc->raise();
+        storyLabel->raise();
+        addStoryButton->raise();
         storyDetailsPage = new QWidget();
         storyDetailsPage->setObjectName("storyDetailsPage");
         storyDetailScrollArea = new QScrollArea(storyDetailsPage);
@@ -1387,7 +1509,7 @@ public:
         storyDetailScrollArea->setWidgetResizable(true);
         storyDetailScrollAreaWidgetContents = new QWidget();
         storyDetailScrollAreaWidgetContents->setObjectName("storyDetailScrollAreaWidgetContents");
-        storyDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 659, 700));
+        storyDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 647, 700));
         sizePolicy1.setHeightForWidth(storyDetailScrollAreaWidgetContents->sizePolicy().hasHeightForWidth());
         storyDetailScrollAreaWidgetContents->setSizePolicy(sizePolicy1);
         storyDetailScrollAreaWidgetContents->setMinimumSize(QSize(0, 700));
@@ -1684,6 +1806,8 @@ public:
 
         verticalLayout_3->addLayout(storyAcceptanceCriteriaLayout);
 
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName("horizontalLayout_11");
         subtaskLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         subtaskLabel->setObjectName("subtaskLabel");
         sizePolicy3.setHeightForWidth(subtaskLabel->sizePolicy().hasHeightForWidth());
@@ -1692,7 +1816,20 @@ public:
         subtaskLabel->setMaximumSize(QSize(300, 16777215));
         subtaskLabel->setFont(font3);
 
-        verticalLayout_3->addWidget(subtaskLabel);
+        horizontalLayout_11->addWidget(subtaskLabel);
+
+        horizontalSpacer_18 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_11->addItem(horizontalSpacer_18);
+
+        addSubTaskButton = new QPushButton(storyDetailScrollAreaWidgetContents);
+        addSubTaskButton->setObjectName("addSubTaskButton");
+        addSubTaskButton->setMinimumSize(QSize(80, 0));
+
+        horizontalLayout_11->addWidget(addSubTaskButton);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_11);
 
         subTaskLayout = new QVBoxLayout();
         subTaskLayout->setSpacing(0);
@@ -1700,6 +1837,10 @@ public:
         subTaskLayout->setSizeConstraint(QLayout::SetMinimumSize);
 
         verticalLayout_3->addLayout(subTaskLayout);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_3);
 
         storyDetailScrollArea->setWidget(storyDetailScrollAreaWidgetContents);
         storyBackButton = new QPushButton(storyDetailsPage);
@@ -1731,7 +1872,18 @@ public:
         locationDesc_3->setFont(font6);
         locationDesc_3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         locationDesc_3->setWordWrap(true);
+        colourLocationLabel_3 = new QLabel(storyDetailsPage);
+        colourLocationLabel_3->setObjectName("colourLocationLabel_3");
+        colourLocationLabel_3->setGeometry(QRect(638, 30, 61, 24));
+        colourLocationLabel_3->setStyleSheet(QString::fromUtf8("background-color: rgb(204, 255, 234);\n"
+"border-radius: 5px 5px 5px 5px;"));
         stackedWidget->addWidget(storyDetailsPage);
+        colourLocationLabel_3->raise();
+        storyDetailScrollArea->raise();
+        storyBackButton->raise();
+        locationDesc_3->raise();
+        addSubTaskButton->raise();
+        subtaskLabel->raise();
         Profile = new QWidget();
         Profile->setObjectName("Profile");
         profileTitleLabel = new QLabel(Profile);
@@ -1982,8 +2134,8 @@ public:
         horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget->raise();
-        layoutWidget->raise();
+        layoutWidget1->raise();
+        layoutWidget1->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -1991,7 +2143,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -2007,6 +2159,7 @@ public:
         joinCodeLabel->setText(QCoreApplication::translate("HomePage", "Join code", nullptr));
         companyNameLabel_2->setText(QCoreApplication::translate("HomePage", "Join code:", nullptr));
         projectTitle->setText(QCoreApplication::translate("HomePage", "Projects", nullptr));
+        addNewProjectButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
         backButton->setText(QString());
         projectNameLabel->setText(QCoreApplication::translate("HomePage", "Project name placeholder", nullptr));
         editProjectName->setText(QString());
@@ -2024,7 +2177,9 @@ public:
         descriptionLabel->setText(QCoreApplication::translate("HomePage", "Description placeholder", nullptr));
         ACLabel->setText(QCoreApplication::translate("HomePage", "Acceptance criteria:", nullptr));
         epicLabel->setText(QCoreApplication::translate("HomePage", "Epics:", nullptr));
+        addEpicButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
         locationDesc_2->setText(QCoreApplication::translate("HomePage", "Projects", nullptr));
+        colourLocationLabel_2->setText(QString());
         epicNameLabel->setText(QCoreApplication::translate("HomePage", "Epic name placeholder", nullptr));
         editEpicName->setText(QString());
         epicDueDateLabelDescription->setText(QCoreApplication::translate("HomePage", "Due: ", nullptr));
@@ -2041,8 +2196,10 @@ public:
         epicDescriptionLabel->setText(QCoreApplication::translate("HomePage", "Description placeholder", nullptr));
         epicACLabel->setText(QCoreApplication::translate("HomePage", "Acceptance criteria:", nullptr));
         storyLabel->setText(QCoreApplication::translate("HomePage", "Stories:", nullptr));
+        addStoryButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
         epicBackButton->setText(QString());
         locationDesc->setText(QCoreApplication::translate("HomePage", "Projects > Epics", nullptr));
+        colourLocationLabel->setText(QString());
         storyNameLabel->setText(QCoreApplication::translate("HomePage", "Story name placeholder", nullptr));
         editStoryName->setText(QString());
         storyDueDateLabelDescription->setText(QCoreApplication::translate("HomePage", "Due: ", nullptr));
@@ -2059,8 +2216,10 @@ public:
         storyDescriptionLabel->setText(QCoreApplication::translate("HomePage", "Description placeholder", nullptr));
         storyACLabel->setText(QCoreApplication::translate("HomePage", "Acceptance criteria:", nullptr));
         subtaskLabel->setText(QCoreApplication::translate("HomePage", "Sub-tasks:", nullptr));
+        addSubTaskButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
         storyBackButton->setText(QString());
         locationDesc_3->setText(QCoreApplication::translate("HomePage", "Projects > Epics > Stories", nullptr));
+        colourLocationLabel_3->setText(QString());
         profileTitleLabel->setText(QCoreApplication::translate("HomePage", "Profile", nullptr));
         profileGroupBox->setTitle(QString());
         usernameLabel->setText(QCoreApplication::translate("HomePage", "Username", nullptr));
