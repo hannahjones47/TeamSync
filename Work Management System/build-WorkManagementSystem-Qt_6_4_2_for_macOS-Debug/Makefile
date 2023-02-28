@@ -52,9 +52,16 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
+SOURCES       = ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp \
+		../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp \
-		../WorkManagementSystem/Sources/Presentation/homepage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp \
 		../WorkManagementSystem/Sources/Presentation/loginwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp \
@@ -90,7 +97,14 @@ SOURCES       = ../WorkManagementSystem/Sources/Presentation/createteamwindow.cp
 		moc_loginwindow.cpp \
 		moc_createaccountwindow.cpp \
 		moc_createteamwindow.cpp
-OBJECTS       = createteamwindow.o \
+OBJECTS       = epicdetailspage.o \
+		mainpage.o \
+		profile.o \
+		projectdetailspage.o \
+		projectspage.o \
+		storydetailspage.o \
+		teampage.o \
+		createteamwindow.o \
 		createaccountwindow.o \
 		homepage.o \
 		loginwindow.o \
@@ -309,9 +323,16 @@ DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
 		../WorkManagementSystem/Headers/Business/epicbl.h \
 		../WorkManagementSystem/Headers/Business/storybl.h \
 		../WorkManagementSystem/Headers/Business/subtaskbl.h \
-		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
+		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp \
+		../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp \
-		../WorkManagementSystem/Sources/Presentation/homepage.cpp \
+		../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp \
 		../WorkManagementSystem/Sources/Presentation/loginwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp \
@@ -703,7 +724,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/Icons.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/Headers/Presentation/homepage.h ../WorkManagementSystem/Headers/Presentation/loginwindow.h ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h ../WorkManagementSystem/Headers/Presentation/createteamwindow.h ../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h ../WorkManagementSystem/Headers/Presentation/Validation/validator.h ../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h ../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h ../WorkManagementSystem/Headers/DataAccess/databaseconnection.h ../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h ../WorkManagementSystem/Headers/DataAccess/epicdao.h ../WorkManagementSystem/Headers/DataAccess/storydao.h ../WorkManagementSystem/Headers/DataAccess/teamdao.h ../WorkManagementSystem/Headers/DataAccess/userdao.h ../WorkManagementSystem/Headers/DataAccess/projectdao.h ../WorkManagementSystem/Headers/DataAccess/subtaskdao.h ../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h ../WorkManagementSystem/Headers/global.h ../WorkManagementSystem/Headers/DataTransfer/enum.h ../WorkManagementSystem/Headers/DataTransfer/project.h ../WorkManagementSystem/Headers/DataTransfer/user.h ../WorkManagementSystem/Headers/DataTransfer/team.h ../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h ../WorkManagementSystem/Headers/DataTransfer/epic.h ../WorkManagementSystem/Headers/DataTransfer/workitem.h ../WorkManagementSystem/Headers/DataTransfer/story.h ../WorkManagementSystem/Headers/DataTransfer/subtask.h ../WorkManagementSystem/Headers/Business/projectbl.h ../WorkManagementSystem/Headers/Business/userbl.h ../WorkManagementSystem/Headers/Business/teambl.h ../WorkManagementSystem/Headers/Business/epicbl.h ../WorkManagementSystem/Headers/Business/storybl.h ../WorkManagementSystem/Headers/Business/subtaskbl.h ../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/Sources/Business/epicbl.cpp ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagementSystem/Sources/Business/subtaskbl.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/Sources/Business/epicbl.cpp ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagementSystem/Sources/Business/subtaskbl.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/UI/homepage.ui ../WorkManagementSystem/UI/loginwindow.ui ../WorkManagementSystem/UI/createaccountwindow.ui ../WorkManagementSystem/UI/createteamwindow.ui $(DISTDIR)/
 
 
@@ -843,6 +864,379 @@ compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
+epicdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		ui_homepage.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/Business/epicbl.h \
+		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Business/storybl.h \
+		../WorkManagementSystem/Headers/Business/subtaskbl.h \
+		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
+		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../WorkManagementSystem/Headers/global.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcalendarwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialogButtonBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epicdetailspage.o ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp
+
+mainpage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		ui_homepage.h \
+		../WorkManagementSystem/Headers/global.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainpage.o ../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp
+
+profile.o: ../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		ui_homepage.h \
+		../WorkManagementSystem/Headers/global.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validator.h \
+		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcalendarwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialogButtonBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o profile.o ../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp
+
+projectdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		ui_homepage.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/Business/epicbl.h \
+		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Business/storybl.h \
+		../WorkManagementSystem/Headers/Business/subtaskbl.h \
+		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
+		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../WorkManagementSystem/Headers/global.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcalendarwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialogButtonBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectdetailspage.o ../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp
+
+projectspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		ui_homepage.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/Business/epicbl.h \
+		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Business/storybl.h \
+		../WorkManagementSystem/Headers/Business/subtaskbl.h \
+		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
+		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../WorkManagementSystem/Headers/global.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcalendarwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialogButtonBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectspage.o ../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp
+
+storydetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		ui_homepage.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/Business/epicbl.h \
+		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/Business/storybl.h \
+		../WorkManagementSystem/Headers/Business/subtaskbl.h \
+		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
+		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../WorkManagementSystem/Headers/global.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcalendarwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialogButtonBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o storydetailspage.o ../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp
+
+teampage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../WorkManagementSystem/Headers/DataTransfer/project.h \
+		../WorkManagementSystem/Headers/DataTransfer/workitem.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDate \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/DataTransfer/enum.h \
+		../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h \
+		../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h \
+		../WorkManagementSystem/Headers/DataAccess/projectdao.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/DataTransfer/epic.h \
+		../WorkManagementSystem/Headers/DataAccess/epicdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/story.h \
+		../WorkManagementSystem/Headers/DataAccess/storydao.h \
+		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
+		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
+		ui_homepage.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/Business/teambl.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/global.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teampage.o ../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp
+
 createteamwindow.o: ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Headers/Presentation/createteamwindow.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
@@ -913,7 +1307,7 @@ createaccountwindow.o: ../WorkManagementSystem/Sources/Presentation/createaccoun
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o createaccountwindow.o ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp
 
-homepage.o: ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
+homepage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
@@ -978,7 +1372,7 @@ homepage.o: ../WorkManagementSystem/Sources/Presentation/homepage.cpp ../WorkMan
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o homepage.o ../WorkManagementSystem/Sources/Presentation/homepage.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o homepage.o ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp
 
 loginwindow.o: ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ui_loginwindow.h \
 		../WorkManagementSystem/Headers/Presentation/loginwindow.h \

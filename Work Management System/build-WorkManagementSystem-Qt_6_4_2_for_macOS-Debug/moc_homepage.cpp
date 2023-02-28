@@ -26,28 +26,28 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_HomePage_t {
-    uint offsetsAndSizes[98];
+    uint offsetsAndSizes[104];
     char stringdata0[9];
     char stringdata1[25];
     char stringdata2[1];
     char stringdata3[26];
-    char stringdata4[26];
-    char stringdata5[8];
-    char stringdata6[29];
-    char stringdata7[24];
-    char stringdata8[22];
-    char stringdata9[26];
-    char stringdata10[17];
-    char stringdata11[8];
-    char stringdata12[14];
-    char stringdata13[5];
-    char stringdata14[22];
-    char stringdata15[26];
-    char stringdata16[15];
-    char stringdata17[6];
-    char stringdata18[27];
-    char stringdata19[17];
-    char stringdata20[8];
+    char stringdata4[29];
+    char stringdata5[24];
+    char stringdata6[22];
+    char stringdata7[26];
+    char stringdata8[17];
+    char stringdata9[8];
+    char stringdata10[14];
+    char stringdata11[5];
+    char stringdata12[22];
+    char stringdata13[26];
+    char stringdata14[15];
+    char stringdata15[6];
+    char stringdata16[27];
+    char stringdata17[17];
+    char stringdata18[8];
+    char stringdata19[13];
+    char stringdata20[9];
     char stringdata21[25];
     char stringdata22[28];
     char stringdata23[27];
@@ -76,6 +76,9 @@ struct qt_meta_stringdata_HomePage_t {
     char stringdata46[21];
     char stringdata47[20];
     char stringdata48[23];
+    char stringdata49[23];
+    char stringdata50[19];
+    char stringdata51[25];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_HomePage_t::offsetsAndSizes) + ofs), len 
@@ -85,58 +88,59 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
         QT_MOC_LITERAL(9, 24),  // "on_profileButton_clicked"
         QT_MOC_LITERAL(34, 0),  // ""
         QT_MOC_LITERAL(35, 25),  // "on_mainPageButton_clicked"
-        QT_MOC_LITERAL(61, 25),  // "on_mainPageButton_toggled"
-        QT_MOC_LITERAL(87, 7),  // "checked"
-        QT_MOC_LITERAL(95, 28),  // "on_saveProfileButton_clicked"
-        QT_MOC_LITERAL(124, 23),  // "on_logOutButton_clicked"
-        QT_MOC_LITERAL(148, 21),  // "on_teamButton_clicked"
-        QT_MOC_LITERAL(170, 25),  // "on_projectsButton_clicked"
-        QT_MOC_LITERAL(196, 16),  // "onProjectClicked"
-        QT_MOC_LITERAL(213, 7),  // "Project"
-        QT_MOC_LITERAL(221, 13),  // "onEpicClicked"
-        QT_MOC_LITERAL(235, 4),  // "Epic"
-        QT_MOC_LITERAL(240, 21),  // "on_backButton_clicked"
-        QT_MOC_LITERAL(262, 25),  // "on_epicBackButton_clicked"
-        QT_MOC_LITERAL(288, 14),  // "onStoryClicked"
-        QT_MOC_LITERAL(303, 5),  // "Story"
-        QT_MOC_LITERAL(309, 26),  // "on_storyBackButton_clicked"
-        QT_MOC_LITERAL(336, 16),  // "onSubTaskClicked"
-        QT_MOC_LITERAL(353, 7),  // "SubTask"
-        QT_MOC_LITERAL(361, 24),  // "on_editStoryName_clicked"
-        QT_MOC_LITERAL(386, 27),  // "on_editStoryDueDate_clicked"
-        QT_MOC_LITERAL(414, 26),  // "on_editStoryStatus_clicked"
-        QT_MOC_LITERAL(441, 28),  // "on_editStoryPriority_clicked"
-        QT_MOC_LITERAL(470, 31),  // "on_editStoryDescription_clicked"
-        QT_MOC_LITERAL(502, 26),  // "on_editProjectName_clicked"
-        QT_MOC_LITERAL(529, 29),  // "on_editProjectDueDate_clicked"
-        QT_MOC_LITERAL(559, 28),  // "on_editProjectStatus_clicked"
-        QT_MOC_LITERAL(588, 30),  // "on_editProjectPriority_clicked"
-        QT_MOC_LITERAL(619, 33),  // "on_editProjectDescription_cli..."
-        QT_MOC_LITERAL(653, 23),  // "on_editEpicName_clicked"
-        QT_MOC_LITERAL(677, 26),  // "on_editEpicDueDate_clicked"
-        QT_MOC_LITERAL(704, 25),  // "on_editEpicStatus_clicked"
-        QT_MOC_LITERAL(730, 27),  // "on_editEpicPriority_clicked"
-        QT_MOC_LITERAL(758, 30),  // "on_editEpicDescription_clicked"
-        QT_MOC_LITERAL(789, 14),  // "getStatusInput"
-        QT_MOC_LITERAL(804, 12),  // "getDateInput"
-        QT_MOC_LITERAL(817, 16),  // "getPriorityInput"
-        QT_MOC_LITERAL(834, 30),  // "on_addNewProjectButton_clicked"
-        QT_MOC_LITERAL(865, 20),  // "getNewWorkItemInputs"
-        QT_MOC_LITERAL(886, 9),  // "WorkItem*"
-        QT_MOC_LITERAL(896, 24),  // "on_addEpicButton_clicked"
-        QT_MOC_LITERAL(921, 25),  // "on_addStoryButton_clicked"
-        QT_MOC_LITERAL(947, 27),  // "on_addSubTaskButton_clicked"
-        QT_MOC_LITERAL(975, 22),  // "onDeleteSubTaskClicked"
-        QT_MOC_LITERAL(998, 20),  // "onDeleteStoryClicked"
-        QT_MOC_LITERAL(1019, 19),  // "onDeleteEpicClicked"
-        QT_MOC_LITERAL(1039, 22)   // "onDeleteProjectClicked"
+        QT_MOC_LITERAL(61, 28),  // "on_saveProfileButton_clicked"
+        QT_MOC_LITERAL(90, 23),  // "on_logOutButton_clicked"
+        QT_MOC_LITERAL(114, 21),  // "on_teamButton_clicked"
+        QT_MOC_LITERAL(136, 25),  // "on_projectsButton_clicked"
+        QT_MOC_LITERAL(162, 16),  // "onProjectClicked"
+        QT_MOC_LITERAL(179, 7),  // "Project"
+        QT_MOC_LITERAL(187, 13),  // "onEpicClicked"
+        QT_MOC_LITERAL(201, 4),  // "Epic"
+        QT_MOC_LITERAL(206, 21),  // "on_backButton_clicked"
+        QT_MOC_LITERAL(228, 25),  // "on_epicBackButton_clicked"
+        QT_MOC_LITERAL(254, 14),  // "onStoryClicked"
+        QT_MOC_LITERAL(269, 5),  // "Story"
+        QT_MOC_LITERAL(275, 26),  // "on_storyBackButton_clicked"
+        QT_MOC_LITERAL(302, 16),  // "onSubTaskClicked"
+        QT_MOC_LITERAL(319, 7),  // "SubTask"
+        QT_MOC_LITERAL(327, 12),  // "deleteLayout"
+        QT_MOC_LITERAL(340, 8),  // "QLayout*"
+        QT_MOC_LITERAL(349, 24),  // "on_editStoryName_clicked"
+        QT_MOC_LITERAL(374, 27),  // "on_editStoryDueDate_clicked"
+        QT_MOC_LITERAL(402, 26),  // "on_editStoryStatus_clicked"
+        QT_MOC_LITERAL(429, 28),  // "on_editStoryPriority_clicked"
+        QT_MOC_LITERAL(458, 31),  // "on_editStoryDescription_clicked"
+        QT_MOC_LITERAL(490, 26),  // "on_editProjectName_clicked"
+        QT_MOC_LITERAL(517, 29),  // "on_editProjectDueDate_clicked"
+        QT_MOC_LITERAL(547, 28),  // "on_editProjectStatus_clicked"
+        QT_MOC_LITERAL(576, 30),  // "on_editProjectPriority_clicked"
+        QT_MOC_LITERAL(607, 33),  // "on_editProjectDescription_cli..."
+        QT_MOC_LITERAL(641, 23),  // "on_editEpicName_clicked"
+        QT_MOC_LITERAL(665, 26),  // "on_editEpicDueDate_clicked"
+        QT_MOC_LITERAL(692, 25),  // "on_editEpicStatus_clicked"
+        QT_MOC_LITERAL(718, 27),  // "on_editEpicPriority_clicked"
+        QT_MOC_LITERAL(746, 30),  // "on_editEpicDescription_clicked"
+        QT_MOC_LITERAL(777, 14),  // "getStatusInput"
+        QT_MOC_LITERAL(792, 12),  // "getDateInput"
+        QT_MOC_LITERAL(805, 16),  // "getPriorityInput"
+        QT_MOC_LITERAL(822, 30),  // "on_addNewProjectButton_clicked"
+        QT_MOC_LITERAL(853, 20),  // "getNewWorkItemInputs"
+        QT_MOC_LITERAL(874, 9),  // "WorkItem*"
+        QT_MOC_LITERAL(884, 24),  // "on_addEpicButton_clicked"
+        QT_MOC_LITERAL(909, 25),  // "on_addStoryButton_clicked"
+        QT_MOC_LITERAL(935, 27),  // "on_addSubTaskButton_clicked"
+        QT_MOC_LITERAL(963, 22),  // "onDeleteSubTaskClicked"
+        QT_MOC_LITERAL(986, 20),  // "onDeleteStoryClicked"
+        QT_MOC_LITERAL(1007, 19),  // "onDeleteEpicClicked"
+        QT_MOC_LITERAL(1027, 22),  // "onDeleteProjectClicked"
+        QT_MOC_LITERAL(1050, 22),  // "editAcceptanceCriteria"
+        QT_MOC_LITERAL(1073, 18),  // "AcceptanceCriteria"
+        QT_MOC_LITERAL(1092, 24)   // "deleteAcceptanceCriteria"
     },
     "HomePage",
     "on_profileButton_clicked",
     "",
     "on_mainPageButton_clicked",
-    "on_mainPageButton_toggled",
-    "checked",
     "on_saveProfileButton_clicked",
     "on_logOutButton_clicked",
     "on_teamButton_clicked",
@@ -152,6 +156,8 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "on_storyBackButton_clicked",
     "onSubTaskClicked",
     "SubTask",
+    "deleteLayout",
+    "QLayout*",
     "on_editStoryName_clicked",
     "on_editStoryDueDate_clicked",
     "on_editStoryStatus_clicked",
@@ -179,7 +185,10 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "onDeleteSubTaskClicked",
     "onDeleteStoryClicked",
     "onDeleteEpicClicked",
-    "onDeleteProjectClicked"
+    "onDeleteProjectClicked",
+    "editAcceptanceCriteria",
+    "AcceptanceCriteria",
+    "deleteAcceptanceCriteria"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -190,7 +199,7 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      41,   14, // methods
+      43,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -198,62 +207,64 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  260,    2, 0x08,    1 /* Private */,
-       3,    0,  261,    2, 0x08,    2 /* Private */,
-       4,    1,  262,    2, 0x08,    3 /* Private */,
-       6,    0,  265,    2, 0x08,    5 /* Private */,
-       7,    0,  266,    2, 0x08,    6 /* Private */,
-       8,    0,  267,    2, 0x08,    7 /* Private */,
-       9,    0,  268,    2, 0x08,    8 /* Private */,
-      10,    1,  269,    2, 0x08,    9 /* Private */,
-      12,    1,  272,    2, 0x08,   11 /* Private */,
-      14,    0,  275,    2, 0x08,   13 /* Private */,
-      15,    0,  276,    2, 0x08,   14 /* Private */,
-      16,    1,  277,    2, 0x08,   15 /* Private */,
-      18,    0,  280,    2, 0x08,   17 /* Private */,
-      19,    1,  281,    2, 0x08,   18 /* Private */,
-      21,    0,  284,    2, 0x08,   20 /* Private */,
-      22,    0,  285,    2, 0x08,   21 /* Private */,
-      23,    0,  286,    2, 0x08,   22 /* Private */,
-      24,    0,  287,    2, 0x08,   23 /* Private */,
-      25,    0,  288,    2, 0x08,   24 /* Private */,
-      26,    0,  289,    2, 0x08,   25 /* Private */,
-      27,    0,  290,    2, 0x08,   26 /* Private */,
-      28,    0,  291,    2, 0x08,   27 /* Private */,
-      29,    0,  292,    2, 0x08,   28 /* Private */,
-      30,    0,  293,    2, 0x08,   29 /* Private */,
-      31,    0,  294,    2, 0x08,   30 /* Private */,
-      32,    0,  295,    2, 0x08,   31 /* Private */,
-      33,    0,  296,    2, 0x08,   32 /* Private */,
-      34,    0,  297,    2, 0x08,   33 /* Private */,
-      35,    0,  298,    2, 0x08,   34 /* Private */,
-      36,    0,  299,    2, 0x08,   35 /* Private */,
-      37,    0,  300,    2, 0x08,   36 /* Private */,
-      38,    0,  301,    2, 0x08,   37 /* Private */,
-      39,    0,  302,    2, 0x08,   38 /* Private */,
-      40,    0,  303,    2, 0x08,   39 /* Private */,
-      42,    0,  304,    2, 0x08,   40 /* Private */,
-      43,    0,  305,    2, 0x08,   41 /* Private */,
-      44,    0,  306,    2, 0x08,   42 /* Private */,
-      45,    1,  307,    2, 0x08,   43 /* Private */,
-      46,    1,  310,    2, 0x08,   45 /* Private */,
-      47,    1,  313,    2, 0x08,   47 /* Private */,
-      48,    1,  316,    2, 0x08,   49 /* Private */,
+       1,    0,  272,    2, 0x08,    1 /* Private */,
+       3,    0,  273,    2, 0x08,    2 /* Private */,
+       4,    0,  274,    2, 0x08,    3 /* Private */,
+       5,    0,  275,    2, 0x08,    4 /* Private */,
+       6,    0,  276,    2, 0x08,    5 /* Private */,
+       7,    0,  277,    2, 0x08,    6 /* Private */,
+       8,    1,  278,    2, 0x08,    7 /* Private */,
+      10,    1,  281,    2, 0x08,    9 /* Private */,
+      12,    0,  284,    2, 0x08,   11 /* Private */,
+      13,    0,  285,    2, 0x08,   12 /* Private */,
+      14,    1,  286,    2, 0x08,   13 /* Private */,
+      16,    0,  289,    2, 0x08,   15 /* Private */,
+      17,    1,  290,    2, 0x08,   16 /* Private */,
+      19,    1,  293,    2, 0x08,   18 /* Private */,
+      21,    0,  296,    2, 0x08,   20 /* Private */,
+      22,    0,  297,    2, 0x08,   21 /* Private */,
+      23,    0,  298,    2, 0x08,   22 /* Private */,
+      24,    0,  299,    2, 0x08,   23 /* Private */,
+      25,    0,  300,    2, 0x08,   24 /* Private */,
+      26,    0,  301,    2, 0x08,   25 /* Private */,
+      27,    0,  302,    2, 0x08,   26 /* Private */,
+      28,    0,  303,    2, 0x08,   27 /* Private */,
+      29,    0,  304,    2, 0x08,   28 /* Private */,
+      30,    0,  305,    2, 0x08,   29 /* Private */,
+      31,    0,  306,    2, 0x08,   30 /* Private */,
+      32,    0,  307,    2, 0x08,   31 /* Private */,
+      33,    0,  308,    2, 0x08,   32 /* Private */,
+      34,    0,  309,    2, 0x08,   33 /* Private */,
+      35,    0,  310,    2, 0x08,   34 /* Private */,
+      36,    0,  311,    2, 0x08,   35 /* Private */,
+      37,    0,  312,    2, 0x08,   36 /* Private */,
+      38,    0,  313,    2, 0x08,   37 /* Private */,
+      39,    0,  314,    2, 0x08,   38 /* Private */,
+      40,    0,  315,    2, 0x08,   39 /* Private */,
+      42,    0,  316,    2, 0x08,   40 /* Private */,
+      43,    0,  317,    2, 0x08,   41 /* Private */,
+      44,    0,  318,    2, 0x08,   42 /* Private */,
+      45,    1,  319,    2, 0x08,   43 /* Private */,
+      46,    1,  322,    2, 0x08,   45 /* Private */,
+      47,    1,  325,    2, 0x08,   47 /* Private */,
+      48,    1,  328,    2, 0x08,   49 /* Private */,
+      49,    1,  331,    2, 0x08,   51 /* Private */,
+      51,    1,  334,    2, 0x08,   53 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,    5,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 9,    2,
     QMetaType::Void, 0x80000000 | 11,    2,
-    QMetaType::Void, 0x80000000 | 13,    2,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 17,    2,
+    QMetaType::Void, 0x80000000 | 15,    2,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 18,    2,
     QMetaType::Void, 0x80000000 | 20,    2,
     QMetaType::Void,
     QMetaType::Void,
@@ -278,10 +289,12 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 20,    2,
-    QMetaType::Void, 0x80000000 | 17,    2,
-    QMetaType::Void, 0x80000000 | 13,    2,
+    QMetaType::Void, 0x80000000 | 18,    2,
+    QMetaType::Void, 0x80000000 | 15,    2,
     QMetaType::Void, 0x80000000 | 11,    2,
+    QMetaType::Void, 0x80000000 | 9,    2,
+    QMetaType::Void, 0x80000000 | 50,    2,
+    QMetaType::Void, 0x80000000 | 50,    2,
 
        0        // eod
 };
@@ -299,9 +312,6 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_mainPageButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_mainPageButton_toggled'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'on_saveProfileButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_logOutButton_clicked'
@@ -328,6 +338,9 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         // method 'onSubTaskClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<SubTask, std::false_type>,
+        // method 'deleteLayout'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QLayout *, std::false_type>,
         // method 'on_editStoryName_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_editStoryDueDate_clicked'
@@ -385,7 +398,13 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<Epic, std::false_type>,
         // method 'onDeleteProjectClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Project, std::false_type>
+        QtPrivate::TypeAndForceComplete<Project, std::false_type>,
+        // method 'editAcceptanceCriteria'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<AcceptanceCriteria, std::false_type>,
+        // method 'deleteAcceptanceCriteria'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<AcceptanceCriteria, std::false_type>
     >,
     nullptr
 } };
@@ -398,18 +417,18 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: _t->on_profileButton_clicked(); break;
         case 1: _t->on_mainPageButton_clicked(); break;
-        case 2: _t->on_mainPageButton_toggled((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 3: _t->on_saveProfileButton_clicked(); break;
-        case 4: _t->on_logOutButton_clicked(); break;
-        case 5: _t->on_teamButton_clicked(); break;
-        case 6: _t->on_projectsButton_clicked(); break;
-        case 7: _t->onProjectClicked((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
-        case 8: _t->onEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic>>(_a[1]))); break;
-        case 9: _t->on_backButton_clicked(); break;
-        case 10: _t->on_epicBackButton_clicked(); break;
-        case 11: _t->onStoryClicked((*reinterpret_cast< std::add_pointer_t<Story>>(_a[1]))); break;
-        case 12: _t->on_storyBackButton_clicked(); break;
-        case 13: _t->onSubTaskClicked((*reinterpret_cast< std::add_pointer_t<SubTask>>(_a[1]))); break;
+        case 2: _t->on_saveProfileButton_clicked(); break;
+        case 3: _t->on_logOutButton_clicked(); break;
+        case 4: _t->on_teamButton_clicked(); break;
+        case 5: _t->on_projectsButton_clicked(); break;
+        case 6: _t->onProjectClicked((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
+        case 7: _t->onEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic>>(_a[1]))); break;
+        case 8: _t->on_backButton_clicked(); break;
+        case 9: _t->on_epicBackButton_clicked(); break;
+        case 10: _t->onStoryClicked((*reinterpret_cast< std::add_pointer_t<Story>>(_a[1]))); break;
+        case 11: _t->on_storyBackButton_clicked(); break;
+        case 12: _t->onSubTaskClicked((*reinterpret_cast< std::add_pointer_t<SubTask>>(_a[1]))); break;
+        case 13: _t->deleteLayout((*reinterpret_cast< std::add_pointer_t<QLayout*>>(_a[1]))); break;
         case 14: _t->on_editStoryName_clicked(); break;
         case 15: _t->on_editStoryDueDate_clicked(); break;
         case 16: _t->on_editStoryStatus_clicked(); break;
@@ -441,7 +460,20 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 38: _t->onDeleteStoryClicked((*reinterpret_cast< std::add_pointer_t<Story>>(_a[1]))); break;
         case 39: _t->onDeleteEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic>>(_a[1]))); break;
         case 40: _t->onDeleteProjectClicked((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
+        case 41: _t->editAcceptanceCriteria((*reinterpret_cast< std::add_pointer_t<AcceptanceCriteria>>(_a[1]))); break;
+        case 42: _t->deleteAcceptanceCriteria((*reinterpret_cast< std::add_pointer_t<AcceptanceCriteria>>(_a[1]))); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 13:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QLayout* >(); break;
+            }
+            break;
         }
     }
 }
@@ -465,13 +497,13 @@ int HomePage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 41)
+        if (_id < 43)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 41;
+        _id -= 43;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 41)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 41;
+        if (_id < 43)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 43;
     }
     return _id;
 }
