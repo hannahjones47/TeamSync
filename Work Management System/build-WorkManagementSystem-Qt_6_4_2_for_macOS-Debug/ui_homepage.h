@@ -79,7 +79,10 @@ public:
     QPushButton *editProjectDescription;
     QSpacerItem *horizontalSpacer_10;
     QLabel *descriptionLabel;
+    QHBoxLayout *horizontalLayout_13;
     QLabel *ACLabel;
+    QSpacerItem *horizontalSpacer_20;
+    QPushButton *addProjectACButton;
     QVBoxLayout *acceptanceCriteriaLayout;
     QHBoxLayout *horizontalLayout_9;
     QLabel *epicLabel;
@@ -117,7 +120,10 @@ public:
     QPushButton *editEpicDescription;
     QSpacerItem *horizontalSpacer_15;
     QLabel *epicDescriptionLabel;
+    QHBoxLayout *horizontalLayout_14;
     QLabel *epicACLabel;
+    QSpacerItem *horizontalSpacer_21;
+    QPushButton *addEpicACButton;
     QVBoxLayout *epicAcceptanceCriteriaLayout;
     QHBoxLayout *horizontalLayout_10;
     QLabel *storyLabel;
@@ -156,7 +162,10 @@ public:
     QPushButton *editStoryDescription;
     QSpacerItem *horizontalSpacer;
     QLabel *storyDescriptionLabel;
+    QHBoxLayout *horizontalLayout_12;
     QLabel *storyACLabel;
+    QSpacerItem *horizontalSpacer_19;
+    QPushButton *addStoryACButton;
     QVBoxLayout *storyAcceptanceCriteriaLayout;
     QHBoxLayout *horizontalLayout_11;
     QLabel *subtaskLabel;
@@ -354,10 +363,11 @@ public:
 "QScrollBar::sub-line:vertical {\n"
 "    background: none;\n"
 "}\n"
-"\n"
 "QPushButton {\n"
-"background-color: transparent;\n"
+"	text-align: right;\n"
 "}\n"
+"\n"
+"\n"
 ""));
         teamMemberScrollArea->setLineWidth(0);
         teamMemberScrollArea->setWidgetResizable(true);
@@ -918,6 +928,8 @@ public:
 
         verticalLayout->addWidget(descriptionLabel);
 
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setObjectName("horizontalLayout_13");
         ACLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         ACLabel->setObjectName("ACLabel");
         sizePolicy3.setHeightForWidth(ACLabel->sizePolicy().hasHeightForWidth());
@@ -926,7 +938,20 @@ public:
         ACLabel->setMaximumSize(QSize(300, 16777215));
         ACLabel->setFont(font3);
 
-        verticalLayout->addWidget(ACLabel);
+        horizontalLayout_13->addWidget(ACLabel);
+
+        horizontalSpacer_20 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_13->addItem(horizontalSpacer_20);
+
+        addProjectACButton = new QPushButton(projectDetailScrollAreaWidgetContents);
+        addProjectACButton->setObjectName("addProjectACButton");
+        addProjectACButton->setMinimumSize(QSize(80, 0));
+
+        horizontalLayout_13->addWidget(addProjectACButton);
+
+
+        verticalLayout->addLayout(horizontalLayout_13);
 
         acceptanceCriteriaLayout = new QVBoxLayout();
         acceptanceCriteriaLayout->setObjectName("acceptanceCriteriaLayout");
@@ -1340,6 +1365,8 @@ public:
 
         verticalLayout_2->addWidget(epicDescriptionLabel);
 
+        horizontalLayout_14 = new QHBoxLayout();
+        horizontalLayout_14->setObjectName("horizontalLayout_14");
         epicACLabel = new QLabel(epicDetailScrollAreaContents);
         epicACLabel->setObjectName("epicACLabel");
         sizePolicy3.setHeightForWidth(epicACLabel->sizePolicy().hasHeightForWidth());
@@ -1348,7 +1375,20 @@ public:
         epicACLabel->setMaximumSize(QSize(300, 16777215));
         epicACLabel->setFont(font3);
 
-        verticalLayout_2->addWidget(epicACLabel);
+        horizontalLayout_14->addWidget(epicACLabel);
+
+        horizontalSpacer_21 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_14->addItem(horizontalSpacer_21);
+
+        addEpicACButton = new QPushButton(epicDetailScrollAreaContents);
+        addEpicACButton->setObjectName("addEpicACButton");
+        addEpicACButton->setMinimumSize(QSize(80, 0));
+
+        horizontalLayout_14->addWidget(addEpicACButton);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_14);
 
         epicAcceptanceCriteriaLayout = new QVBoxLayout();
         epicAcceptanceCriteriaLayout->setObjectName("epicAcceptanceCriteriaLayout");
@@ -1786,6 +1826,8 @@ public:
 
         verticalLayout_3->addWidget(storyDescriptionLabel);
 
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setObjectName("horizontalLayout_12");
         storyACLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyACLabel->setObjectName("storyACLabel");
         sizePolicy3.setHeightForWidth(storyACLabel->sizePolicy().hasHeightForWidth());
@@ -1794,7 +1836,20 @@ public:
         storyACLabel->setMaximumSize(QSize(300, 16777215));
         storyACLabel->setFont(font3);
 
-        verticalLayout_3->addWidget(storyACLabel);
+        horizontalLayout_12->addWidget(storyACLabel);
+
+        horizontalSpacer_19 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_12->addItem(horizontalSpacer_19);
+
+        addStoryACButton = new QPushButton(storyDetailScrollAreaWidgetContents);
+        addStoryACButton->setObjectName("addStoryACButton");
+        addStoryACButton->setMinimumSize(QSize(80, 0));
+
+        horizontalLayout_12->addWidget(addStoryACButton);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_12);
 
         storyAcceptanceCriteriaLayout = new QVBoxLayout();
         storyAcceptanceCriteriaLayout->setObjectName("storyAcceptanceCriteriaLayout");
@@ -2137,7 +2192,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(5);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -2170,8 +2225,9 @@ public:
         editProjectDescription->setText(QString());
         descriptionLabel->setText(QCoreApplication::translate("HomePage", "Description placeholder", nullptr));
         ACLabel->setText(QCoreApplication::translate("HomePage", "Acceptance criteria:", nullptr));
+        addProjectACButton->setText(QCoreApplication::translate("HomePage", "Add new acceptance criteria", nullptr));
         epicLabel->setText(QCoreApplication::translate("HomePage", "Epics:", nullptr));
-        addEpicButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
+        addEpicButton->setText(QCoreApplication::translate("HomePage", "Add new epic", nullptr));
         locationDesc_2->setText(QCoreApplication::translate("HomePage", "Projects", nullptr));
         colourLocationLabel_2->setText(QString());
         epicNameLabel->setText(QCoreApplication::translate("HomePage", "Epic name placeholder", nullptr));
@@ -2189,8 +2245,9 @@ public:
         editEpicDescription->setText(QString());
         epicDescriptionLabel->setText(QCoreApplication::translate("HomePage", "Description placeholder", nullptr));
         epicACLabel->setText(QCoreApplication::translate("HomePage", "Acceptance criteria:", nullptr));
+        addEpicACButton->setText(QCoreApplication::translate("HomePage", "Add new acceptance criteria", nullptr));
         storyLabel->setText(QCoreApplication::translate("HomePage", "Stories:", nullptr));
-        addStoryButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
+        addStoryButton->setText(QCoreApplication::translate("HomePage", "Add new story", nullptr));
         epicBackButton->setText(QString());
         locationDesc->setText(QCoreApplication::translate("HomePage", "Projects > Epics", nullptr));
         colourLocationLabel->setText(QString());
@@ -2209,8 +2266,9 @@ public:
         editStoryDescription->setText(QString());
         storyDescriptionLabel->setText(QCoreApplication::translate("HomePage", "Description placeholder", nullptr));
         storyACLabel->setText(QCoreApplication::translate("HomePage", "Acceptance criteria:", nullptr));
+        addStoryACButton->setText(QCoreApplication::translate("HomePage", "Add new acceptance criteria", nullptr));
         subtaskLabel->setText(QCoreApplication::translate("HomePage", "Sub-tasks:", nullptr));
-        addSubTaskButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
+        addSubTaskButton->setText(QCoreApplication::translate("HomePage", "Add new sub-task", nullptr));
         storyBackButton->setText(QString());
         locationDesc_3->setText(QCoreApplication::translate("HomePage", "Projects > Epics > Stories", nullptr));
         colourLocationLabel_3->setText(QString());
