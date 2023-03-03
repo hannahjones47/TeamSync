@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_HomePage_t {
-    uint offsetsAndSizes[116];
+    uint offsetsAndSizes[130];
     char stringdata0[9];
     char stringdata1[25];
     char stringdata2[1];
@@ -85,6 +85,13 @@ struct qt_meta_stringdata_HomePage_t {
     char stringdata55[36];
     char stringdata56[5];
     char stringdata57[29];
+    char stringdata58[27];
+    char stringdata59[29];
+    char stringdata60[24];
+    char stringdata61[30];
+    char stringdata62[29];
+    char stringdata63[31];
+    char stringdata64[34];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_HomePage_t::offsetsAndSizes) + ofs), len 
@@ -147,7 +154,14 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
         QT_MOC_LITERAL(1172, 29),  // "on_addProjectACButton_clicked"
         QT_MOC_LITERAL(1202, 35),  // "onDemoteToStandardUserButtonC..."
         QT_MOC_LITERAL(1238, 4),  // "User"
-        QT_MOC_LITERAL(1243, 28)   // "onTurnIntoAdminButtonClicked"
+        QT_MOC_LITERAL(1243, 28),  // "onTurnIntoAdminButtonClicked"
+        QT_MOC_LITERAL(1272, 26),  // "on_editSubTaskName_clicked"
+        QT_MOC_LITERAL(1299, 28),  // "on_subTaskBackButton_clicked"
+        QT_MOC_LITERAL(1328, 23),  // "on_editAssignee_clicked"
+        QT_MOC_LITERAL(1352, 29),  // "on_editSubTaskDueDate_clicked"
+        QT_MOC_LITERAL(1382, 28),  // "on_editSubTaskStatus_clicked"
+        QT_MOC_LITERAL(1411, 30),  // "on_editSubTaskPriority_clicked"
+        QT_MOC_LITERAL(1442, 33)   // "on_editSubTaskDescription_cli..."
     },
     "HomePage",
     "on_profileButton_clicked",
@@ -206,7 +220,14 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "on_addProjectACButton_clicked",
     "onDemoteToStandardUserButtonClicked",
     "User",
-    "onTurnIntoAdminButtonClicked"
+    "onTurnIntoAdminButtonClicked",
+    "on_editSubTaskName_clicked",
+    "on_subTaskBackButton_clicked",
+    "on_editAssignee_clicked",
+    "on_editSubTaskDueDate_clicked",
+    "on_editSubTaskStatus_clicked",
+    "on_editSubTaskPriority_clicked",
+    "on_editSubTaskDescription_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -217,7 +238,7 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      48,   14, // methods
+      55,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -225,54 +246,61 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  302,    2, 0x08,    1 /* Private */,
-       3,    0,  303,    2, 0x08,    2 /* Private */,
-       4,    0,  304,    2, 0x08,    3 /* Private */,
-       5,    0,  305,    2, 0x08,    4 /* Private */,
-       6,    0,  306,    2, 0x08,    5 /* Private */,
-       7,    0,  307,    2, 0x08,    6 /* Private */,
-       8,    1,  308,    2, 0x08,    7 /* Private */,
-      10,    1,  311,    2, 0x08,    9 /* Private */,
-      12,    0,  314,    2, 0x08,   11 /* Private */,
-      13,    0,  315,    2, 0x08,   12 /* Private */,
-      14,    1,  316,    2, 0x08,   13 /* Private */,
-      16,    0,  319,    2, 0x08,   15 /* Private */,
-      17,    1,  320,    2, 0x08,   16 /* Private */,
-      19,    1,  323,    2, 0x08,   18 /* Private */,
-      21,    0,  326,    2, 0x08,   20 /* Private */,
-      22,    0,  327,    2, 0x08,   21 /* Private */,
-      23,    0,  328,    2, 0x08,   22 /* Private */,
-      24,    0,  329,    2, 0x08,   23 /* Private */,
-      25,    0,  330,    2, 0x08,   24 /* Private */,
-      26,    0,  331,    2, 0x08,   25 /* Private */,
-      27,    0,  332,    2, 0x08,   26 /* Private */,
-      28,    0,  333,    2, 0x08,   27 /* Private */,
-      29,    0,  334,    2, 0x08,   28 /* Private */,
-      30,    0,  335,    2, 0x08,   29 /* Private */,
-      31,    0,  336,    2, 0x08,   30 /* Private */,
-      32,    0,  337,    2, 0x08,   31 /* Private */,
-      33,    0,  338,    2, 0x08,   32 /* Private */,
-      34,    0,  339,    2, 0x08,   33 /* Private */,
-      35,    0,  340,    2, 0x08,   34 /* Private */,
-      36,    0,  341,    2, 0x08,   35 /* Private */,
-      37,    0,  342,    2, 0x08,   36 /* Private */,
-      38,    0,  343,    2, 0x08,   37 /* Private */,
-      39,    0,  344,    2, 0x08,   38 /* Private */,
-      40,    0,  345,    2, 0x08,   39 /* Private */,
-      42,    0,  346,    2, 0x08,   40 /* Private */,
-      43,    0,  347,    2, 0x08,   41 /* Private */,
-      44,    0,  348,    2, 0x08,   42 /* Private */,
-      45,    1,  349,    2, 0x08,   43 /* Private */,
-      46,    1,  352,    2, 0x08,   45 /* Private */,
-      47,    1,  355,    2, 0x08,   47 /* Private */,
-      48,    1,  358,    2, 0x08,   49 /* Private */,
-      49,    1,  361,    2, 0x08,   51 /* Private */,
-      51,    1,  364,    2, 0x08,   53 /* Private */,
-      52,    0,  367,    2, 0x08,   55 /* Private */,
-      53,    0,  368,    2, 0x08,   56 /* Private */,
-      54,    0,  369,    2, 0x08,   57 /* Private */,
-      55,    1,  370,    2, 0x08,   58 /* Private */,
-      57,    1,  373,    2, 0x08,   60 /* Private */,
+       1,    0,  344,    2, 0x08,    1 /* Private */,
+       3,    0,  345,    2, 0x08,    2 /* Private */,
+       4,    0,  346,    2, 0x08,    3 /* Private */,
+       5,    0,  347,    2, 0x08,    4 /* Private */,
+       6,    0,  348,    2, 0x08,    5 /* Private */,
+       7,    0,  349,    2, 0x08,    6 /* Private */,
+       8,    1,  350,    2, 0x08,    7 /* Private */,
+      10,    1,  353,    2, 0x08,    9 /* Private */,
+      12,    0,  356,    2, 0x08,   11 /* Private */,
+      13,    0,  357,    2, 0x08,   12 /* Private */,
+      14,    1,  358,    2, 0x08,   13 /* Private */,
+      16,    0,  361,    2, 0x08,   15 /* Private */,
+      17,    1,  362,    2, 0x08,   16 /* Private */,
+      19,    1,  365,    2, 0x08,   18 /* Private */,
+      21,    0,  368,    2, 0x08,   20 /* Private */,
+      22,    0,  369,    2, 0x08,   21 /* Private */,
+      23,    0,  370,    2, 0x08,   22 /* Private */,
+      24,    0,  371,    2, 0x08,   23 /* Private */,
+      25,    0,  372,    2, 0x08,   24 /* Private */,
+      26,    0,  373,    2, 0x08,   25 /* Private */,
+      27,    0,  374,    2, 0x08,   26 /* Private */,
+      28,    0,  375,    2, 0x08,   27 /* Private */,
+      29,    0,  376,    2, 0x08,   28 /* Private */,
+      30,    0,  377,    2, 0x08,   29 /* Private */,
+      31,    0,  378,    2, 0x08,   30 /* Private */,
+      32,    0,  379,    2, 0x08,   31 /* Private */,
+      33,    0,  380,    2, 0x08,   32 /* Private */,
+      34,    0,  381,    2, 0x08,   33 /* Private */,
+      35,    0,  382,    2, 0x08,   34 /* Private */,
+      36,    0,  383,    2, 0x08,   35 /* Private */,
+      37,    0,  384,    2, 0x08,   36 /* Private */,
+      38,    0,  385,    2, 0x08,   37 /* Private */,
+      39,    0,  386,    2, 0x08,   38 /* Private */,
+      40,    0,  387,    2, 0x08,   39 /* Private */,
+      42,    0,  388,    2, 0x08,   40 /* Private */,
+      43,    0,  389,    2, 0x08,   41 /* Private */,
+      44,    0,  390,    2, 0x08,   42 /* Private */,
+      45,    1,  391,    2, 0x08,   43 /* Private */,
+      46,    1,  394,    2, 0x08,   45 /* Private */,
+      47,    1,  397,    2, 0x08,   47 /* Private */,
+      48,    1,  400,    2, 0x08,   49 /* Private */,
+      49,    1,  403,    2, 0x08,   51 /* Private */,
+      51,    1,  406,    2, 0x08,   53 /* Private */,
+      52,    0,  409,    2, 0x08,   55 /* Private */,
+      53,    0,  410,    2, 0x08,   56 /* Private */,
+      54,    0,  411,    2, 0x08,   57 /* Private */,
+      55,    1,  412,    2, 0x08,   58 /* Private */,
+      57,    1,  415,    2, 0x08,   60 /* Private */,
+      58,    0,  418,    2, 0x08,   62 /* Private */,
+      59,    0,  419,    2, 0x08,   63 /* Private */,
+      60,    0,  420,    2, 0x08,   64 /* Private */,
+      61,    0,  421,    2, 0x08,   65 /* Private */,
+      62,    0,  422,    2, 0x08,   66 /* Private */,
+      63,    0,  423,    2, 0x08,   67 /* Private */,
+      64,    0,  424,    2, 0x08,   68 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -323,6 +351,13 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 56,    2,
     QMetaType::Void, 0x80000000 | 56,    2,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -444,7 +479,21 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<User, std::false_type>,
         // method 'onTurnIntoAdminButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<User, std::false_type>
+        QtPrivate::TypeAndForceComplete<User, std::false_type>,
+        // method 'on_editSubTaskName_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_subTaskBackButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editAssignee_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editSubTaskDueDate_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editSubTaskStatus_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editSubTaskPriority_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editSubTaskDescription_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -507,6 +556,13 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 45: _t->on_addProjectACButton_clicked(); break;
         case 46: _t->onDemoteToStandardUserButtonClicked((*reinterpret_cast< std::add_pointer_t<User>>(_a[1]))); break;
         case 47: _t->onTurnIntoAdminButtonClicked((*reinterpret_cast< std::add_pointer_t<User>>(_a[1]))); break;
+        case 48: _t->on_editSubTaskName_clicked(); break;
+        case 49: _t->on_subTaskBackButton_clicked(); break;
+        case 50: _t->on_editAssignee_clicked(); break;
+        case 51: _t->on_editSubTaskDueDate_clicked(); break;
+        case 52: _t->on_editSubTaskStatus_clicked(); break;
+        case 53: _t->on_editSubTaskPriority_clicked(); break;
+        case 54: _t->on_editSubTaskDescription_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -542,13 +598,13 @@ int HomePage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 48)
+        if (_id < 55)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 48;
+        _id -= 55;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 48)
+        if (_id < 55)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 48;
+        _id -= 55;
     }
     return _id;
 }
