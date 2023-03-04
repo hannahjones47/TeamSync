@@ -237,12 +237,29 @@ public:
     QLabel *jobRoleLabel;
     QLineEdit *jobRoleInput;
     QPushButton *saveProfileButton;
+    QWidget *myWorkPage;
+    QLabel *myTasksTitle;
+    QScrollArea *epicDetailScrollArea_2;
+    QWidget *epicDetailScrollAreaContents_2;
+    QVBoxLayout *verticalLayout_6;
+    QLabel *myTasksTitle_2;
+    QVBoxLayout *notStartedTaskLayout;
+    QLabel *myTasksTitle_3;
+    QVBoxLayout *planningTaskLayout;
+    QLabel *myTasksTitle_4;
+    QVBoxLayout *inProgressLayout;
+    QLabel *myTasksTitle_5;
+    QVBoxLayout *blockedLayout;
+    QLabel *myTasksTitle_6;
+    QVBoxLayout *completeLayout;
+    QSpacerItem *verticalSpacer_5;
     QFrame *frame;
     QVBoxLayout *navBarLayout;
     QPushButton *mainPageButton;
     QPushButton *profileButton;
     QPushButton *projectsButton;
     QPushButton *teamButton;
+    QPushButton *myWorkButton;
     QPushButton *logOutButton;
     QPushButton *logoButton;
     QLabel *navBarBackground;
@@ -2537,6 +2554,154 @@ public:
         profileLayout->addWidget(saveProfileButton);
 
         stackedWidget->addWidget(Profile);
+        myWorkPage = new QWidget();
+        myWorkPage->setObjectName("myWorkPage");
+        myTasksTitle = new QLabel(myWorkPage);
+        myTasksTitle->setObjectName("myTasksTitle");
+        myTasksTitle->setGeometry(QRect(80, 50, 191, 51));
+        myTasksTitle->setFont(font);
+        epicDetailScrollArea_2 = new QScrollArea(myWorkPage);
+        epicDetailScrollArea_2->setObjectName("epicDetailScrollArea_2");
+        epicDetailScrollArea_2->setGeometry(QRect(40, 100, 661, 500));
+        sizePolicy.setHeightForWidth(epicDetailScrollArea_2->sizePolicy().hasHeightForWidth());
+        epicDetailScrollArea_2->setSizePolicy(sizePolicy);
+        epicDetailScrollArea_2->setMinimumSize(QSize(550, 500));
+        QPalette palette32;
+        palette32.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette32.setBrush(QPalette::Active, QPalette::Base, brush1);
+        QBrush brush33(QColor(0, 0, 0, 255));
+        brush33.setStyle(Qt::NoBrush);
+        palette32.setBrush(QPalette::Active, QPalette::Window, brush33);
+        palette32.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette32.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        QBrush brush34(QColor(0, 0, 0, 255));
+        brush34.setStyle(Qt::NoBrush);
+        palette32.setBrush(QPalette::Inactive, QPalette::Window, brush34);
+        palette32.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette32.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        QBrush brush35(QColor(0, 0, 0, 255));
+        brush35.setStyle(Qt::NoBrush);
+        palette32.setBrush(QPalette::Disabled, QPalette::Window, brush35);
+        epicDetailScrollArea_2->setPalette(palette32);
+        epicDetailScrollArea_2->setFocusPolicy(Qt::NoFocus);
+        epicDetailScrollArea_2->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
+"    background-color: white;\n"
+"    border: solid;\n"
+"    border-color: rgb(229, 242, 255);\n"
+"    border-width: 2px;\n"
+"}\n"
+"QScrollArea QWidget {\n"
+"    background-color: transparent;\n"
+"}\n"
+"QScrollBar:vertical {\n"
+"    border: none;\n"
+"    background: none;\n"
+"    width: 10px;\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"    background-color: #666666;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"QScrollBar::handle:vertical:hover {\n"
+"    background-color: #b8b8b8;\n"
+"}\n"
+"QScrollBar::add-line:vertical {\n"
+"    background: none;\n"
+"}\n"
+"QScrollBar::sub-line:vertical {\n"
+"    background: none;\n"
+"}\n"
+"QPushButton {\n"
+"    border: 1px solid #8f8f91;\n"
+"    border-radius: 3px;\n"
+"    padding: 5px 10px;\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(218, 230, 255), stop:1 #f6f7fa);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    b"
+                        "ackground-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(172, 181, 224), stop:1 #c4c6ca);\n"
+"}\n"
+""));
+        epicDetailScrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        epicDetailScrollArea_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        epicDetailScrollArea_2->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        epicDetailScrollArea_2->setWidgetResizable(true);
+        epicDetailScrollAreaContents_2 = new QWidget();
+        epicDetailScrollAreaContents_2->setObjectName("epicDetailScrollAreaContents_2");
+        epicDetailScrollAreaContents_2->setGeometry(QRect(0, 0, 647, 700));
+        sizePolicy1.setHeightForWidth(epicDetailScrollAreaContents_2->sizePolicy().hasHeightForWidth());
+        epicDetailScrollAreaContents_2->setSizePolicy(sizePolicy1);
+        epicDetailScrollAreaContents_2->setMinimumSize(QSize(647, 700));
+        verticalLayout_6 = new QVBoxLayout(epicDetailScrollAreaContents_2);
+        verticalLayout_6->setObjectName("verticalLayout_6");
+        myTasksTitle_2 = new QLabel(epicDetailScrollAreaContents_2);
+        myTasksTitle_2->setObjectName("myTasksTitle_2");
+        QFont font7;
+        font7.setFamilies({QString::fromUtf8("Avenir")});
+        font7.setPointSize(21);
+        font7.setBold(false);
+        myTasksTitle_2->setFont(font7);
+
+        verticalLayout_6->addWidget(myTasksTitle_2);
+
+        notStartedTaskLayout = new QVBoxLayout();
+        notStartedTaskLayout->setObjectName("notStartedTaskLayout");
+
+        verticalLayout_6->addLayout(notStartedTaskLayout);
+
+        myTasksTitle_3 = new QLabel(epicDetailScrollAreaContents_2);
+        myTasksTitle_3->setObjectName("myTasksTitle_3");
+        myTasksTitle_3->setFont(font7);
+
+        verticalLayout_6->addWidget(myTasksTitle_3);
+
+        planningTaskLayout = new QVBoxLayout();
+        planningTaskLayout->setObjectName("planningTaskLayout");
+
+        verticalLayout_6->addLayout(planningTaskLayout);
+
+        myTasksTitle_4 = new QLabel(epicDetailScrollAreaContents_2);
+        myTasksTitle_4->setObjectName("myTasksTitle_4");
+        myTasksTitle_4->setFont(font7);
+
+        verticalLayout_6->addWidget(myTasksTitle_4);
+
+        inProgressLayout = new QVBoxLayout();
+        inProgressLayout->setObjectName("inProgressLayout");
+
+        verticalLayout_6->addLayout(inProgressLayout);
+
+        myTasksTitle_5 = new QLabel(epicDetailScrollAreaContents_2);
+        myTasksTitle_5->setObjectName("myTasksTitle_5");
+        myTasksTitle_5->setFont(font7);
+
+        verticalLayout_6->addWidget(myTasksTitle_5);
+
+        blockedLayout = new QVBoxLayout();
+        blockedLayout->setObjectName("blockedLayout");
+
+        verticalLayout_6->addLayout(blockedLayout);
+
+        myTasksTitle_6 = new QLabel(epicDetailScrollAreaContents_2);
+        myTasksTitle_6->setObjectName("myTasksTitle_6");
+        myTasksTitle_6->setFont(font7);
+
+        verticalLayout_6->addWidget(myTasksTitle_6);
+
+        completeLayout = new QVBoxLayout();
+        completeLayout->setObjectName("completeLayout");
+
+        verticalLayout_6->addLayout(completeLayout);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_6->addItem(verticalSpacer_5);
+
+        epicDetailScrollArea_2->setWidget(epicDetailScrollAreaContents_2);
+        stackedWidget->addWidget(myWorkPage);
         frame = new QFrame(HomePage);
         frame->setObjectName("frame");
         frame->setGeometry(QRect(0, 90, 81, 511));
@@ -2546,17 +2711,17 @@ public:
         mainPageButton = new QPushButton(frame);
         mainPageButton->setObjectName("mainPageButton");
         mainPageButton->setMinimumSize(QSize(40, 50));
-        QPalette palette32;
-        palette32.setBrush(QPalette::Active, QPalette::Button, brush20);
-        palette32.setBrush(QPalette::Active, QPalette::Base, brush20);
-        palette32.setBrush(QPalette::Active, QPalette::Window, brush20);
-        palette32.setBrush(QPalette::Inactive, QPalette::Button, brush20);
-        palette32.setBrush(QPalette::Inactive, QPalette::Base, brush20);
-        palette32.setBrush(QPalette::Inactive, QPalette::Window, brush20);
-        palette32.setBrush(QPalette::Disabled, QPalette::Button, brush20);
-        palette32.setBrush(QPalette::Disabled, QPalette::Base, brush20);
-        palette32.setBrush(QPalette::Disabled, QPalette::Window, brush20);
-        mainPageButton->setPalette(palette32);
+        QPalette palette33;
+        palette33.setBrush(QPalette::Active, QPalette::Button, brush20);
+        palette33.setBrush(QPalette::Active, QPalette::Base, brush20);
+        palette33.setBrush(QPalette::Active, QPalette::Window, brush20);
+        palette33.setBrush(QPalette::Inactive, QPalette::Button, brush20);
+        palette33.setBrush(QPalette::Inactive, QPalette::Base, brush20);
+        palette33.setBrush(QPalette::Inactive, QPalette::Window, brush20);
+        palette33.setBrush(QPalette::Disabled, QPalette::Button, brush20);
+        palette33.setBrush(QPalette::Disabled, QPalette::Base, brush20);
+        palette33.setBrush(QPalette::Disabled, QPalette::Window, brush20);
+        mainPageButton->setPalette(palette33);
         mainPageButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);\n"
 "border-radius: 10px 10px 0px 0px;"));
         QIcon icon2;
@@ -2584,17 +2749,17 @@ public:
         projectsButton = new QPushButton(frame);
         projectsButton->setObjectName("projectsButton");
         projectsButton->setMinimumSize(QSize(40, 50));
-        QPalette palette33;
-        palette33.setBrush(QPalette::Active, QPalette::Button, brush20);
-        palette33.setBrush(QPalette::Active, QPalette::Base, brush20);
-        palette33.setBrush(QPalette::Active, QPalette::Window, brush20);
-        palette33.setBrush(QPalette::Inactive, QPalette::Button, brush20);
-        palette33.setBrush(QPalette::Inactive, QPalette::Base, brush20);
-        palette33.setBrush(QPalette::Inactive, QPalette::Window, brush20);
-        palette33.setBrush(QPalette::Disabled, QPalette::Button, brush20);
-        palette33.setBrush(QPalette::Disabled, QPalette::Base, brush20);
-        palette33.setBrush(QPalette::Disabled, QPalette::Window, brush20);
-        projectsButton->setPalette(palette33);
+        QPalette palette34;
+        palette34.setBrush(QPalette::Active, QPalette::Button, brush20);
+        palette34.setBrush(QPalette::Active, QPalette::Base, brush20);
+        palette34.setBrush(QPalette::Active, QPalette::Window, brush20);
+        palette34.setBrush(QPalette::Inactive, QPalette::Button, brush20);
+        palette34.setBrush(QPalette::Inactive, QPalette::Base, brush20);
+        palette34.setBrush(QPalette::Inactive, QPalette::Window, brush20);
+        palette34.setBrush(QPalette::Disabled, QPalette::Button, brush20);
+        palette34.setBrush(QPalette::Disabled, QPalette::Base, brush20);
+        palette34.setBrush(QPalette::Disabled, QPalette::Window, brush20);
+        projectsButton->setPalette(palette34);
         projectsButton->setAutoFillBackground(false);
         projectsButton->setStyleSheet(QString::fromUtf8("\n"
 "    border: none;\n"
@@ -2629,15 +2794,45 @@ public:
 
         navBarLayout->addWidget(teamButton);
 
+        myWorkButton = new QPushButton(frame);
+        myWorkButton->setObjectName("myWorkButton");
+        myWorkButton->setMinimumSize(QSize(40, 50));
+        QPalette palette35;
+        palette35.setBrush(QPalette::Active, QPalette::Button, brush20);
+        palette35.setBrush(QPalette::Active, QPalette::Base, brush20);
+        palette35.setBrush(QPalette::Active, QPalette::Window, brush20);
+        palette35.setBrush(QPalette::Inactive, QPalette::Button, brush20);
+        palette35.setBrush(QPalette::Inactive, QPalette::Base, brush20);
+        palette35.setBrush(QPalette::Inactive, QPalette::Window, brush20);
+        palette35.setBrush(QPalette::Disabled, QPalette::Button, brush20);
+        palette35.setBrush(QPalette::Disabled, QPalette::Base, brush20);
+        palette35.setBrush(QPalette::Disabled, QPalette::Window, brush20);
+        myWorkButton->setPalette(palette35);
+        myWorkButton->setAutoFillBackground(false);
+        myWorkButton->setStyleSheet(QString::fromUtf8("\n"
+"    border: none;\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"	border-radius: 10px 10px 0px 0px;\n"
+"    padding: 0;\n"
+"    margin: 0;\n"
+"\n"
+""));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/Icons/mywork.png"), QSize(), QIcon::Normal, QIcon::Off);
+        myWorkButton->setIcon(icon6);
+        myWorkButton->setIconSize(QSize(45, 45));
+
+        navBarLayout->addWidget(myWorkButton);
+
         logOutButton = new QPushButton(frame);
         logOutButton->setObjectName("logOutButton");
         logOutButton->setMinimumSize(QSize(30, 50));
         logOutButton->setAutoFillBackground(false);
         logOutButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);\n"
 "border-radius: 10px 10px 0px 0px;"));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/Icons/exit.png"), QSize(), QIcon::Normal, QIcon::On);
-        logOutButton->setIcon(icon6);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/Icons/exit.png"), QSize(), QIcon::Normal, QIcon::On);
+        logOutButton->setIcon(icon7);
         logOutButton->setIconSize(QSize(30, 30));
 
         navBarLayout->addWidget(logOutButton);
@@ -2647,33 +2842,34 @@ public:
         profileButton->raise();
         projectsButton->raise();
         teamButton->raise();
+        myWorkButton->raise();
         logoButton = new QPushButton(HomePage);
         logoButton->setObjectName("logoButton");
         logoButton->setGeometry(QRect(10, 10, 65, 66));
         logoButton->setMinimumSize(QSize(50, 50));
         logoButton->setAutoFillBackground(false);
         logoButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/Icons/logo.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon7.addFile(QString::fromUtf8(":/Icons/team.png"), QSize(), QIcon::Normal, QIcon::On);
-        logoButton->setIcon(icon7);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/Icons/logo.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon8.addFile(QString::fromUtf8(":/Icons/team.png"), QSize(), QIcon::Normal, QIcon::On);
+        logoButton->setIcon(icon8);
         logoButton->setIconSize(QSize(50, 50));
         navBarBackground = new QLabel(HomePage);
         navBarBackground->setObjectName("navBarBackground");
         navBarBackground->setGeometry(QRect(-20, 90, 101, 511));
-        QPalette palette34;
-        QBrush brush33(QColor(71, 173, 255, 255));
-        brush33.setStyle(Qt::SolidPattern);
-        palette34.setBrush(QPalette::Active, QPalette::Button, brush33);
-        palette34.setBrush(QPalette::Active, QPalette::Base, brush33);
-        palette34.setBrush(QPalette::Active, QPalette::Window, brush33);
-        palette34.setBrush(QPalette::Inactive, QPalette::Button, brush33);
-        palette34.setBrush(QPalette::Inactive, QPalette::Base, brush33);
-        palette34.setBrush(QPalette::Inactive, QPalette::Window, brush33);
-        palette34.setBrush(QPalette::Disabled, QPalette::Button, brush33);
-        palette34.setBrush(QPalette::Disabled, QPalette::Base, brush33);
-        palette34.setBrush(QPalette::Disabled, QPalette::Window, brush33);
-        navBarBackground->setPalette(palette34);
+        QPalette palette36;
+        QBrush brush36(QColor(71, 173, 255, 255));
+        brush36.setStyle(Qt::SolidPattern);
+        palette36.setBrush(QPalette::Active, QPalette::Button, brush36);
+        palette36.setBrush(QPalette::Active, QPalette::Base, brush36);
+        palette36.setBrush(QPalette::Active, QPalette::Window, brush36);
+        palette36.setBrush(QPalette::Inactive, QPalette::Button, brush36);
+        palette36.setBrush(QPalette::Inactive, QPalette::Base, brush36);
+        palette36.setBrush(QPalette::Inactive, QPalette::Window, brush36);
+        palette36.setBrush(QPalette::Disabled, QPalette::Button, brush36);
+        palette36.setBrush(QPalette::Disabled, QPalette::Base, brush36);
+        palette36.setBrush(QPalette::Disabled, QPalette::Window, brush36);
+        navBarBackground->setPalette(palette36);
         navBarBackground->setStyleSheet(QString::fromUtf8("background-color: rgb(71, 173, 255);\n"
 "border-radius: 10px 10px 0px 0px;\n"
 "/*border-width: 1px;\n"
@@ -2692,8 +2888,8 @@ public:
         horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget2->raise();
-        layoutWidget2->raise();
+        layoutWidget->raise();
+        layoutWidget->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -2701,7 +2897,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -2808,10 +3004,17 @@ public:
         emailLabel->setText(QCoreApplication::translate("HomePage", "Email ", nullptr));
         jobRoleLabel->setText(QCoreApplication::translate("HomePage", "Job role", nullptr));
         saveProfileButton->setText(QCoreApplication::translate("HomePage", "Save", nullptr));
+        myTasksTitle->setText(QCoreApplication::translate("HomePage", "My tasks", nullptr));
+        myTasksTitle_2->setText(QCoreApplication::translate("HomePage", "Not started", nullptr));
+        myTasksTitle_3->setText(QCoreApplication::translate("HomePage", "Planning", nullptr));
+        myTasksTitle_4->setText(QCoreApplication::translate("HomePage", "In progress", nullptr));
+        myTasksTitle_5->setText(QCoreApplication::translate("HomePage", "Blocked", nullptr));
+        myTasksTitle_6->setText(QCoreApplication::translate("HomePage", "Complete", nullptr));
         mainPageButton->setText(QString());
         profileButton->setText(QString());
         projectsButton->setText(QString());
         teamButton->setText(QString());
+        myWorkButton->setText(QString());
         logOutButton->setText(QString());
         logoButton->setText(QString());
         navBarBackground->setText(QString());
