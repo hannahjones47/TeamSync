@@ -63,6 +63,7 @@ SOURCES       = ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetail
 		../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp \
+		../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp \
 		../WorkManagementSystem/Sources/Presentation/loginwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp \
@@ -92,7 +93,7 @@ SOURCES       = ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetail
 		../WorkManagementSystem/Sources/DataAccess/commentdao.cpp \
 		../WorkManagementSystem/Sources/DataTransfer/comment.cpp \
 		../WorkManagementSystem/Sources/Business/commentbl.cpp \
-		../WorkManagementSystem/Sources/Presentation/commentwidget.cpp \
+		../WorkManagementSystem/Sources/Presentation/CustomWidgets/commentwidget.cpp \
 		../WorkManagementSystem/main.cpp \
 		../WorkManagementSystem/Sources/Business/userbl.cpp \
 		../WorkManagementSystem/Sources/Business/teambl.cpp \
@@ -113,6 +114,7 @@ OBJECTS       = epicdetailspage.o \
 		createteamwindow.o \
 		createaccountwindow.o \
 		homepage.o \
+		inputcommentwidget.o \
 		loginwindow.o \
 		uservalidator.o \
 		validator.o \
@@ -301,6 +303,7 @@ DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
 		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/yacc.prf \
 		../../../../Applications/Qt/6.4.2/macos/mkspecs/features/lex.prf \
 		../WorkManagementSystem/WorkManagementSystem.pro ../WorkManagementSystem/Headers/Presentation/homepage.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/inputcommentwidget.h \
 		../WorkManagementSystem/Headers/Presentation/loginwindow.h \
 		../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
 		../WorkManagementSystem/Headers/Presentation/createteamwindow.h \
@@ -337,7 +340,7 @@ DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
 		../WorkManagementSystem/Headers/DataTransfer/comment.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
-		../WorkManagementSystem/Headers/Presentation/commentwidget.h ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp \
 		../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp \
 		../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp \
 		../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp \
@@ -348,6 +351,7 @@ DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
 		../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp \
+		../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp \
 		../WorkManagementSystem/Sources/Presentation/loginwindow.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp \
 		../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp \
@@ -377,7 +381,7 @@ DIST          = ../WorkManagementSystem/Doxygen/Doxyfile \
 		../WorkManagementSystem/Sources/DataAccess/commentdao.cpp \
 		../WorkManagementSystem/Sources/DataTransfer/comment.cpp \
 		../WorkManagementSystem/Sources/Business/commentbl.cpp \
-		../WorkManagementSystem/Sources/Presentation/commentwidget.cpp \
+		../WorkManagementSystem/Sources/Presentation/CustomWidgets/commentwidget.cpp \
 		../WorkManagementSystem/main.cpp \
 		../WorkManagementSystem/Sources/Business/userbl.cpp \
 		../WorkManagementSystem/Sources/Business/teambl.cpp \
@@ -747,8 +751,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/Icons.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../WorkManagementSystem/Headers/Presentation/homepage.h ../WorkManagementSystem/Headers/Presentation/loginwindow.h ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h ../WorkManagementSystem/Headers/Presentation/createteamwindow.h ../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h ../WorkManagementSystem/Headers/Presentation/Validation/validator.h ../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h ../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h ../WorkManagementSystem/Headers/DataAccess/databaseconnection.h ../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h ../WorkManagementSystem/Headers/DataAccess/epicdao.h ../WorkManagementSystem/Headers/DataAccess/storydao.h ../WorkManagementSystem/Headers/DataAccess/teamdao.h ../WorkManagementSystem/Headers/DataAccess/userdao.h ../WorkManagementSystem/Headers/DataAccess/projectdao.h ../WorkManagementSystem/Headers/DataAccess/subtaskdao.h ../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h ../WorkManagementSystem/Headers/global.h ../WorkManagementSystem/Headers/DataTransfer/enum.h ../WorkManagementSystem/Headers/DataTransfer/project.h ../WorkManagementSystem/Headers/DataTransfer/user.h ../WorkManagementSystem/Headers/DataTransfer/team.h ../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h ../WorkManagementSystem/Headers/DataTransfer/epic.h ../WorkManagementSystem/Headers/DataTransfer/workitem.h ../WorkManagementSystem/Headers/DataTransfer/story.h ../WorkManagementSystem/Headers/DataTransfer/subtask.h ../WorkManagementSystem/Headers/Business/projectbl.h ../WorkManagementSystem/Headers/Business/userbl.h ../WorkManagementSystem/Headers/Business/teambl.h ../WorkManagementSystem/Headers/Business/epicbl.h ../WorkManagementSystem/Headers/Business/storybl.h ../WorkManagementSystem/Headers/Business/subtaskbl.h ../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h ../WorkManagementSystem/Headers/DataAccess/commentdao.h ../WorkManagementSystem/Headers/DataTransfer/comment.h ../WorkManagementSystem/Headers/Business/commentbl.h ../WorkManagementSystem/Headers/Presentation/commentwidget.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskdetails.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/Sources/Business/epicbl.cpp ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp ../WorkManagementSystem/Sources/DataAccess/commentdao.cpp ../WorkManagementSystem/Sources/DataTransfer/comment.cpp ../WorkManagementSystem/Sources/Business/commentbl.cpp ../WorkManagementSystem/Sources/Presentation/commentwidget.cpp ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagementSystem/Sources/Business/subtaskbl.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../WorkManagementSystem/Headers/Presentation/homepage.h ../WorkManagementSystem/Headers/Presentation/CustomWidgets/inputcommentwidget.h ../WorkManagementSystem/Headers/Presentation/loginwindow.h ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h ../WorkManagementSystem/Headers/Presentation/createteamwindow.h ../WorkManagementSystem/Headers/Presentation/Validation/uservalidator.h ../WorkManagementSystem/Headers/Presentation/Validation/validator.h ../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h ../WorkManagementSystem/Headers/Presentation/Validation/teamvalidator.h ../WorkManagementSystem/Headers/DataAccess/databaseconnection.h ../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h ../WorkManagementSystem/Headers/DataAccess/epicdao.h ../WorkManagementSystem/Headers/DataAccess/storydao.h ../WorkManagementSystem/Headers/DataAccess/teamdao.h ../WorkManagementSystem/Headers/DataAccess/userdao.h ../WorkManagementSystem/Headers/DataAccess/projectdao.h ../WorkManagementSystem/Headers/DataAccess/subtaskdao.h ../WorkManagementSystem/Headers/DataAccess/workitemdaointerface.h ../WorkManagementSystem/Headers/global.h ../WorkManagementSystem/Headers/DataTransfer/enum.h ../WorkManagementSystem/Headers/DataTransfer/project.h ../WorkManagementSystem/Headers/DataTransfer/user.h ../WorkManagementSystem/Headers/DataTransfer/team.h ../WorkManagementSystem/Headers/DataTransfer/acceptancecriteria.h ../WorkManagementSystem/Headers/DataTransfer/epic.h ../WorkManagementSystem/Headers/DataTransfer/workitem.h ../WorkManagementSystem/Headers/DataTransfer/story.h ../WorkManagementSystem/Headers/DataTransfer/subtask.h ../WorkManagementSystem/Headers/Business/projectbl.h ../WorkManagementSystem/Headers/Business/userbl.h ../WorkManagementSystem/Headers/Business/teambl.h ../WorkManagementSystem/Headers/Business/epicbl.h ../WorkManagementSystem/Headers/Business/storybl.h ../WorkManagementSystem/Headers/Business/subtaskbl.h ../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h ../WorkManagementSystem/Headers/DataAccess/commentdao.h ../WorkManagementSystem/Headers/DataTransfer/comment.h ../WorkManagementSystem/Headers/Business/commentbl.h ../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/profile.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskdetails.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp ../WorkManagementSystem/Sources/Presentation/createteamwindow.cpp ../WorkManagementSystem/Sources/Presentation/createaccountwindow.cpp ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp ../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ../WorkManagementSystem/Sources/Presentation/Validation/uservalidator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validator.cpp ../WorkManagementSystem/Sources/Presentation/Validation/validationexception.cpp ../WorkManagementSystem/Sources/Presentation/Validation/teamvalidator.cpp ../WorkManagementSystem/Sources/DataAccess/subtaskdao.cpp ../WorkManagementSystem/Sources/DataAccess/teamdao.cpp ../WorkManagementSystem/Sources/DataAccess/projectdao.cpp ../WorkManagementSystem/Sources/DataAccess/storydao.cpp ../WorkManagementSystem/Sources/DataAccess/acceptancecriteriadao.cpp ../WorkManagementSystem/Sources/DataAccess/databaseconnection.cpp ../WorkManagementSystem/Sources/DataAccess/userdao.cpp ../WorkManagementSystem/Sources/DataAccess/epicdao.cpp ../WorkManagementSystem/Sources/DataTransfer/project.cpp ../WorkManagementSystem/Sources/DataTransfer/acceptancecriteria.cpp ../WorkManagementSystem/Sources/DataTransfer/enum.cpp ../WorkManagementSystem/Sources/DataTransfer/epic.cpp ../WorkManagementSystem/Sources/DataTransfer/workitem.cpp ../WorkManagementSystem/Sources/global.cpp ../WorkManagementSystem/Sources/DataTransfer/story.cpp ../WorkManagementSystem/Sources/DataTransfer/user.cpp ../WorkManagementSystem/Sources/DataTransfer/team.cpp ../WorkManagementSystem/Sources/DataTransfer/subtask.cpp ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManagementSystem/Sources/Business/epicbl.cpp ../WorkManagementSystem/Sources/Business/acceptancecriteriabl.cpp ../WorkManagementSystem/Sources/DataAccess/commentdao.cpp ../WorkManagementSystem/Sources/DataTransfer/comment.cpp ../WorkManagementSystem/Sources/Business/commentbl.cpp ../WorkManagementSystem/Sources/Presentation/CustomWidgets/commentwidget.cpp ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagementSystem/Sources/Business/subtaskbl.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../WorkManagementSystem/UI/homepage.ui ../WorkManagementSystem/UI/loginwindow.ui ../WorkManagementSystem/UI/createaccountwindow.ui ../WorkManagementSystem/UI/createteamwindow.ui $(DISTDIR)/
 
 
@@ -932,6 +936,8 @@ epicdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/epicdet
 		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
 		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
 		../WorkManagementSystem/Headers/global.h \
+		../WorkManagementSystem/Headers/Business/commentbl.h \
+		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
@@ -1211,6 +1217,8 @@ storydetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/storyd
 		../WorkManagementSystem/Headers/DataTransfer/team.h \
 		../WorkManagementSystem/Headers/Business/epicbl.h \
 		../WorkManagementSystem/Headers/Business/projectbl.h \
+		../WorkManagementSystem/Headers/Business/commentbl.h \
+		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
 		../WorkManagementSystem/Headers/Business/storybl.h \
 		../WorkManagementSystem/Headers/Business/subtaskbl.h \
 		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
@@ -1275,6 +1283,8 @@ subtaskdetails.o: ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskd
 		../WorkManagementSystem/Headers/Business/projectbl.h \
 		../WorkManagementSystem/Headers/Business/subtaskbl.h \
 		../WorkManagementSystem/Headers/Business/teambl.h \
+		../WorkManagementSystem/Headers/Business/commentbl.h \
+		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
 		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
 		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
 		../WorkManagementSystem/Headers/global.h \
@@ -1479,6 +1489,24 @@ homepage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp .
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o homepage.o ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp
+
+inputcommentwidget.o: ../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp ../WorkManagementSystem/Headers/Business/commentbl.h \
+		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/comment.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/global.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainter \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainter.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainterPath \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainterpath.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QMetaObject \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qobjectdefs.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o inputcommentwidget.o ../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp
 
 loginwindow.o: ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ui_loginwindow.h \
 		../WorkManagementSystem/Headers/Presentation/loginwindow.h \
@@ -1913,20 +1941,11 @@ commentbl.o: ../WorkManagementSystem/Sources/Business/commentbl.cpp ../WorkManag
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o commentbl.o ../WorkManagementSystem/Sources/Business/commentbl.cpp
 
-commentwidget.o: ../WorkManagementSystem/Sources/Presentation/commentwidget.cpp ../WorkManagementSystem/Headers/Presentation/commentwidget.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainter \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainter.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o commentwidget.o ../WorkManagementSystem/Sources/Presentation/commentwidget.cpp
+commentwidget.o: ../WorkManagementSystem/Sources/Presentation/CustomWidgets/commentwidget.cpp ../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainter \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainter.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainterPath \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainterpath.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o commentwidget.o ../WorkManagementSystem/Sources/Presentation/CustomWidgets/commentwidget.cpp
 
 main.o: ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Headers/Presentation/loginwindow.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
