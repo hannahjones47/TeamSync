@@ -662,7 +662,7 @@ public:
         projectDetailScrollArea->setWidgetResizable(true);
         projectDetailScrollAreaWidgetContents = new QWidget();
         projectDetailScrollAreaWidgetContents->setObjectName("projectDetailScrollAreaWidgetContents");
-        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, -198, 647, 700));
+        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 647, 700));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -710,7 +710,7 @@ public:
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/Icons/edit.png"), QSize(), QIcon::Normal, QIcon::On);
         editProjectName->setIcon(icon1);
-        editProjectName->setIconSize(QSize(40, 40));
+        editProjectName->setIconSize(QSize(20, 20));
 
         horizontalLayout_3->addWidget(editProjectName);
 
@@ -756,7 +756,7 @@ public:
         editProjectDueDate = new QPushButton(projectDetailScrollAreaWidgetContents);
         editProjectDueDate->setObjectName("editProjectDueDate");
         editProjectDueDate->setMinimumSize(QSize(40, 40));
-        editProjectDueDate->setMaximumSize(QSize(40, 40));
+        editProjectDueDate->setMaximumSize(QSize(100, 100));
         QPalette palette6;
         palette6.setBrush(QPalette::Active, QPalette::Button, brush1);
         palette6.setBrush(QPalette::Active, QPalette::Base, brush1);
@@ -776,7 +776,7 @@ public:
 "}\n"
 ""));
         editProjectDueDate->setIcon(icon1);
-        editProjectDueDate->setIconSize(QSize(40, 40));
+        editProjectDueDate->setIconSize(QSize(20, 20));
 
         dueDateLayout->addWidget(editProjectDueDate);
 
@@ -836,7 +836,7 @@ public:
 "}\n"
 ""));
         editProjectStatus->setIcon(icon1);
-        editProjectStatus->setIconSize(QSize(40, 40));
+        editProjectStatus->setIconSize(QSize(20, 20));
 
         statusLayout->addWidget(editProjectStatus);
 
@@ -892,7 +892,7 @@ public:
 "}\n"
 ""));
         editProjectPriority->setIcon(icon1);
-        editProjectPriority->setIconSize(QSize(40, 40));
+        editProjectPriority->setIconSize(QSize(20, 20));
 
         priorityLayout->addWidget(editProjectPriority);
 
@@ -938,7 +938,7 @@ public:
 "}\n"
 ""));
         editProjectDescription->setIcon(icon1);
-        editProjectDescription->setIconSize(QSize(40, 40));
+        editProjectDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_4->addWidget(editProjectDescription);
 
@@ -1174,7 +1174,7 @@ public:
 "}\n"
 ""));
         editEpicName->setIcon(icon1);
-        editEpicName->setIconSize(QSize(40, 40));
+        editEpicName->setIconSize(QSize(20, 20));
 
         horizontalLayout_5->addWidget(editEpicName);
 
@@ -1229,7 +1229,7 @@ public:
 "}\n"
 ""));
         editEpicDueDate->setIcon(icon1);
-        editEpicDueDate->setIconSize(QSize(40, 40));
+        editEpicDueDate->setIconSize(QSize(20, 20));
 
         epicDueDateLayout->addWidget(editEpicDueDate);
 
@@ -1285,7 +1285,7 @@ public:
 "}\n"
 ""));
         editEpicStatus->setIcon(icon1);
-        editEpicStatus->setIconSize(QSize(40, 40));
+        editEpicStatus->setIconSize(QSize(20, 20));
 
         epicStatusLayout->addWidget(editEpicStatus);
 
@@ -1341,7 +1341,7 @@ public:
 "}\n"
 ""));
         editEpicPriority->setIcon(icon1);
-        editEpicPriority->setIconSize(QSize(40, 40));
+        editEpicPriority->setIconSize(QSize(20, 20));
 
         epicPriorityLayout->addWidget(editEpicPriority);
 
@@ -1387,7 +1387,7 @@ public:
 "}\n"
 ""));
         editEpicDescription->setIcon(icon1);
-        editEpicDescription->setIconSize(QSize(40, 40));
+        editEpicDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_8->addWidget(editEpicDescription);
 
@@ -1643,7 +1643,7 @@ public:
 "}\n"
 ""));
         editStoryName->setIcon(icon1);
-        editStoryName->setIconSize(QSize(40, 40));
+        editStoryName->setIconSize(QSize(20, 20));
 
         horizontalLayout->addWidget(editStoryName);
 
@@ -1701,7 +1701,7 @@ public:
 "}\n"
 ""));
         editStoryDueDate->setIcon(icon1);
-        editStoryDueDate->setIconSize(QSize(40, 40));
+        editStoryDueDate->setIconSize(QSize(20, 20));
 
         storydueDateLayout->addWidget(editStoryDueDate);
 
@@ -1757,7 +1757,7 @@ public:
 "}\n"
 ""));
         editStoryStatus->setIcon(icon1);
-        editStoryStatus->setIconSize(QSize(40, 40));
+        editStoryStatus->setIconSize(QSize(20, 20));
 
         storyStatusLayout->addWidget(editStoryStatus);
 
@@ -1813,7 +1813,7 @@ public:
 "}\n"
 ""));
         editStoryPriority->setIcon(icon1);
-        editStoryPriority->setIconSize(QSize(40, 40));
+        editStoryPriority->setIconSize(QSize(20, 20));
 
         storyPriorityLayout->addWidget(editStoryPriority);
 
@@ -1861,7 +1861,7 @@ public:
 "}\n"
 ""));
         editStoryDescription->setIcon(icon1);
-        editStoryDescription->setIconSize(QSize(40, 40));
+        editStoryDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_2->addWidget(editStoryDescription);
 
@@ -2107,7 +2107,7 @@ public:
 "}\n"
 ""));
         editSubTaskName->setIcon(icon1);
-        editSubTaskName->setIconSize(QSize(40, 40));
+        editSubTaskName->setIconSize(QSize(20, 20));
 
         horizontalLayout_15->addWidget(editSubTaskName);
 
@@ -2162,7 +2162,7 @@ public:
 "}\n"
 ""));
         editAssignee->setIcon(icon1);
-        editAssignee->setIconSize(QSize(40, 40));
+        editAssignee->setIconSize(QSize(20, 20));
 
         subTaskDueDateLayout_3->addWidget(editAssignee);
 
@@ -2217,7 +2217,7 @@ public:
 "}\n"
 ""));
         editSubTaskDueDate->setIcon(icon1);
-        editSubTaskDueDate->setIconSize(QSize(40, 40));
+        editSubTaskDueDate->setIconSize(QSize(20, 20));
 
         subTaskDueDateLayout_2->addWidget(editSubTaskDueDate);
 
@@ -2273,7 +2273,7 @@ public:
 "}\n"
 ""));
         editSubTaskStatus->setIcon(icon1);
-        editSubTaskStatus->setIconSize(QSize(40, 40));
+        editSubTaskStatus->setIconSize(QSize(20, 20));
 
         epicStatusLayout_2->addWidget(editSubTaskStatus);
 
@@ -2298,8 +2298,11 @@ public:
 
         subTaskPriorityLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskPriorityLabel->setObjectName("subTaskPriorityLabel");
-        sizePolicy3.setHeightForWidth(subTaskPriorityLabel->sizePolicy().hasHeightForWidth());
-        subTaskPriorityLabel->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy8(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+        sizePolicy8.setHorizontalStretch(0);
+        sizePolicy8.setVerticalStretch(0);
+        sizePolicy8.setHeightForWidth(subTaskPriorityLabel->sizePolicy().hasHeightForWidth());
+        subTaskPriorityLabel->setSizePolicy(sizePolicy8);
         subTaskPriorityLabel->setMinimumSize(QSize(100, 30));
         subTaskPriorityLabel->setMaximumSize(QSize(16777215, 16777215));
         subTaskPriorityLabel->setFont(font4);
@@ -2329,7 +2332,7 @@ public:
 "}\n"
 ""));
         editSubTaskPriority->setIcon(icon1);
-        editSubTaskPriority->setIconSize(QSize(40, 40));
+        editSubTaskPriority->setIconSize(QSize(20, 20));
 
         subTaskPriorityLayout->addWidget(editSubTaskPriority);
 
@@ -2375,7 +2378,7 @@ public:
 "}\n"
 ""));
         editSubTaskDescription->setIcon(icon1);
-        editSubTaskDescription->setIconSize(QSize(40, 40));
+        editSubTaskDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_16->addWidget(editSubTaskDescription);
 
@@ -2689,8 +2692,8 @@ public:
         horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget->raise();
-        layoutWidget->raise();
+        layoutWidget2->raise();
+        layoutWidget2->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -2698,7 +2701,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(HomePage);
