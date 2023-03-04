@@ -89,7 +89,6 @@ public:
     QSpacerItem *horizontalSpacer_16;
     QPushButton *addEpicButton;
     QVBoxLayout *epicLayout;
-    QLabel *epicLabel_2;
     QVBoxLayout *projectCommentsLayout;
     QSpacerItem *verticalSpacer_2;
     QLabel *locationDesc_2;
@@ -132,6 +131,7 @@ public:
     QSpacerItem *horizontalSpacer_17;
     QPushButton *addStoryButton;
     QVBoxLayout *storyLayout;
+    QVBoxLayout *epicCommentsLayout;
     QSpacerItem *verticalSpacer;
     QPushButton *epicBackButton;
     QLabel *locationDesc;
@@ -174,6 +174,7 @@ public:
     QSpacerItem *horizontalSpacer_18;
     QPushButton *addSubTaskButton;
     QHBoxLayout *subTaskLayout;
+    QVBoxLayout *storyCommentsLayout;
     QSpacerItem *verticalSpacer_3;
     QPushButton *storyBackButton;
     QLabel *locationDesc_3;
@@ -211,6 +212,7 @@ public:
     QPushButton *editSubTaskDescription;
     QSpacerItem *horizontalSpacer_26;
     QLabel *subTaskDescriptionLabel;
+    QVBoxLayout *subTaskCommentsLayout;
     QSpacerItem *verticalSpacer_4;
     QPushButton *subTaskBackButton;
     QLabel *locationDesc_4;
@@ -660,7 +662,7 @@ public:
         projectDetailScrollArea->setWidgetResizable(true);
         projectDetailScrollAreaWidgetContents = new QWidget();
         projectDetailScrollAreaWidgetContents->setObjectName("projectDetailScrollAreaWidgetContents");
-        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, -183, 647, 700));
+        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 647, 700));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -1028,16 +1030,6 @@ public:
         epicLayout->setSizeConstraint(QLayout::SetMinimumSize);
 
         verticalLayout->addLayout(epicLayout);
-
-        epicLabel_2 = new QLabel(projectDetailScrollAreaWidgetContents);
-        epicLabel_2->setObjectName("epicLabel_2");
-        sizePolicy3.setHeightForWidth(epicLabel_2->sizePolicy().hasHeightForWidth());
-        epicLabel_2->setSizePolicy(sizePolicy3);
-        epicLabel_2->setMinimumSize(QSize(50, 30));
-        epicLabel_2->setMaximumSize(QSize(300, 16777215));
-        epicLabel_2->setFont(font3);
-
-        verticalLayout->addWidget(epicLabel_2);
 
         projectCommentsLayout = new QVBoxLayout();
         projectCommentsLayout->setObjectName("projectCommentsLayout");
@@ -1480,6 +1472,11 @@ public:
         storyLayout->setSizeConstraint(QLayout::SetMinimumSize);
 
         verticalLayout_2->addLayout(storyLayout);
+
+        epicCommentsLayout = new QVBoxLayout();
+        epicCommentsLayout->setObjectName("epicCommentsLayout");
+
+        verticalLayout_2->addLayout(epicCommentsLayout);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -1948,6 +1945,11 @@ public:
 
         verticalLayout_3->addLayout(subTaskLayout);
 
+        storyCommentsLayout = new QVBoxLayout();
+        storyCommentsLayout->setObjectName("storyCommentsLayout");
+
+        verticalLayout_3->addLayout(storyCommentsLayout);
+
         verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_3->addItem(verticalSpacer_3);
@@ -2396,6 +2398,11 @@ public:
 
         verticalLayout_5->addWidget(subTaskDescriptionLabel);
 
+        subTaskCommentsLayout = new QVBoxLayout();
+        subTaskCommentsLayout->setObjectName("subTaskCommentsLayout");
+
+        verticalLayout_5->addLayout(subTaskCommentsLayout);
+
         verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
 
         verticalLayout_5->addItem(verticalSpacer_4);
@@ -2652,7 +2659,7 @@ public:
         navBarBackground->setObjectName("navBarBackground");
         navBarBackground->setGeometry(QRect(-20, 90, 101, 511));
         QPalette palette34;
-        QBrush brush33(QColor(133, 187, 101, 76));
+        QBrush brush33(QColor(71, 173, 255, 255));
         brush33.setStyle(Qt::SolidPattern);
         palette34.setBrush(QPalette::Active, QPalette::Button, brush33);
         palette34.setBrush(QPalette::Active, QPalette::Base, brush33);
@@ -2664,10 +2671,11 @@ public:
         palette34.setBrush(QPalette::Disabled, QPalette::Base, brush33);
         palette34.setBrush(QPalette::Disabled, QPalette::Window, brush33);
         navBarBackground->setPalette(palette34);
-        navBarBackground->setStyleSheet(QString::fromUtf8("background-color: rgba(133, 187, 101, 0.3);\n"
+        navBarBackground->setStyleSheet(QString::fromUtf8("background-color: rgb(71, 173, 255);\n"
 "border-radius: 10px 10px 0px 0px;\n"
 "/*border-width: 1px;\n"
 "border-style: solid;*/\n"
+"\n"
 ""));
         layoutWidget1 = new QWidget(HomePage);
         layoutWidget1->setObjectName("layoutWidget1");
@@ -2690,7 +2698,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -2726,7 +2734,6 @@ public:
         addProjectACButton->setText(QCoreApplication::translate("HomePage", "Add new acceptance criteria", nullptr));
         epicLabel->setText(QCoreApplication::translate("HomePage", "Epics:", nullptr));
         addEpicButton->setText(QCoreApplication::translate("HomePage", "Add new epic", nullptr));
-        epicLabel_2->setText(QCoreApplication::translate("HomePage", "Discussion:", nullptr));
         locationDesc_2->setText(QCoreApplication::translate("HomePage", "Projects", nullptr));
         colourLocationLabel_2->setText(QString());
         epicNameLabel->setText(QCoreApplication::translate("HomePage", "Epic name placeholder", nullptr));
