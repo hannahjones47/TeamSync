@@ -935,17 +935,24 @@ epicdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/epicdet
 		../WorkManagementSystem/Headers/Business/subtaskbl.h \
 		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
 		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/inputcommentwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
 		../WorkManagementSystem/Headers/global.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
@@ -955,9 +962,7 @@ epicdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/epicdet
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epicdetailspage.o ../WorkManagementSystem/Sources/Presentation/Homepage/epicdetailspage.cpp
 
 mainpage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
@@ -1092,6 +1097,17 @@ projectdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/proj
 		../WorkManagementSystem/Headers/Business/epicbl.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/inputcommentwidget.h \
 		../WorkManagementSystem/Headers/Business/projectbl.h \
 		../WorkManagementSystem/Headers/Business/storybl.h \
 		../WorkManagementSystem/Headers/Business/subtaskbl.h \
@@ -1100,12 +1116,8 @@ projectdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/proj
 		../WorkManagementSystem/Headers/global.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
@@ -1115,9 +1127,7 @@ projectdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/proj
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o projectdetailspage.o ../WorkManagementSystem/Sources/Presentation/Homepage/projectdetailspage.cpp
 
 projectspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/projectspage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
@@ -1219,6 +1229,17 @@ storydetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/storyd
 		../WorkManagementSystem/Headers/Business/projectbl.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/inputcommentwidget.h \
 		../WorkManagementSystem/Headers/Business/storybl.h \
 		../WorkManagementSystem/Headers/Business/subtaskbl.h \
 		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
@@ -1226,12 +1247,8 @@ storydetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/storyd
 		../WorkManagementSystem/Headers/global.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
@@ -1241,9 +1258,7 @@ storydetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/storyd
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o storydetailspage.o ../WorkManagementSystem/Sources/Presentation/Homepage/storydetailspage.cpp
 
 subtaskdetails.o: ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskdetails.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
@@ -1285,17 +1300,24 @@ subtaskdetails.o: ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskd
 		../WorkManagementSystem/Headers/Business/teambl.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/inputcommentwidget.h \
 		../WorkManagementSystem/Headers/Business/acceptancecriteriabl.h \
 		../WorkManagementSystem/Headers/DataAccess/acceptancecriteriadao.h \
 		../WorkManagementSystem/Headers/global.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMessageBox \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QInputDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qinputdialog.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QCalendarWidget \
@@ -1305,9 +1327,7 @@ subtaskdetails.o: ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskd
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFormLayout \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qformlayout.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QComboBox \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qcombobox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtaskdetails.o ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskdetails.cpp
 
 teampage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/teampage.cpp ../WorkManagementSystem/Headers/Presentation/homepage.h \
@@ -1490,22 +1510,38 @@ homepage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp .
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o homepage.o ../WorkManagementSystem/Sources/Presentation/Homepage/homepage.cpp
 
-inputcommentwidget.o: ../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp ../WorkManagementSystem/Headers/Business/commentbl.h \
-		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
-		../WorkManagementSystem/Headers/DataTransfer/comment.h \
+inputcommentwidget.o: ../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp ../WorkManagementSystem/Headers/Presentation/CustomWidgets/inputcommentwidget.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
+		../WorkManagementSystem/Headers/Business/commentbl.h \
+		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/comment.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/QSqlDatabase \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
+		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		ui_homepage.h \
 		../WorkManagementSystem/Headers/global.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainterPath \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainterpath.h \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QMetaObject \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qobjectdefs.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainterpath.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o inputcommentwidget.o ../WorkManagementSystem/Sources/Presentation/CustomWidgets/inputcommentwidget.cpp
 
 loginwindow.o: ../WorkManagementSystem/Sources/Presentation/loginwindow.cpp ui_loginwindow.h \
@@ -1941,7 +1977,20 @@ commentbl.o: ../WorkManagementSystem/Sources/Business/commentbl.cpp ../WorkManag
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o commentbl.o ../WorkManagementSystem/Sources/Business/commentbl.cpp
 
-commentwidget.o: ../WorkManagementSystem/Sources/Presentation/CustomWidgets/commentwidget.cpp ../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainter \
+commentwidget.o: ../WorkManagementSystem/Sources/Presentation/CustomWidgets/commentwidget.cpp ../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QHBoxLayout \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QTextEdit \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainter \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainter.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/QPainterPath \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers/qpainterpath.h
