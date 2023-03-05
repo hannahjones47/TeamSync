@@ -239,18 +239,19 @@ public:
     QPushButton *saveProfileButton;
     QWidget *myWorkPage;
     QLabel *myTasksTitle;
-    QScrollArea *epicDetailScrollArea_2;
+    QScrollArea *myWorkScrollArea;
     QWidget *epicDetailScrollAreaContents_2;
     QVBoxLayout *verticalLayout_6;
-    QLabel *myTasksTitle_2;
+    QVBoxLayout *subTasksLayout;
+    QLabel *notStartedLabel;
     QVBoxLayout *notStartedTaskLayout;
-    QLabel *myTasksTitle_3;
+    QLabel *planningLabel;
     QVBoxLayout *planningTaskLayout;
-    QLabel *myTasksTitle_4;
+    QLabel *inProgressLabel;
     QVBoxLayout *inProgressLayout;
-    QLabel *myTasksTitle_5;
+    QLabel *blockedLabel;
     QVBoxLayout *blockedLayout;
-    QLabel *myTasksTitle_6;
+    QLabel *completeLayout_2;
     QVBoxLayout *completeLayout;
     QSpacerItem *verticalSpacer_5;
     QFrame *frame;
@@ -2560,12 +2561,12 @@ public:
         myTasksTitle->setObjectName("myTasksTitle");
         myTasksTitle->setGeometry(QRect(80, 50, 191, 51));
         myTasksTitle->setFont(font);
-        epicDetailScrollArea_2 = new QScrollArea(myWorkPage);
-        epicDetailScrollArea_2->setObjectName("epicDetailScrollArea_2");
-        epicDetailScrollArea_2->setGeometry(QRect(40, 100, 661, 500));
-        sizePolicy.setHeightForWidth(epicDetailScrollArea_2->sizePolicy().hasHeightForWidth());
-        epicDetailScrollArea_2->setSizePolicy(sizePolicy);
-        epicDetailScrollArea_2->setMinimumSize(QSize(550, 500));
+        myWorkScrollArea = new QScrollArea(myWorkPage);
+        myWorkScrollArea->setObjectName("myWorkScrollArea");
+        myWorkScrollArea->setGeometry(QRect(40, 100, 661, 500));
+        sizePolicy.setHeightForWidth(myWorkScrollArea->sizePolicy().hasHeightForWidth());
+        myWorkScrollArea->setSizePolicy(sizePolicy);
+        myWorkScrollArea->setMinimumSize(QSize(550, 500));
         QPalette palette32;
         palette32.setBrush(QPalette::Active, QPalette::Button, brush1);
         palette32.setBrush(QPalette::Active, QPalette::Base, brush1);
@@ -2582,9 +2583,9 @@ public:
         QBrush brush35(QColor(0, 0, 0, 255));
         brush35.setStyle(Qt::NoBrush);
         palette32.setBrush(QPalette::Disabled, QPalette::Window, brush35);
-        epicDetailScrollArea_2->setPalette(palette32);
-        epicDetailScrollArea_2->setFocusPolicy(Qt::NoFocus);
-        epicDetailScrollArea_2->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
+        myWorkScrollArea->setPalette(palette32);
+        myWorkScrollArea->setFocusPolicy(Qt::NoFocus);
+        myWorkScrollArea->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
 "    background-color: white;\n"
 "    border: solid;\n"
 "    border-color: rgb(229, 242, 255);\n"
@@ -2624,11 +2625,13 @@ public:
 "    b"
                         "ackground-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(172, 181, 224), stop:1 #c4c6ca);\n"
 "}\n"
+"\n"
+"\n"
 ""));
-        epicDetailScrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        epicDetailScrollArea_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        epicDetailScrollArea_2->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
-        epicDetailScrollArea_2->setWidgetResizable(true);
+        myWorkScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        myWorkScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        myWorkScrollArea->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        myWorkScrollArea->setWidgetResizable(true);
         epicDetailScrollAreaContents_2 = new QWidget();
         epicDetailScrollAreaContents_2->setObjectName("epicDetailScrollAreaContents_2");
         epicDetailScrollAreaContents_2->setGeometry(QRect(0, 0, 647, 700));
@@ -2637,70 +2640,76 @@ public:
         epicDetailScrollAreaContents_2->setMinimumSize(QSize(647, 700));
         verticalLayout_6 = new QVBoxLayout(epicDetailScrollAreaContents_2);
         verticalLayout_6->setObjectName("verticalLayout_6");
-        myTasksTitle_2 = new QLabel(epicDetailScrollAreaContents_2);
-        myTasksTitle_2->setObjectName("myTasksTitle_2");
+        subTasksLayout = new QVBoxLayout();
+        subTasksLayout->setObjectName("subTasksLayout");
+        notStartedLabel = new QLabel(epicDetailScrollAreaContents_2);
+        notStartedLabel->setObjectName("notStartedLabel");
         QFont font7;
         font7.setFamilies({QString::fromUtf8("Avenir")});
         font7.setPointSize(21);
         font7.setBold(false);
-        myTasksTitle_2->setFont(font7);
+        notStartedLabel->setFont(font7);
+        notStartedLabel->setStyleSheet(QString::fromUtf8(""));
 
-        verticalLayout_6->addWidget(myTasksTitle_2);
+        subTasksLayout->addWidget(notStartedLabel);
 
         notStartedTaskLayout = new QVBoxLayout();
         notStartedTaskLayout->setObjectName("notStartedTaskLayout");
 
-        verticalLayout_6->addLayout(notStartedTaskLayout);
+        subTasksLayout->addLayout(notStartedTaskLayout);
 
-        myTasksTitle_3 = new QLabel(epicDetailScrollAreaContents_2);
-        myTasksTitle_3->setObjectName("myTasksTitle_3");
-        myTasksTitle_3->setFont(font7);
+        planningLabel = new QLabel(epicDetailScrollAreaContents_2);
+        planningLabel->setObjectName("planningLabel");
+        planningLabel->setFont(font7);
 
-        verticalLayout_6->addWidget(myTasksTitle_3);
+        subTasksLayout->addWidget(planningLabel);
 
         planningTaskLayout = new QVBoxLayout();
         planningTaskLayout->setObjectName("planningTaskLayout");
 
-        verticalLayout_6->addLayout(planningTaskLayout);
+        subTasksLayout->addLayout(planningTaskLayout);
 
-        myTasksTitle_4 = new QLabel(epicDetailScrollAreaContents_2);
-        myTasksTitle_4->setObjectName("myTasksTitle_4");
-        myTasksTitle_4->setFont(font7);
+        inProgressLabel = new QLabel(epicDetailScrollAreaContents_2);
+        inProgressLabel->setObjectName("inProgressLabel");
+        inProgressLabel->setFont(font7);
 
-        verticalLayout_6->addWidget(myTasksTitle_4);
+        subTasksLayout->addWidget(inProgressLabel);
 
         inProgressLayout = new QVBoxLayout();
         inProgressLayout->setObjectName("inProgressLayout");
 
-        verticalLayout_6->addLayout(inProgressLayout);
+        subTasksLayout->addLayout(inProgressLayout);
 
-        myTasksTitle_5 = new QLabel(epicDetailScrollAreaContents_2);
-        myTasksTitle_5->setObjectName("myTasksTitle_5");
-        myTasksTitle_5->setFont(font7);
+        blockedLabel = new QLabel(epicDetailScrollAreaContents_2);
+        blockedLabel->setObjectName("blockedLabel");
+        blockedLabel->setFont(font7);
 
-        verticalLayout_6->addWidget(myTasksTitle_5);
+        subTasksLayout->addWidget(blockedLabel);
 
         blockedLayout = new QVBoxLayout();
         blockedLayout->setObjectName("blockedLayout");
 
-        verticalLayout_6->addLayout(blockedLayout);
+        subTasksLayout->addLayout(blockedLayout);
 
-        myTasksTitle_6 = new QLabel(epicDetailScrollAreaContents_2);
-        myTasksTitle_6->setObjectName("myTasksTitle_6");
-        myTasksTitle_6->setFont(font7);
+        completeLayout_2 = new QLabel(epicDetailScrollAreaContents_2);
+        completeLayout_2->setObjectName("completeLayout_2");
+        completeLayout_2->setFont(font7);
 
-        verticalLayout_6->addWidget(myTasksTitle_6);
+        subTasksLayout->addWidget(completeLayout_2);
 
         completeLayout = new QVBoxLayout();
         completeLayout->setObjectName("completeLayout");
 
-        verticalLayout_6->addLayout(completeLayout);
+        subTasksLayout->addLayout(completeLayout);
 
         verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_6->addItem(verticalSpacer_5);
+        subTasksLayout->addItem(verticalSpacer_5);
 
-        epicDetailScrollArea_2->setWidget(epicDetailScrollAreaContents_2);
+
+        verticalLayout_6->addLayout(subTasksLayout);
+
+        myWorkScrollArea->setWidget(epicDetailScrollAreaContents_2);
         stackedWidget->addWidget(myWorkPage);
         frame = new QFrame(HomePage);
         frame->setObjectName("frame");
@@ -2888,8 +2897,8 @@ public:
         horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget->raise();
-        layoutWidget->raise();
+        layoutWidget2->raise();
+        layoutWidget2->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -2897,7 +2906,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -3005,11 +3014,11 @@ public:
         jobRoleLabel->setText(QCoreApplication::translate("HomePage", "Job role", nullptr));
         saveProfileButton->setText(QCoreApplication::translate("HomePage", "Save", nullptr));
         myTasksTitle->setText(QCoreApplication::translate("HomePage", "My tasks", nullptr));
-        myTasksTitle_2->setText(QCoreApplication::translate("HomePage", "Not started", nullptr));
-        myTasksTitle_3->setText(QCoreApplication::translate("HomePage", "Planning", nullptr));
-        myTasksTitle_4->setText(QCoreApplication::translate("HomePage", "In progress", nullptr));
-        myTasksTitle_5->setText(QCoreApplication::translate("HomePage", "Blocked", nullptr));
-        myTasksTitle_6->setText(QCoreApplication::translate("HomePage", "Complete", nullptr));
+        notStartedLabel->setText(QCoreApplication::translate("HomePage", "Not started", nullptr));
+        planningLabel->setText(QCoreApplication::translate("HomePage", "Planning", nullptr));
+        inProgressLabel->setText(QCoreApplication::translate("HomePage", "In progress", nullptr));
+        blockedLabel->setText(QCoreApplication::translate("HomePage", "Blocked", nullptr));
+        completeLayout_2->setText(QCoreApplication::translate("HomePage", "Complete", nullptr));
         mainPageButton->setText(QString());
         profileButton->setText(QString());
         projectsButton->setText(QString());
