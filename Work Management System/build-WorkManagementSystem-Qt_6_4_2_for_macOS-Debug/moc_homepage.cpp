@@ -28,9 +28,9 @@ namespace {
 struct qt_meta_stringdata_HomePage_t {
     uint offsetsAndSizes[138];
     char stringdata0[9];
-    char stringdata1[25];
+    char stringdata1[26];
     char stringdata2[1];
-    char stringdata3[26];
+    char stringdata3[25];
     char stringdata4[29];
     char stringdata5[24];
     char stringdata6[22];
@@ -102,9 +102,9 @@ struct qt_meta_stringdata_HomePage_t {
 Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePage = {
     {
         QT_MOC_LITERAL(0, 8),  // "HomePage"
-        QT_MOC_LITERAL(9, 24),  // "on_profileButton_clicked"
-        QT_MOC_LITERAL(34, 0),  // ""
-        QT_MOC_LITERAL(35, 25),  // "on_mainPageButton_clicked"
+        QT_MOC_LITERAL(9, 25),  // "on_mainPageButton_clicked"
+        QT_MOC_LITERAL(35, 0),  // ""
+        QT_MOC_LITERAL(36, 24),  // "on_profileButton_clicked"
         QT_MOC_LITERAL(61, 28),  // "on_saveProfileButton_clicked"
         QT_MOC_LITERAL(90, 23),  // "on_logOutButton_clicked"
         QT_MOC_LITERAL(114, 21),  // "on_teamButton_clicked"
@@ -172,9 +172,9 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
         QT_MOC_LITERAL(1528, 23)   // "on_myWorkButton_clicked"
     },
     "HomePage",
-    "on_profileButton_clicked",
-    "",
     "on_mainPageButton_clicked",
+    "",
+    "on_profileButton_clicked",
     "on_saveProfileButton_clicked",
     "on_logOutButton_clicked",
     "on_teamButton_clicked",
@@ -258,7 +258,7 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  362,    2, 0x08,    1 /* Private */,
+       1,    0,  362,    2, 0x0a,    1 /* Public */,
        3,    0,  363,    2, 0x08,    2 /* Private */,
        4,    0,  364,    2, 0x08,    3 /* Private */,
        5,    0,  365,    2, 0x08,    4 /* Private */,
@@ -389,9 +389,9 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_HomePage_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<HomePage, std::true_type>,
-        // method 'on_profileButton_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_mainPageButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_profileButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_saveProfileButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -530,8 +530,8 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         auto *_t = static_cast<HomePage *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_profileButton_clicked(); break;
-        case 1: _t->on_mainPageButton_clicked(); break;
+        case 0: _t->on_mainPageButton_clicked(); break;
+        case 1: _t->on_profileButton_clicked(); break;
         case 2: _t->on_saveProfileButton_clicked(); break;
         case 3: _t->on_logOutButton_clicked(); break;
         case 4: _t->on_teamButton_clicked(); break;
