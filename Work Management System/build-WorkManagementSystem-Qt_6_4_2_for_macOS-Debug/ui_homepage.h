@@ -2871,8 +2871,16 @@ public:
         palette35.setBrush(QPalette::Disabled, QPalette::Base, brush25);
         palette35.setBrush(QPalette::Disabled, QPalette::Window, brush25);
         mainPageButton->setPalette(palette35);
-        mainPageButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);\n"
-"border-radius: 10px 10px 0px 0px;"));
+        mainPageButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius: 10px 10px 0px 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: lightblue;\n"
+"}\n"
+"\n"
+""));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/Icons/home.png"), QSize(), QIcon::Normal, QIcon::On);
         mainPageButton->setIcon(icon2);
@@ -2884,8 +2892,19 @@ public:
         profileButton->setObjectName("profileButton");
         profileButton->setMinimumSize(QSize(40, 50));
         profileButton->setAutoFillBackground(false);
-        profileButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);\n"
-"border-radius: 10px 10px 0px 0px;"));
+        profileButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius: 10px 10px 0px 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: lightblue;\n"
+"}\n"
+"\n"
+"QPushButton.active {\n"
+"    background-color: red;\n"
+"}\n"
+""));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/Icons/profile.png"), QSize(), QIcon::Normal, QIcon::Off);
         icon3.addFile(QString::fromUtf8(":/Icons/profile.png"), QSize(), QIcon::Normal, QIcon::On);
@@ -2910,14 +2929,18 @@ public:
         palette36.setBrush(QPalette::Disabled, QPalette::Window, brush25);
         projectsButton->setPalette(palette36);
         projectsButton->setAutoFillBackground(false);
-        projectsButton->setStyleSheet(QString::fromUtf8("\n"
-"    border: none;\n"
+        projectsButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
-"	border-radius: 10px 10px 0px 0px;\n"
-"    padding: 0;\n"
-"    margin: 0;\n"
+"    border-radius: 10px 10px 0px 0px;\n"
+"}\n"
 "\n"
-""));
+"QPushButton:hover {\n"
+"    background-color: lightblue;\n"
+"}\n"
+"\n"
+"QPushButton.active {\n"
+"    background-color: red;\n"
+"}"));
         QIcon icon4;
         QString iconThemeName = QString::fromUtf8("camera-photo");
         if (QIcon::hasThemeIcon(iconThemeName)) {
@@ -2934,8 +2957,18 @@ public:
         teamButton->setObjectName("teamButton");
         teamButton->setMinimumSize(QSize(40, 50));
         teamButton->setAutoFillBackground(false);
-        teamButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);\n"
-"border-radius: 10px 10px 0px 0px;"));
+        teamButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius: 10px 10px 0px 0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: lightblue;\n"
+"}\n"
+"\n"
+"QPushButton.active {\n"
+"    background-color: red;\n"
+"}"));
         QIcon icon5;
         icon5.addFile(QString::fromUtf8(":/Icons/team.png"), QSize(), QIcon::Normal, QIcon::On);
         teamButton->setIcon(icon5);
@@ -2958,14 +2991,18 @@ public:
         palette37.setBrush(QPalette::Disabled, QPalette::Window, brush25);
         myWorkButton->setPalette(palette37);
         myWorkButton->setAutoFillBackground(false);
-        myWorkButton->setStyleSheet(QString::fromUtf8("\n"
-"    border: none;\n"
+        myWorkButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
-"	border-radius: 10px 10px 0px 0px;\n"
-"    padding: 0;\n"
-"    margin: 0;\n"
+"    border-radius: 10px 10px 0px 0px;\n"
+"}\n"
 "\n"
-""));
+"QPushButton:hover {\n"
+"    background-color: lightblue;\n"
+"}\n"
+"\n"
+"QPushButton.active {\n"
+"    background-color: red;\n"
+"}"));
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/Icons/mywork.png"), QSize(), QIcon::Normal, QIcon::Off);
         myWorkButton->setIcon(icon6);
@@ -3046,7 +3083,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(7);
+        stackedWidget->setCurrentIndex(8);
 
 
         QMetaObject::connectSlotsByName(HomePage);
