@@ -41,8 +41,6 @@ public:
     QSpacerItem *verticalSpacer_6;
     QFrame *line;
     QWidget *teamPage;
-    QLabel *companyNameLabel;
-    QLabel *teamNameLabel;
     QScrollArea *teamMemberScrollArea;
     QWidget *teamMemberScrollAreaWidgetContents;
     QWidget *layoutWidget;
@@ -50,6 +48,14 @@ public:
     QLabel *hashtagLabel;
     QLabel *joinCodeLabel;
     QLabel *companyNameLabel_2;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_17;
+    QLabel *companyNameLabel;
+    QPushButton *editCompanyNameButton;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_18;
+    QLabel *teamNameLabel;
+    QPushButton *editTeamNameButton;
     QWidget *projectPage;
     QLabel *projectTitle;
     QWidget *verticalLayoutWidget_2;
@@ -451,18 +457,6 @@ public:
         activityScrollArea->raise();
         teamPage = new QWidget();
         teamPage->setObjectName("teamPage");
-        companyNameLabel = new QLabel(teamPage);
-        companyNameLabel->setObjectName("companyNameLabel");
-        companyNameLabel->setGeometry(QRect(60, 80, 411, 62));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Avenir")});
-        font1.setPointSize(18);
-        font1.setBold(false);
-        companyNameLabel->setFont(font1);
-        teamNameLabel = new QLabel(teamPage);
-        teamNameLabel->setObjectName("teamNameLabel");
-        teamNameLabel->setGeometry(QRect(60, 40, 421, 62));
-        teamNameLabel->setFont(font);
         teamMemberScrollArea = new QScrollArea(teamPage);
         teamMemberScrollArea->setObjectName("teamMemberScrollArea");
         teamMemberScrollArea->setGeometry(QRect(60, 140, 631, 451));
@@ -609,11 +603,11 @@ public:
         joinCodeLayout->setContentsMargins(0, 0, 0, 0);
         hashtagLabel = new QLabel(layoutWidget);
         hashtagLabel->setObjectName("hashtagLabel");
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Avenir")});
-        font2.setPointSize(36);
-        font2.setBold(false);
-        hashtagLabel->setFont(font2);
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Avenir")});
+        font1.setPointSize(36);
+        font1.setBold(false);
+        hashtagLabel->setFont(font1);
         hashtagLabel->setLayoutDirection(Qt::RightToLeft);
         hashtagLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -621,7 +615,7 @@ public:
 
         joinCodeLabel = new QLabel(layoutWidget);
         joinCodeLabel->setObjectName("joinCodeLabel");
-        joinCodeLabel->setFont(font2);
+        joinCodeLabel->setFont(font1);
         joinCodeLabel->setLayoutDirection(Qt::RightToLeft);
         joinCodeLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         joinCodeLabel->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -631,7 +625,103 @@ public:
         companyNameLabel_2 = new QLabel(teamPage);
         companyNameLabel_2->setObjectName("companyNameLabel_2");
         companyNameLabel_2->setGeometry(QRect(600, 50, 91, 21));
-        companyNameLabel_2->setFont(font1);
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Avenir")});
+        font2.setPointSize(18);
+        font2.setBold(false);
+        companyNameLabel_2->setFont(font2);
+        widget = new QWidget(teamPage);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(60, 100, 156, 42));
+        horizontalLayout_17 = new QHBoxLayout(widget);
+        horizontalLayout_17->setObjectName("horizontalLayout_17");
+        horizontalLayout_17->setContentsMargins(0, 0, 0, 0);
+        companyNameLabel = new QLabel(widget);
+        companyNameLabel->setObjectName("companyNameLabel");
+        QSizePolicy sizePolicy2(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(companyNameLabel->sizePolicy().hasHeightForWidth());
+        companyNameLabel->setSizePolicy(sizePolicy2);
+        companyNameLabel->setMinimumSize(QSize(100, 0));
+        companyNameLabel->setFont(font2);
+
+        horizontalLayout_17->addWidget(companyNameLabel);
+
+        editCompanyNameButton = new QPushButton(widget);
+        editCompanyNameButton->setObjectName("editCompanyNameButton");
+        editCompanyNameButton->setMinimumSize(QSize(40, 40));
+        editCompanyNameButton->setMaximumSize(QSize(40, 40));
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette4.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editCompanyNameButton->setPalette(palette4);
+        editCompanyNameButton->setAutoFillBackground(false);
+        editCompanyNameButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	border: none;\n"
+"    padding: 5px 5px;\n"
+"    background-color: rgba(0,0,0,0)\n"
+"}\n"
+""));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/Icons/edit.png"), QSize(), QIcon::Normal, QIcon::On);
+        editCompanyNameButton->setIcon(icon);
+        editCompanyNameButton->setIconSize(QSize(20, 20));
+
+        horizontalLayout_17->addWidget(editCompanyNameButton);
+
+        widget1 = new QWidget(teamPage);
+        widget1->setObjectName("widget1");
+        widget1->setGeometry(QRect(60, 40, 256, 64));
+        horizontalLayout_18 = new QHBoxLayout(widget1);
+        horizontalLayout_18->setObjectName("horizontalLayout_18");
+        horizontalLayout_18->setContentsMargins(0, 0, 0, 0);
+        teamNameLabel = new QLabel(widget1);
+        teamNameLabel->setObjectName("teamNameLabel");
+        QSizePolicy sizePolicy3(QSizePolicy::MinimumExpanding, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(teamNameLabel->sizePolicy().hasHeightForWidth());
+        teamNameLabel->setSizePolicy(sizePolicy3);
+        teamNameLabel->setMinimumSize(QSize(100, 0));
+        teamNameLabel->setFont(font);
+
+        horizontalLayout_18->addWidget(teamNameLabel);
+
+        editTeamNameButton = new QPushButton(widget1);
+        editTeamNameButton->setObjectName("editTeamNameButton");
+        editTeamNameButton->setMinimumSize(QSize(40, 40));
+        editTeamNameButton->setMaximumSize(QSize(40, 40));
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette5.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editTeamNameButton->setPalette(palette5);
+        editTeamNameButton->setAutoFillBackground(false);
+        editTeamNameButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	border: none;\n"
+"    padding: 5px 5px;\n"
+"    background-color: rgba(0,0,0,0)\n"
+"}\n"
+""));
+        editTeamNameButton->setIcon(icon);
+        editTeamNameButton->setIconSize(QSize(20, 20));
+
+        horizontalLayout_18->addWidget(editTeamNameButton);
+
         stackedWidget->addWidget(teamPage);
         projectPage = new QWidget();
         projectPage->setObjectName("projectPage");
@@ -647,23 +737,23 @@ public:
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
         projectScrollArea = new QScrollArea(verticalLayoutWidget_2);
         projectScrollArea->setObjectName("projectScrollArea");
-        QPalette palette4;
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush);
+        QPalette palette6;
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette6.setBrush(QPalette::Active, QPalette::Base, brush);
         QBrush brush22(QColor(0, 0, 0, 255));
         brush22.setStyle(Qt::NoBrush);
-        palette4.setBrush(QPalette::Active, QPalette::Window, brush22);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette6.setBrush(QPalette::Active, QPalette::Window, brush22);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush);
         QBrush brush23(QColor(0, 0, 0, 255));
         brush23.setStyle(Qt::NoBrush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush23);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush23);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush);
         QBrush brush24(QColor(0, 0, 0, 255));
         brush24.setStyle(Qt::NoBrush);
-        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush24);
-        projectScrollArea->setPalette(palette4);
+        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush24);
+        projectScrollArea->setPalette(palette6);
         projectScrollArea->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
 "    background-color: white;\n"
 "    border: solid;\n"
@@ -739,24 +829,24 @@ public:
         backButton->setObjectName("backButton");
         backButton->setGeometry(QRect(10, 10, 65, 56));
         backButton->setMinimumSize(QSize(40, 40));
-        QPalette palette5;
+        QPalette palette7;
         QBrush brush25(QColor(255, 255, 255, 0));
         brush25.setStyle(Qt::SolidPattern);
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush25);
-        palette5.setBrush(QPalette::Active, QPalette::Base, brush25);
-        palette5.setBrush(QPalette::Active, QPalette::Window, brush25);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush25);
-        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush25);
-        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush25);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush25);
-        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush25);
-        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush25);
-        backButton->setPalette(palette5);
+        palette7.setBrush(QPalette::Active, QPalette::Button, brush25);
+        palette7.setBrush(QPalette::Active, QPalette::Base, brush25);
+        palette7.setBrush(QPalette::Active, QPalette::Window, brush25);
+        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush25);
+        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush25);
+        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush25);
+        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush25);
+        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush25);
+        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush25);
+        backButton->setPalette(palette7);
         backButton->setAutoFillBackground(false);
         backButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/Icons/arrow-left.png"), QSize(), QIcon::Normal, QIcon::On);
-        backButton->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Icons/arrow-left.png"), QSize(), QIcon::Normal, QIcon::On);
+        backButton->setIcon(icon1);
         backButton->setIconSize(QSize(40, 40));
         projectDetailScrollArea = new QScrollArea(projectDetailsPage);
         projectDetailScrollArea->setObjectName("projectDetailScrollArea");
@@ -764,23 +854,23 @@ public:
         sizePolicy.setHeightForWidth(projectDetailScrollArea->sizePolicy().hasHeightForWidth());
         projectDetailScrollArea->setSizePolicy(sizePolicy);
         projectDetailScrollArea->setMinimumSize(QSize(550, 500));
-        QPalette palette6;
-        palette6.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette6.setBrush(QPalette::Active, QPalette::Base, brush);
+        QPalette palette8;
+        palette8.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette8.setBrush(QPalette::Active, QPalette::Base, brush);
         QBrush brush26(QColor(0, 0, 0, 255));
         brush26.setStyle(Qt::NoBrush);
-        palette6.setBrush(QPalette::Active, QPalette::Window, brush26);
-        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette8.setBrush(QPalette::Active, QPalette::Window, brush26);
+        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::Base, brush);
         QBrush brush27(QColor(0, 0, 0, 255));
         brush27.setStyle(Qt::NoBrush);
-        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush27);
-        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette8.setBrush(QPalette::Inactive, QPalette::Window, brush27);
+        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette8.setBrush(QPalette::Disabled, QPalette::Base, brush);
         QBrush brush28(QColor(0, 0, 0, 255));
         brush28.setStyle(Qt::NoBrush);
-        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush28);
-        projectDetailScrollArea->setPalette(palette6);
+        palette8.setBrush(QPalette::Disabled, QPalette::Window, brush28);
+        projectDetailScrollArea->setPalette(palette8);
         projectDetailScrollArea->setFocusPolicy(Qt::NoFocus);
         projectDetailScrollArea->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
 "    background-color: white;\n"
@@ -839,11 +929,11 @@ public:
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         projectNameLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         projectNameLabel->setObjectName("projectNameLabel");
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(projectNameLabel->sizePolicy().hasHeightForWidth());
-        projectNameLabel->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(projectNameLabel->sizePolicy().hasHeightForWidth());
+        projectNameLabel->setSizePolicy(sizePolicy4);
         projectNameLabel->setMinimumSize(QSize(0, 60));
         projectNameLabel->setFont(font);
 
@@ -853,17 +943,17 @@ public:
         editProjectName->setObjectName("editProjectName");
         editProjectName->setMinimumSize(QSize(40, 40));
         editProjectName->setMaximumSize(QSize(40, 40));
-        QPalette palette7;
-        palette7.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette7.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette7.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editProjectName->setPalette(palette7);
+        QPalette palette9;
+        palette9.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette9.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette9.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette9.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette9.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editProjectName->setPalette(palette9);
         editProjectName->setAutoFillBackground(false);
         editProjectName->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -871,9 +961,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/Icons/edit.png"), QSize(), QIcon::Normal, QIcon::On);
-        editProjectName->setIcon(icon1);
+        editProjectName->setIcon(icon);
         editProjectName->setIconSize(QSize(20, 20));
 
         horizontalLayout_3->addWidget(editProjectName);
@@ -889,11 +977,11 @@ public:
         dueDateLayout->setObjectName("dueDateLayout");
         dueDateLabel_2 = new QLabel(projectDetailScrollAreaWidgetContents);
         dueDateLabel_2->setObjectName("dueDateLabel_2");
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(dueDateLabel_2->sizePolicy().hasHeightForWidth());
-        dueDateLabel_2->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(dueDateLabel_2->sizePolicy().hasHeightForWidth());
+        dueDateLabel_2->setSizePolicy(sizePolicy5);
         dueDateLabel_2->setMinimumSize(QSize(60, 35));
         dueDateLabel_2->setMaximumSize(QSize(50, 16777215));
         QFont font3;
@@ -906,8 +994,8 @@ public:
 
         dueDateLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         dueDateLabel->setObjectName("dueDateLabel");
-        sizePolicy3.setHeightForWidth(dueDateLabel->sizePolicy().hasHeightForWidth());
-        dueDateLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(dueDateLabel->sizePolicy().hasHeightForWidth());
+        dueDateLabel->setSizePolicy(sizePolicy5);
         dueDateLabel->setMinimumSize(QSize(0, 30));
         QFont font4;
         font4.setFamilies({QString::fromUtf8("Avenir")});
@@ -921,17 +1009,17 @@ public:
         editProjectDueDate->setObjectName("editProjectDueDate");
         editProjectDueDate->setMinimumSize(QSize(40, 40));
         editProjectDueDate->setMaximumSize(QSize(100, 100));
-        QPalette palette8;
-        palette8.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette8.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette8.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette8.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette8.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette8.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette8.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette8.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette8.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editProjectDueDate->setPalette(palette8);
+        QPalette palette10;
+        palette10.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette10.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette10.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editProjectDueDate->setPalette(palette10);
         editProjectDueDate->setAutoFillBackground(false);
         editProjectDueDate->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -939,7 +1027,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editProjectDueDate->setIcon(icon1);
+        editProjectDueDate->setIcon(icon);
         editProjectDueDate->setIconSize(QSize(20, 20));
 
         dueDateLayout->addWidget(editProjectDueDate);
@@ -955,8 +1043,8 @@ public:
         statusLayout->setObjectName("statusLayout");
         statusColourIcon = new QLabel(projectDetailScrollAreaWidgetContents);
         statusColourIcon->setObjectName("statusColourIcon");
-        sizePolicy3.setHeightForWidth(statusColourIcon->sizePolicy().hasHeightForWidth());
-        statusColourIcon->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(statusColourIcon->sizePolicy().hasHeightForWidth());
+        statusColourIcon->setSizePolicy(sizePolicy5);
         statusColourIcon->setMinimumSize(QSize(0, 0));
         statusColourIcon->setMaximumSize(QSize(30, 50));
         QFont font5;
@@ -969,8 +1057,8 @@ public:
 
         statusLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         statusLabel->setObjectName("statusLabel");
-        sizePolicy3.setHeightForWidth(statusLabel->sizePolicy().hasHeightForWidth());
-        statusLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(statusLabel->sizePolicy().hasHeightForWidth());
+        statusLabel->setSizePolicy(sizePolicy5);
         statusLabel->setMinimumSize(QSize(100, 30));
         statusLabel->setMaximumSize(QSize(16777215, 16777215));
         statusLabel->setFont(font4);
@@ -987,17 +1075,17 @@ public:
         editProjectStatus->setObjectName("editProjectStatus");
         editProjectStatus->setMinimumSize(QSize(40, 40));
         editProjectStatus->setMaximumSize(QSize(40, 40));
-        QPalette palette9;
-        palette9.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette9.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette9.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette9.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette9.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette9.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette9.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette9.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette9.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editProjectStatus->setPalette(palette9);
+        QPalette palette11;
+        palette11.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette11.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette11.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette11.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette11.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editProjectStatus->setPalette(palette11);
         editProjectStatus->setAutoFillBackground(false);
         editProjectStatus->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1005,7 +1093,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editProjectStatus->setIcon(icon1);
+        editProjectStatus->setIcon(icon);
         editProjectStatus->setIconSize(QSize(20, 20));
 
         statusLayout->addWidget(editProjectStatus);
@@ -1021,8 +1109,8 @@ public:
         priorityLayout->setObjectName("priorityLayout");
         priorityDescriptionLavel = new QLabel(projectDetailScrollAreaWidgetContents);
         priorityDescriptionLavel->setObjectName("priorityDescriptionLavel");
-        sizePolicy3.setHeightForWidth(priorityDescriptionLavel->sizePolicy().hasHeightForWidth());
-        priorityDescriptionLavel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(priorityDescriptionLavel->sizePolicy().hasHeightForWidth());
+        priorityDescriptionLavel->setSizePolicy(sizePolicy5);
         priorityDescriptionLavel->setMinimumSize(QSize(95, 0));
         priorityDescriptionLavel->setMaximumSize(QSize(85, 16777215));
         priorityDescriptionLavel->setFont(font3);
@@ -1031,8 +1119,8 @@ public:
 
         priorityLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         priorityLabel->setObjectName("priorityLabel");
-        sizePolicy3.setHeightForWidth(priorityLabel->sizePolicy().hasHeightForWidth());
-        priorityLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(priorityLabel->sizePolicy().hasHeightForWidth());
+        priorityLabel->setSizePolicy(sizePolicy5);
         priorityLabel->setMinimumSize(QSize(100, 30));
         priorityLabel->setMaximumSize(QSize(16777215, 16777215));
         priorityLabel->setFont(font4);
@@ -1043,17 +1131,17 @@ public:
         editProjectPriority->setObjectName("editProjectPriority");
         editProjectPriority->setMinimumSize(QSize(40, 40));
         editProjectPriority->setMaximumSize(QSize(40, 40));
-        QPalette palette10;
-        palette10.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette10.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette10.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editProjectPriority->setPalette(palette10);
+        QPalette palette12;
+        palette12.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette12.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette12.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editProjectPriority->setPalette(palette12);
         editProjectPriority->setAutoFillBackground(false);
         editProjectPriority->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1061,7 +1149,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editProjectPriority->setIcon(icon1);
+        editProjectPriority->setIcon(icon);
         editProjectPriority->setIconSize(QSize(20, 20));
 
         priorityLayout->addWidget(editProjectPriority);
@@ -1077,8 +1165,8 @@ public:
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         descriptionLabel_2 = new QLabel(projectDetailScrollAreaWidgetContents);
         descriptionLabel_2->setObjectName("descriptionLabel_2");
-        sizePolicy3.setHeightForWidth(descriptionLabel_2->sizePolicy().hasHeightForWidth());
-        descriptionLabel_2->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(descriptionLabel_2->sizePolicy().hasHeightForWidth());
+        descriptionLabel_2->setSizePolicy(sizePolicy5);
         descriptionLabel_2->setMinimumSize(QSize(50, 30));
         descriptionLabel_2->setMaximumSize(QSize(300, 16777215));
         descriptionLabel_2->setFont(font3);
@@ -1089,17 +1177,17 @@ public:
         editProjectDescription->setObjectName("editProjectDescription");
         editProjectDescription->setMinimumSize(QSize(40, 40));
         editProjectDescription->setMaximumSize(QSize(40, 40));
-        QPalette palette11;
-        palette11.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette11.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette11.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette11.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette11.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette11.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette11.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette11.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette11.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editProjectDescription->setPalette(palette11);
+        QPalette palette13;
+        palette13.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette13.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette13.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette13.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette13.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette13.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette13.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette13.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette13.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editProjectDescription->setPalette(palette13);
         editProjectDescription->setAutoFillBackground(false);
         editProjectDescription->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1107,7 +1195,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editProjectDescription->setIcon(icon1);
+        editProjectDescription->setIcon(icon);
         editProjectDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_4->addWidget(editProjectDescription);
@@ -1121,11 +1209,11 @@ public:
 
         descriptionLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         descriptionLabel->setObjectName("descriptionLabel");
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Minimum);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(descriptionLabel->sizePolicy().hasHeightForWidth());
-        descriptionLabel->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy6(QSizePolicy::Preferred, QSizePolicy::Minimum);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(descriptionLabel->sizePolicy().hasHeightForWidth());
+        descriptionLabel->setSizePolicy(sizePolicy6);
         descriptionLabel->setMinimumSize(QSize(0, 0));
         descriptionLabel->setMaximumSize(QSize(16777214, 16777215));
         QFont font6;
@@ -1142,8 +1230,8 @@ public:
         horizontalLayout_13->setObjectName("horizontalLayout_13");
         ACLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         ACLabel->setObjectName("ACLabel");
-        sizePolicy3.setHeightForWidth(ACLabel->sizePolicy().hasHeightForWidth());
-        ACLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(ACLabel->sizePolicy().hasHeightForWidth());
+        ACLabel->setSizePolicy(sizePolicy5);
         ACLabel->setMinimumSize(QSize(50, 30));
         ACLabel->setMaximumSize(QSize(300, 16777215));
         ACLabel->setFont(font3);
@@ -1173,8 +1261,8 @@ public:
         horizontalLayout_9->setObjectName("horizontalLayout_9");
         epicLabel = new QLabel(projectDetailScrollAreaWidgetContents);
         epicLabel->setObjectName("epicLabel");
-        sizePolicy3.setHeightForWidth(epicLabel->sizePolicy().hasHeightForWidth());
-        epicLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicLabel->sizePolicy().hasHeightForWidth());
+        epicLabel->setSizePolicy(sizePolicy5);
         epicLabel->setMinimumSize(QSize(50, 30));
         epicLabel->setMaximumSize(QSize(300, 16777215));
         epicLabel->setFont(font3);
@@ -1239,23 +1327,23 @@ public:
         sizePolicy.setHeightForWidth(epicDetailScrollArea->sizePolicy().hasHeightForWidth());
         epicDetailScrollArea->setSizePolicy(sizePolicy);
         epicDetailScrollArea->setMinimumSize(QSize(550, 500));
-        QPalette palette12;
-        palette12.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette12.setBrush(QPalette::Active, QPalette::Base, brush);
+        QPalette palette14;
+        palette14.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette14.setBrush(QPalette::Active, QPalette::Base, brush);
         QBrush brush29(QColor(0, 0, 0, 255));
         brush29.setStyle(Qt::NoBrush);
-        palette12.setBrush(QPalette::Active, QPalette::Window, brush29);
-        palette12.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette14.setBrush(QPalette::Active, QPalette::Window, brush29);
+        palette14.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette14.setBrush(QPalette::Inactive, QPalette::Base, brush);
         QBrush brush30(QColor(0, 0, 0, 255));
         brush30.setStyle(Qt::NoBrush);
-        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush30);
-        palette12.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette14.setBrush(QPalette::Inactive, QPalette::Window, brush30);
+        palette14.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette14.setBrush(QPalette::Disabled, QPalette::Base, brush);
         QBrush brush31(QColor(0, 0, 0, 255));
         brush31.setStyle(Qt::NoBrush);
-        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush31);
-        epicDetailScrollArea->setPalette(palette12);
+        palette14.setBrush(QPalette::Disabled, QPalette::Window, brush31);
+        epicDetailScrollArea->setPalette(palette14);
         epicDetailScrollArea->setFocusPolicy(Qt::NoFocus);
         epicDetailScrollArea->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
 "    background-color: white;\n"
@@ -1314,8 +1402,8 @@ public:
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         epicNameLabel = new QLabel(epicDetailScrollAreaContents);
         epicNameLabel->setObjectName("epicNameLabel");
-        sizePolicy2.setHeightForWidth(epicNameLabel->sizePolicy().hasHeightForWidth());
-        epicNameLabel->setSizePolicy(sizePolicy2);
+        sizePolicy4.setHeightForWidth(epicNameLabel->sizePolicy().hasHeightForWidth());
+        epicNameLabel->setSizePolicy(sizePolicy4);
         epicNameLabel->setMinimumSize(QSize(0, 60));
         epicNameLabel->setFont(font);
 
@@ -1325,17 +1413,17 @@ public:
         editEpicName->setObjectName("editEpicName");
         editEpicName->setMinimumSize(QSize(40, 40));
         editEpicName->setMaximumSize(QSize(40, 40));
-        QPalette palette13;
-        palette13.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette13.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette13.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette13.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette13.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette13.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette13.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette13.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette13.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editEpicName->setPalette(palette13);
+        QPalette palette15;
+        palette15.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette15.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette15.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette15.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette15.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette15.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editEpicName->setPalette(palette15);
         editEpicName->setAutoFillBackground(false);
         editEpicName->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1343,7 +1431,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editEpicName->setIcon(icon1);
+        editEpicName->setIcon(icon);
         editEpicName->setIconSize(QSize(20, 20));
 
         horizontalLayout_5->addWidget(editEpicName);
@@ -1359,8 +1447,8 @@ public:
         epicDueDateLayout->setObjectName("epicDueDateLayout");
         epicDueDateLabelDescription = new QLabel(epicDetailScrollAreaContents);
         epicDueDateLabelDescription->setObjectName("epicDueDateLabelDescription");
-        sizePolicy3.setHeightForWidth(epicDueDateLabelDescription->sizePolicy().hasHeightForWidth());
-        epicDueDateLabelDescription->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicDueDateLabelDescription->sizePolicy().hasHeightForWidth());
+        epicDueDateLabelDescription->setSizePolicy(sizePolicy5);
         epicDueDateLabelDescription->setMinimumSize(QSize(60, 35));
         epicDueDateLabelDescription->setMaximumSize(QSize(50, 16777215));
         epicDueDateLabelDescription->setFont(font3);
@@ -1369,8 +1457,8 @@ public:
 
         epicDueDateLabel = new QLabel(epicDetailScrollAreaContents);
         epicDueDateLabel->setObjectName("epicDueDateLabel");
-        sizePolicy3.setHeightForWidth(epicDueDateLabel->sizePolicy().hasHeightForWidth());
-        epicDueDateLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicDueDateLabel->sizePolicy().hasHeightForWidth());
+        epicDueDateLabel->setSizePolicy(sizePolicy5);
         epicDueDateLabel->setMinimumSize(QSize(0, 30));
         epicDueDateLabel->setFont(font4);
 
@@ -1380,17 +1468,17 @@ public:
         editEpicDueDate->setObjectName("editEpicDueDate");
         editEpicDueDate->setMinimumSize(QSize(40, 40));
         editEpicDueDate->setMaximumSize(QSize(40, 40));
-        QPalette palette14;
-        palette14.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette14.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette14.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette14.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette14.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette14.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette14.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette14.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette14.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editEpicDueDate->setPalette(palette14);
+        QPalette palette16;
+        palette16.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette16.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette16.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette16.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette16.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette16.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editEpicDueDate->setPalette(palette16);
         editEpicDueDate->setAutoFillBackground(false);
         editEpicDueDate->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1398,7 +1486,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editEpicDueDate->setIcon(icon1);
+        editEpicDueDate->setIcon(icon);
         editEpicDueDate->setIconSize(QSize(20, 20));
 
         epicDueDateLayout->addWidget(editEpicDueDate);
@@ -1414,8 +1502,8 @@ public:
         epicStatusLayout->setObjectName("epicStatusLayout");
         epicStatusColourIcon = new QLabel(epicDetailScrollAreaContents);
         epicStatusColourIcon->setObjectName("epicStatusColourIcon");
-        sizePolicy3.setHeightForWidth(epicStatusColourIcon->sizePolicy().hasHeightForWidth());
-        epicStatusColourIcon->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicStatusColourIcon->sizePolicy().hasHeightForWidth());
+        epicStatusColourIcon->setSizePolicy(sizePolicy5);
         epicStatusColourIcon->setMinimumSize(QSize(0, 0));
         epicStatusColourIcon->setMaximumSize(QSize(30, 50));
         epicStatusColourIcon->setFont(font5);
@@ -1424,8 +1512,8 @@ public:
 
         epicStatusLabel = new QLabel(epicDetailScrollAreaContents);
         epicStatusLabel->setObjectName("epicStatusLabel");
-        sizePolicy3.setHeightForWidth(epicStatusLabel->sizePolicy().hasHeightForWidth());
-        epicStatusLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicStatusLabel->sizePolicy().hasHeightForWidth());
+        epicStatusLabel->setSizePolicy(sizePolicy5);
         epicStatusLabel->setMinimumSize(QSize(100, 30));
         epicStatusLabel->setMaximumSize(QSize(16777215, 16777215));
         epicStatusLabel->setFont(font4);
@@ -1442,17 +1530,17 @@ public:
         editEpicStatus->setObjectName("editEpicStatus");
         editEpicStatus->setMinimumSize(QSize(40, 40));
         editEpicStatus->setMaximumSize(QSize(40, 40));
-        QPalette palette15;
-        palette15.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette15.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette15.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette15.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette15.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette15.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette15.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette15.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette15.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editEpicStatus->setPalette(palette15);
+        QPalette palette17;
+        palette17.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette17.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette17.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette17.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette17.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette17.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editEpicStatus->setPalette(palette17);
         editEpicStatus->setAutoFillBackground(false);
         editEpicStatus->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1460,7 +1548,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editEpicStatus->setIcon(icon1);
+        editEpicStatus->setIcon(icon);
         editEpicStatus->setIconSize(QSize(20, 20));
 
         epicStatusLayout->addWidget(editEpicStatus);
@@ -1476,8 +1564,8 @@ public:
         epicPriorityLayout->setObjectName("epicPriorityLayout");
         epicProrityDescriptionLabel = new QLabel(epicDetailScrollAreaContents);
         epicProrityDescriptionLabel->setObjectName("epicProrityDescriptionLabel");
-        sizePolicy3.setHeightForWidth(epicProrityDescriptionLabel->sizePolicy().hasHeightForWidth());
-        epicProrityDescriptionLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicProrityDescriptionLabel->sizePolicy().hasHeightForWidth());
+        epicProrityDescriptionLabel->setSizePolicy(sizePolicy5);
         epicProrityDescriptionLabel->setMinimumSize(QSize(95, 0));
         epicProrityDescriptionLabel->setMaximumSize(QSize(85, 16777215));
         epicProrityDescriptionLabel->setFont(font3);
@@ -1486,8 +1574,8 @@ public:
 
         epicPriorityLabel = new QLabel(epicDetailScrollAreaContents);
         epicPriorityLabel->setObjectName("epicPriorityLabel");
-        sizePolicy3.setHeightForWidth(epicPriorityLabel->sizePolicy().hasHeightForWidth());
-        epicPriorityLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicPriorityLabel->sizePolicy().hasHeightForWidth());
+        epicPriorityLabel->setSizePolicy(sizePolicy5);
         epicPriorityLabel->setMinimumSize(QSize(100, 30));
         epicPriorityLabel->setMaximumSize(QSize(16777215, 16777215));
         epicPriorityLabel->setFont(font4);
@@ -1498,17 +1586,17 @@ public:
         editEpicPriority->setObjectName("editEpicPriority");
         editEpicPriority->setMinimumSize(QSize(40, 40));
         editEpicPriority->setMaximumSize(QSize(40, 40));
-        QPalette palette16;
-        palette16.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette16.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette16.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette16.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette16.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette16.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette16.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette16.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette16.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editEpicPriority->setPalette(palette16);
+        QPalette palette18;
+        palette18.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette18.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette18.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette18.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette18.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette18.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editEpicPriority->setPalette(palette18);
         editEpicPriority->setAutoFillBackground(false);
         editEpicPriority->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1516,7 +1604,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editEpicPriority->setIcon(icon1);
+        editEpicPriority->setIcon(icon);
         editEpicPriority->setIconSize(QSize(20, 20));
 
         epicPriorityLayout->addWidget(editEpicPriority);
@@ -1532,8 +1620,8 @@ public:
         horizontalLayout_8->setObjectName("horizontalLayout_8");
         epicDescription = new QLabel(epicDetailScrollAreaContents);
         epicDescription->setObjectName("epicDescription");
-        sizePolicy3.setHeightForWidth(epicDescription->sizePolicy().hasHeightForWidth());
-        epicDescription->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicDescription->sizePolicy().hasHeightForWidth());
+        epicDescription->setSizePolicy(sizePolicy5);
         epicDescription->setMinimumSize(QSize(50, 30));
         epicDescription->setMaximumSize(QSize(300, 16777215));
         epicDescription->setFont(font3);
@@ -1544,17 +1632,17 @@ public:
         editEpicDescription->setObjectName("editEpicDescription");
         editEpicDescription->setMinimumSize(QSize(40, 40));
         editEpicDescription->setMaximumSize(QSize(40, 40));
-        QPalette palette17;
-        palette17.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette17.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette17.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette17.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette17.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette17.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette17.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette17.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette17.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editEpicDescription->setPalette(palette17);
+        QPalette palette19;
+        palette19.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette19.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette19.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette19.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette19.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette19.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette19.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette19.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette19.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editEpicDescription->setPalette(palette19);
         editEpicDescription->setAutoFillBackground(false);
         editEpicDescription->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1562,7 +1650,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editEpicDescription->setIcon(icon1);
+        editEpicDescription->setIcon(icon);
         editEpicDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_8->addWidget(editEpicDescription);
@@ -1576,8 +1664,8 @@ public:
 
         epicDescriptionLabel = new QLabel(epicDetailScrollAreaContents);
         epicDescriptionLabel->setObjectName("epicDescriptionLabel");
-        sizePolicy4.setHeightForWidth(epicDescriptionLabel->sizePolicy().hasHeightForWidth());
-        epicDescriptionLabel->setSizePolicy(sizePolicy4);
+        sizePolicy6.setHeightForWidth(epicDescriptionLabel->sizePolicy().hasHeightForWidth());
+        epicDescriptionLabel->setSizePolicy(sizePolicy6);
         epicDescriptionLabel->setMinimumSize(QSize(0, 0));
         epicDescriptionLabel->setMaximumSize(QSize(16777214, 16777215));
         epicDescriptionLabel->setFont(font6);
@@ -1590,8 +1678,8 @@ public:
         horizontalLayout_14->setObjectName("horizontalLayout_14");
         epicACLabel = new QLabel(epicDetailScrollAreaContents);
         epicACLabel->setObjectName("epicACLabel");
-        sizePolicy3.setHeightForWidth(epicACLabel->sizePolicy().hasHeightForWidth());
-        epicACLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(epicACLabel->sizePolicy().hasHeightForWidth());
+        epicACLabel->setSizePolicy(sizePolicy5);
         epicACLabel->setMinimumSize(QSize(50, 30));
         epicACLabel->setMaximumSize(QSize(300, 16777215));
         epicACLabel->setFont(font3);
@@ -1621,8 +1709,8 @@ public:
         horizontalLayout_10->setObjectName("horizontalLayout_10");
         storyLabel = new QLabel(epicDetailScrollAreaContents);
         storyLabel->setObjectName("storyLabel");
-        sizePolicy3.setHeightForWidth(storyLabel->sizePolicy().hasHeightForWidth());
-        storyLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(storyLabel->sizePolicy().hasHeightForWidth());
+        storyLabel->setSizePolicy(sizePolicy5);
         storyLabel->setMinimumSize(QSize(50, 30));
         storyLabel->setMaximumSize(QSize(300, 16777215));
         storyLabel->setFont(font3);
@@ -1663,20 +1751,20 @@ public:
         epicBackButton->setObjectName("epicBackButton");
         epicBackButton->setGeometry(QRect(10, 10, 65, 56));
         epicBackButton->setMinimumSize(QSize(40, 40));
-        QPalette palette18;
-        palette18.setBrush(QPalette::Active, QPalette::Button, brush25);
-        palette18.setBrush(QPalette::Active, QPalette::Base, brush25);
-        palette18.setBrush(QPalette::Active, QPalette::Window, brush25);
-        palette18.setBrush(QPalette::Inactive, QPalette::Button, brush25);
-        palette18.setBrush(QPalette::Inactive, QPalette::Base, brush25);
-        palette18.setBrush(QPalette::Inactive, QPalette::Window, brush25);
-        palette18.setBrush(QPalette::Disabled, QPalette::Button, brush25);
-        palette18.setBrush(QPalette::Disabled, QPalette::Base, brush25);
-        palette18.setBrush(QPalette::Disabled, QPalette::Window, brush25);
-        epicBackButton->setPalette(palette18);
+        QPalette palette20;
+        palette20.setBrush(QPalette::Active, QPalette::Button, brush25);
+        palette20.setBrush(QPalette::Active, QPalette::Base, brush25);
+        palette20.setBrush(QPalette::Active, QPalette::Window, brush25);
+        palette20.setBrush(QPalette::Inactive, QPalette::Button, brush25);
+        palette20.setBrush(QPalette::Inactive, QPalette::Base, brush25);
+        palette20.setBrush(QPalette::Inactive, QPalette::Window, brush25);
+        palette20.setBrush(QPalette::Disabled, QPalette::Button, brush25);
+        palette20.setBrush(QPalette::Disabled, QPalette::Base, brush25);
+        palette20.setBrush(QPalette::Disabled, QPalette::Window, brush25);
+        epicBackButton->setPalette(palette20);
         epicBackButton->setAutoFillBackground(false);
         epicBackButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
-        epicBackButton->setIcon(icon);
+        epicBackButton->setIcon(icon1);
         epicBackButton->setIconSize(QSize(40, 40));
         locationDesc = new QLabel(epicDetailsPage);
         locationDesc->setObjectName("locationDesc");
@@ -1700,37 +1788,37 @@ public:
         locationDesc->raise();
         storyDetailsPage = new QWidget();
         storyDetailsPage->setObjectName("storyDetailsPage");
-        QSizePolicy sizePolicy5(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(storyDetailsPage->sizePolicy().hasHeightForWidth());
-        storyDetailsPage->setSizePolicy(sizePolicy5);
+        QSizePolicy sizePolicy7(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(storyDetailsPage->sizePolicy().hasHeightForWidth());
+        storyDetailsPage->setSizePolicy(sizePolicy7);
         storyDetailScrollArea = new QScrollArea(storyDetailsPage);
         storyDetailScrollArea->setObjectName("storyDetailScrollArea");
         storyDetailScrollArea->setGeometry(QRect(40, 80, 661, 511));
-        QSizePolicy sizePolicy6(QSizePolicy::Fixed, QSizePolicy::Expanding);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(storyDetailScrollArea->sizePolicy().hasHeightForWidth());
-        storyDetailScrollArea->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy8(QSizePolicy::Fixed, QSizePolicy::Expanding);
+        sizePolicy8.setHorizontalStretch(0);
+        sizePolicy8.setVerticalStretch(0);
+        sizePolicy8.setHeightForWidth(storyDetailScrollArea->sizePolicy().hasHeightForWidth());
+        storyDetailScrollArea->setSizePolicy(sizePolicy8);
         storyDetailScrollArea->setMinimumSize(QSize(550, 500));
-        QPalette palette19;
-        palette19.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette19.setBrush(QPalette::Active, QPalette::Base, brush);
+        QPalette palette21;
+        palette21.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette21.setBrush(QPalette::Active, QPalette::Base, brush);
         QBrush brush32(QColor(0, 0, 0, 255));
         brush32.setStyle(Qt::NoBrush);
-        palette19.setBrush(QPalette::Active, QPalette::Window, brush32);
-        palette19.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette19.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette21.setBrush(QPalette::Active, QPalette::Window, brush32);
+        palette21.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette21.setBrush(QPalette::Inactive, QPalette::Base, brush);
         QBrush brush33(QColor(0, 0, 0, 255));
         brush33.setStyle(Qt::NoBrush);
-        palette19.setBrush(QPalette::Inactive, QPalette::Window, brush33);
-        palette19.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette19.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette21.setBrush(QPalette::Inactive, QPalette::Window, brush33);
+        palette21.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette21.setBrush(QPalette::Disabled, QPalette::Base, brush);
         QBrush brush34(QColor(0, 0, 0, 255));
         brush34.setStyle(Qt::NoBrush);
-        palette19.setBrush(QPalette::Disabled, QPalette::Window, brush34);
-        storyDetailScrollArea->setPalette(palette19);
+        palette21.setBrush(QPalette::Disabled, QPalette::Window, brush34);
+        storyDetailScrollArea->setPalette(palette21);
         storyDetailScrollArea->setFocusPolicy(Qt::NoFocus);
         storyDetailScrollArea->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
 "    background-color: white;\n"
@@ -1789,8 +1877,8 @@ public:
         horizontalLayout->setObjectName("horizontalLayout");
         storyNameLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyNameLabel->setObjectName("storyNameLabel");
-        sizePolicy2.setHeightForWidth(storyNameLabel->sizePolicy().hasHeightForWidth());
-        storyNameLabel->setSizePolicy(sizePolicy2);
+        sizePolicy4.setHeightForWidth(storyNameLabel->sizePolicy().hasHeightForWidth());
+        storyNameLabel->setSizePolicy(sizePolicy4);
         storyNameLabel->setMinimumSize(QSize(0, 60));
         storyNameLabel->setFont(font);
 
@@ -1800,17 +1888,17 @@ public:
         editStoryName->setObjectName("editStoryName");
         editStoryName->setMinimumSize(QSize(40, 40));
         editStoryName->setMaximumSize(QSize(40, 40));
-        QPalette palette20;
-        palette20.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette20.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette20.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette20.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette20.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette20.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette20.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette20.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette20.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editStoryName->setPalette(palette20);
+        QPalette palette22;
+        palette22.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette22.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette22.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette22.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette22.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette22.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette22.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette22.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette22.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editStoryName->setPalette(palette22);
         editStoryName->setAutoFillBackground(false);
         editStoryName->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1818,7 +1906,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editStoryName->setIcon(icon1);
+        editStoryName->setIcon(icon);
         editStoryName->setIconSize(QSize(20, 20));
 
         horizontalLayout->addWidget(editStoryName);
@@ -1834,11 +1922,11 @@ public:
         storydueDateLayout->setObjectName("storydueDateLayout");
         storyDueDateLabelDescription = new QLabel(storyDetailScrollAreaWidgetContents);
         storyDueDateLabelDescription->setObjectName("storyDueDateLabelDescription");
-        QSizePolicy sizePolicy7(QSizePolicy::Minimum, QSizePolicy::Fixed);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(storyDueDateLabelDescription->sizePolicy().hasHeightForWidth());
-        storyDueDateLabelDescription->setSizePolicy(sizePolicy7);
+        QSizePolicy sizePolicy9(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy9.setHorizontalStretch(0);
+        sizePolicy9.setVerticalStretch(0);
+        sizePolicy9.setHeightForWidth(storyDueDateLabelDescription->sizePolicy().hasHeightForWidth());
+        storyDueDateLabelDescription->setSizePolicy(sizePolicy9);
         storyDueDateLabelDescription->setMinimumSize(QSize(60, 35));
         storyDueDateLabelDescription->setMaximumSize(QSize(50, 16777215));
         storyDueDateLabelDescription->setFont(font3);
@@ -1847,8 +1935,8 @@ public:
 
         storyDueDateLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyDueDateLabel->setObjectName("storyDueDateLabel");
-        sizePolicy7.setHeightForWidth(storyDueDateLabel->sizePolicy().hasHeightForWidth());
-        storyDueDateLabel->setSizePolicy(sizePolicy7);
+        sizePolicy9.setHeightForWidth(storyDueDateLabel->sizePolicy().hasHeightForWidth());
+        storyDueDateLabel->setSizePolicy(sizePolicy9);
         storyDueDateLabel->setMinimumSize(QSize(0, 30));
         storyDueDateLabel->setFont(font4);
 
@@ -1858,17 +1946,17 @@ public:
         editStoryDueDate->setObjectName("editStoryDueDate");
         editStoryDueDate->setMinimumSize(QSize(40, 40));
         editStoryDueDate->setMaximumSize(QSize(40, 40));
-        QPalette palette21;
-        palette21.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette21.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette21.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette21.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette21.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette21.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette21.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette21.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette21.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editStoryDueDate->setPalette(palette21);
+        QPalette palette23;
+        palette23.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette23.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette23.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette23.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette23.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette23.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette23.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette23.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette23.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editStoryDueDate->setPalette(palette23);
         editStoryDueDate->setAutoFillBackground(false);
         editStoryDueDate->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1876,7 +1964,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editStoryDueDate->setIcon(icon1);
+        editStoryDueDate->setIcon(icon);
         editStoryDueDate->setIconSize(QSize(20, 20));
 
         storydueDateLayout->addWidget(editStoryDueDate);
@@ -1892,8 +1980,8 @@ public:
         storyStatusLayout->setObjectName("storyStatusLayout");
         storyStatusColourIcon = new QLabel(storyDetailScrollAreaWidgetContents);
         storyStatusColourIcon->setObjectName("storyStatusColourIcon");
-        sizePolicy3.setHeightForWidth(storyStatusColourIcon->sizePolicy().hasHeightForWidth());
-        storyStatusColourIcon->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(storyStatusColourIcon->sizePolicy().hasHeightForWidth());
+        storyStatusColourIcon->setSizePolicy(sizePolicy5);
         storyStatusColourIcon->setMinimumSize(QSize(0, 0));
         storyStatusColourIcon->setMaximumSize(QSize(30, 50));
         storyStatusColourIcon->setFont(font5);
@@ -1902,8 +1990,8 @@ public:
 
         storyStatusLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyStatusLabel->setObjectName("storyStatusLabel");
-        sizePolicy3.setHeightForWidth(storyStatusLabel->sizePolicy().hasHeightForWidth());
-        storyStatusLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(storyStatusLabel->sizePolicy().hasHeightForWidth());
+        storyStatusLabel->setSizePolicy(sizePolicy5);
         storyStatusLabel->setMinimumSize(QSize(100, 30));
         storyStatusLabel->setMaximumSize(QSize(16777215, 16777215));
         storyStatusLabel->setFont(font4);
@@ -1920,17 +2008,17 @@ public:
         editStoryStatus->setObjectName("editStoryStatus");
         editStoryStatus->setMinimumSize(QSize(40, 40));
         editStoryStatus->setMaximumSize(QSize(40, 40));
-        QPalette palette22;
-        palette22.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette22.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette22.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette22.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette22.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette22.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette22.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette22.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette22.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editStoryStatus->setPalette(palette22);
+        QPalette palette24;
+        palette24.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette24.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette24.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette24.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette24.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette24.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette24.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette24.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette24.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editStoryStatus->setPalette(palette24);
         editStoryStatus->setAutoFillBackground(false);
         editStoryStatus->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1938,7 +2026,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editStoryStatus->setIcon(icon1);
+        editStoryStatus->setIcon(icon);
         editStoryStatus->setIconSize(QSize(20, 20));
 
         storyStatusLayout->addWidget(editStoryStatus);
@@ -1954,8 +2042,8 @@ public:
         storyPriorityLayout->setObjectName("storyPriorityLayout");
         storyPriorityDescriptionLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyPriorityDescriptionLabel->setObjectName("storyPriorityDescriptionLabel");
-        sizePolicy3.setHeightForWidth(storyPriorityDescriptionLabel->sizePolicy().hasHeightForWidth());
-        storyPriorityDescriptionLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(storyPriorityDescriptionLabel->sizePolicy().hasHeightForWidth());
+        storyPriorityDescriptionLabel->setSizePolicy(sizePolicy5);
         storyPriorityDescriptionLabel->setMinimumSize(QSize(95, 0));
         storyPriorityDescriptionLabel->setMaximumSize(QSize(85, 16777215));
         storyPriorityDescriptionLabel->setFont(font3);
@@ -1964,8 +2052,8 @@ public:
 
         storyPriorityLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyPriorityLabel->setObjectName("storyPriorityLabel");
-        sizePolicy3.setHeightForWidth(storyPriorityLabel->sizePolicy().hasHeightForWidth());
-        storyPriorityLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(storyPriorityLabel->sizePolicy().hasHeightForWidth());
+        storyPriorityLabel->setSizePolicy(sizePolicy5);
         storyPriorityLabel->setMinimumSize(QSize(100, 30));
         storyPriorityLabel->setMaximumSize(QSize(16777215, 16777215));
         storyPriorityLabel->setFont(font4);
@@ -1976,17 +2064,17 @@ public:
         editStoryPriority->setObjectName("editStoryPriority");
         editStoryPriority->setMinimumSize(QSize(40, 40));
         editStoryPriority->setMaximumSize(QSize(40, 40));
-        QPalette palette23;
-        palette23.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette23.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette23.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette23.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette23.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette23.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette23.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette23.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette23.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editStoryPriority->setPalette(palette23);
+        QPalette palette25;
+        palette25.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette25.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette25.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette25.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette25.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editStoryPriority->setPalette(palette25);
         editStoryPriority->setAutoFillBackground(false);
         editStoryPriority->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -1994,7 +2082,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editStoryPriority->setIcon(icon1);
+        editStoryPriority->setIcon(icon);
         editStoryPriority->setIconSize(QSize(20, 20));
 
         storyPriorityLayout->addWidget(editStoryPriority);
@@ -2011,8 +2099,8 @@ public:
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         storyDescriptionLabel_2 = new QLabel(storyDetailScrollAreaWidgetContents);
         storyDescriptionLabel_2->setObjectName("storyDescriptionLabel_2");
-        sizePolicy7.setHeightForWidth(storyDescriptionLabel_2->sizePolicy().hasHeightForWidth());
-        storyDescriptionLabel_2->setSizePolicy(sizePolicy7);
+        sizePolicy9.setHeightForWidth(storyDescriptionLabel_2->sizePolicy().hasHeightForWidth());
+        storyDescriptionLabel_2->setSizePolicy(sizePolicy9);
         storyDescriptionLabel_2->setMinimumSize(QSize(50, 30));
         storyDescriptionLabel_2->setMaximumSize(QSize(300, 16777215));
         storyDescriptionLabel_2->setFont(font3);
@@ -2024,17 +2112,17 @@ public:
         editStoryDescription->setObjectName("editStoryDescription");
         editStoryDescription->setMinimumSize(QSize(40, 40));
         editStoryDescription->setMaximumSize(QSize(40, 40));
-        QPalette palette24;
-        palette24.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette24.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette24.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette24.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette24.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette24.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette24.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette24.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette24.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editStoryDescription->setPalette(palette24);
+        QPalette palette26;
+        palette26.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette26.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette26.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette26.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette26.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editStoryDescription->setPalette(palette26);
         editStoryDescription->setAutoFillBackground(false);
         editStoryDescription->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -2042,7 +2130,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editStoryDescription->setIcon(icon1);
+        editStoryDescription->setIcon(icon);
         editStoryDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_2->addWidget(editStoryDescription);
@@ -2056,8 +2144,8 @@ public:
 
         storyDescriptionLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyDescriptionLabel->setObjectName("storyDescriptionLabel");
-        sizePolicy4.setHeightForWidth(storyDescriptionLabel->sizePolicy().hasHeightForWidth());
-        storyDescriptionLabel->setSizePolicy(sizePolicy4);
+        sizePolicy6.setHeightForWidth(storyDescriptionLabel->sizePolicy().hasHeightForWidth());
+        storyDescriptionLabel->setSizePolicy(sizePolicy6);
         storyDescriptionLabel->setMinimumSize(QSize(0, 0));
         storyDescriptionLabel->setMaximumSize(QSize(16777214, 16777215));
         storyDescriptionLabel->setFont(font6);
@@ -2070,8 +2158,8 @@ public:
         horizontalLayout_12->setObjectName("horizontalLayout_12");
         storyACLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         storyACLabel->setObjectName("storyACLabel");
-        sizePolicy3.setHeightForWidth(storyACLabel->sizePolicy().hasHeightForWidth());
-        storyACLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(storyACLabel->sizePolicy().hasHeightForWidth());
+        storyACLabel->setSizePolicy(sizePolicy5);
         storyACLabel->setMinimumSize(QSize(50, 30));
         storyACLabel->setMaximumSize(QSize(300, 16777215));
         storyACLabel->setFont(font3);
@@ -2101,8 +2189,8 @@ public:
         horizontalLayout_11->setObjectName("horizontalLayout_11");
         subtaskLabel = new QLabel(storyDetailScrollAreaWidgetContents);
         subtaskLabel->setObjectName("subtaskLabel");
-        sizePolicy3.setHeightForWidth(subtaskLabel->sizePolicy().hasHeightForWidth());
-        subtaskLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subtaskLabel->sizePolicy().hasHeightForWidth());
+        subtaskLabel->setSizePolicy(sizePolicy5);
         subtaskLabel->setMinimumSize(QSize(50, 30));
         subtaskLabel->setMaximumSize(QSize(300, 16777215));
         subtaskLabel->setFont(font3);
@@ -2141,20 +2229,20 @@ public:
         storyBackButton->setObjectName("storyBackButton");
         storyBackButton->setGeometry(QRect(10, 10, 65, 56));
         storyBackButton->setMinimumSize(QSize(40, 40));
-        QPalette palette25;
-        palette25.setBrush(QPalette::Active, QPalette::Button, brush25);
-        palette25.setBrush(QPalette::Active, QPalette::Base, brush25);
-        palette25.setBrush(QPalette::Active, QPalette::Window, brush25);
-        palette25.setBrush(QPalette::Inactive, QPalette::Button, brush25);
-        palette25.setBrush(QPalette::Inactive, QPalette::Base, brush25);
-        palette25.setBrush(QPalette::Inactive, QPalette::Window, brush25);
-        palette25.setBrush(QPalette::Disabled, QPalette::Button, brush25);
-        palette25.setBrush(QPalette::Disabled, QPalette::Base, brush25);
-        palette25.setBrush(QPalette::Disabled, QPalette::Window, brush25);
-        storyBackButton->setPalette(palette25);
+        QPalette palette27;
+        palette27.setBrush(QPalette::Active, QPalette::Button, brush25);
+        palette27.setBrush(QPalette::Active, QPalette::Base, brush25);
+        palette27.setBrush(QPalette::Active, QPalette::Window, brush25);
+        palette27.setBrush(QPalette::Inactive, QPalette::Button, brush25);
+        palette27.setBrush(QPalette::Inactive, QPalette::Base, brush25);
+        palette27.setBrush(QPalette::Inactive, QPalette::Window, brush25);
+        palette27.setBrush(QPalette::Disabled, QPalette::Button, brush25);
+        palette27.setBrush(QPalette::Disabled, QPalette::Base, brush25);
+        palette27.setBrush(QPalette::Disabled, QPalette::Window, brush25);
+        storyBackButton->setPalette(palette27);
         storyBackButton->setAutoFillBackground(false);
         storyBackButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
-        storyBackButton->setIcon(icon);
+        storyBackButton->setIcon(icon1);
         storyBackButton->setIconSize(QSize(40, 40));
         locationDesc_3 = new QLabel(storyDetailsPage);
         locationDesc_3->setObjectName("locationDesc_3");
@@ -2184,23 +2272,23 @@ public:
         sizePolicy.setHeightForWidth(subTaskPage->sizePolicy().hasHeightForWidth());
         subTaskPage->setSizePolicy(sizePolicy);
         subTaskPage->setMinimumSize(QSize(550, 500));
-        QPalette palette26;
-        palette26.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette26.setBrush(QPalette::Active, QPalette::Base, brush);
+        QPalette palette28;
+        palette28.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette28.setBrush(QPalette::Active, QPalette::Base, brush);
         QBrush brush35(QColor(0, 0, 0, 255));
         brush35.setStyle(Qt::NoBrush);
-        palette26.setBrush(QPalette::Active, QPalette::Window, brush35);
-        palette26.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette26.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette28.setBrush(QPalette::Active, QPalette::Window, brush35);
+        palette28.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette28.setBrush(QPalette::Inactive, QPalette::Base, brush);
         QBrush brush36(QColor(0, 0, 0, 255));
         brush36.setStyle(Qt::NoBrush);
-        palette26.setBrush(QPalette::Inactive, QPalette::Window, brush36);
-        palette26.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette26.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette28.setBrush(QPalette::Inactive, QPalette::Window, brush36);
+        palette28.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette28.setBrush(QPalette::Disabled, QPalette::Base, brush);
         QBrush brush37(QColor(0, 0, 0, 255));
         brush37.setStyle(Qt::NoBrush);
-        palette26.setBrush(QPalette::Disabled, QPalette::Window, brush37);
-        subTaskPage->setPalette(palette26);
+        palette28.setBrush(QPalette::Disabled, QPalette::Window, brush37);
+        subTaskPage->setPalette(palette28);
         subTaskPage->setFocusPolicy(Qt::NoFocus);
         subTaskPage->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
 "    background-color: white;\n"
@@ -2259,8 +2347,8 @@ public:
         horizontalLayout_15->setObjectName("horizontalLayout_15");
         subTaskNameLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskNameLabel->setObjectName("subTaskNameLabel");
-        sizePolicy2.setHeightForWidth(subTaskNameLabel->sizePolicy().hasHeightForWidth());
-        subTaskNameLabel->setSizePolicy(sizePolicy2);
+        sizePolicy4.setHeightForWidth(subTaskNameLabel->sizePolicy().hasHeightForWidth());
+        subTaskNameLabel->setSizePolicy(sizePolicy4);
         subTaskNameLabel->setMinimumSize(QSize(0, 60));
         subTaskNameLabel->setFont(font);
 
@@ -2270,17 +2358,17 @@ public:
         editSubTaskName->setObjectName("editSubTaskName");
         editSubTaskName->setMinimumSize(QSize(40, 40));
         editSubTaskName->setMaximumSize(QSize(40, 40));
-        QPalette palette27;
-        palette27.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette27.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette27.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette27.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette27.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette27.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette27.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette27.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette27.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editSubTaskName->setPalette(palette27);
+        QPalette palette29;
+        palette29.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette29.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette29.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette29.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette29.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editSubTaskName->setPalette(palette29);
         editSubTaskName->setAutoFillBackground(false);
         editSubTaskName->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -2288,7 +2376,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editSubTaskName->setIcon(icon1);
+        editSubTaskName->setIcon(icon);
         editSubTaskName->setIconSize(QSize(20, 20));
 
         horizontalLayout_15->addWidget(editSubTaskName);
@@ -2304,8 +2392,8 @@ public:
         subTaskDueDateLayout_3->setObjectName("subTaskDueDateLayout_3");
         subTaskDueDateLabelDescription_2 = new QLabel(subTaskDetailScrollAreaContents);
         subTaskDueDateLabelDescription_2->setObjectName("subTaskDueDateLabelDescription_2");
-        sizePolicy3.setHeightForWidth(subTaskDueDateLabelDescription_2->sizePolicy().hasHeightForWidth());
-        subTaskDueDateLabelDescription_2->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subTaskDueDateLabelDescription_2->sizePolicy().hasHeightForWidth());
+        subTaskDueDateLabelDescription_2->setSizePolicy(sizePolicy5);
         subTaskDueDateLabelDescription_2->setMinimumSize(QSize(140, 35));
         subTaskDueDateLabelDescription_2->setMaximumSize(QSize(140, 16777215));
         subTaskDueDateLabelDescription_2->setFont(font3);
@@ -2314,8 +2402,8 @@ public:
 
         assigneeLabel = new QLabel(subTaskDetailScrollAreaContents);
         assigneeLabel->setObjectName("assigneeLabel");
-        sizePolicy3.setHeightForWidth(assigneeLabel->sizePolicy().hasHeightForWidth());
-        assigneeLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(assigneeLabel->sizePolicy().hasHeightForWidth());
+        assigneeLabel->setSizePolicy(sizePolicy5);
         assigneeLabel->setMinimumSize(QSize(0, 30));
         assigneeLabel->setFont(font4);
 
@@ -2325,17 +2413,17 @@ public:
         editAssignee->setObjectName("editAssignee");
         editAssignee->setMinimumSize(QSize(40, 40));
         editAssignee->setMaximumSize(QSize(40, 40));
-        QPalette palette28;
-        palette28.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette28.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette28.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette28.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette28.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette28.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette28.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette28.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette28.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editAssignee->setPalette(palette28);
+        QPalette palette30;
+        palette30.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette30.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette30.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette30.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette30.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette30.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette30.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette30.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette30.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editAssignee->setPalette(palette30);
         editAssignee->setAutoFillBackground(false);
         editAssignee->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -2343,7 +2431,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editAssignee->setIcon(icon1);
+        editAssignee->setIcon(icon);
         editAssignee->setIconSize(QSize(20, 20));
 
         subTaskDueDateLayout_3->addWidget(editAssignee);
@@ -2359,8 +2447,8 @@ public:
         subTaskDueDateLayout_2->setObjectName("subTaskDueDateLayout_2");
         subTaskDueDateLabelDescription = new QLabel(subTaskDetailScrollAreaContents);
         subTaskDueDateLabelDescription->setObjectName("subTaskDueDateLabelDescription");
-        sizePolicy3.setHeightForWidth(subTaskDueDateLabelDescription->sizePolicy().hasHeightForWidth());
-        subTaskDueDateLabelDescription->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subTaskDueDateLabelDescription->sizePolicy().hasHeightForWidth());
+        subTaskDueDateLabelDescription->setSizePolicy(sizePolicy5);
         subTaskDueDateLabelDescription->setMinimumSize(QSize(60, 35));
         subTaskDueDateLabelDescription->setMaximumSize(QSize(50, 16777215));
         subTaskDueDateLabelDescription->setFont(font3);
@@ -2369,8 +2457,8 @@ public:
 
         subTaskDueDateLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskDueDateLabel->setObjectName("subTaskDueDateLabel");
-        sizePolicy3.setHeightForWidth(subTaskDueDateLabel->sizePolicy().hasHeightForWidth());
-        subTaskDueDateLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subTaskDueDateLabel->sizePolicy().hasHeightForWidth());
+        subTaskDueDateLabel->setSizePolicy(sizePolicy5);
         subTaskDueDateLabel->setMinimumSize(QSize(0, 30));
         subTaskDueDateLabel->setFont(font4);
 
@@ -2380,17 +2468,17 @@ public:
         editSubTaskDueDate->setObjectName("editSubTaskDueDate");
         editSubTaskDueDate->setMinimumSize(QSize(40, 40));
         editSubTaskDueDate->setMaximumSize(QSize(40, 40));
-        QPalette palette29;
-        palette29.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette29.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette29.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette29.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette29.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette29.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette29.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette29.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette29.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editSubTaskDueDate->setPalette(palette29);
+        QPalette palette31;
+        palette31.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette31.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette31.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette31.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette31.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette31.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette31.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette31.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette31.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editSubTaskDueDate->setPalette(palette31);
         editSubTaskDueDate->setAutoFillBackground(false);
         editSubTaskDueDate->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -2398,7 +2486,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editSubTaskDueDate->setIcon(icon1);
+        editSubTaskDueDate->setIcon(icon);
         editSubTaskDueDate->setIconSize(QSize(20, 20));
 
         subTaskDueDateLayout_2->addWidget(editSubTaskDueDate);
@@ -2414,8 +2502,8 @@ public:
         subTaskStatusLayout->setObjectName("subTaskStatusLayout");
         subTaskStatusColourIcon = new QLabel(subTaskDetailScrollAreaContents);
         subTaskStatusColourIcon->setObjectName("subTaskStatusColourIcon");
-        sizePolicy3.setHeightForWidth(subTaskStatusColourIcon->sizePolicy().hasHeightForWidth());
-        subTaskStatusColourIcon->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subTaskStatusColourIcon->sizePolicy().hasHeightForWidth());
+        subTaskStatusColourIcon->setSizePolicy(sizePolicy5);
         subTaskStatusColourIcon->setMinimumSize(QSize(0, 0));
         subTaskStatusColourIcon->setMaximumSize(QSize(30, 50));
         subTaskStatusColourIcon->setFont(font5);
@@ -2424,8 +2512,8 @@ public:
 
         subTaskStatusLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskStatusLabel->setObjectName("subTaskStatusLabel");
-        sizePolicy3.setHeightForWidth(subTaskStatusLabel->sizePolicy().hasHeightForWidth());
-        subTaskStatusLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subTaskStatusLabel->sizePolicy().hasHeightForWidth());
+        subTaskStatusLabel->setSizePolicy(sizePolicy5);
         subTaskStatusLabel->setMinimumSize(QSize(100, 30));
         subTaskStatusLabel->setMaximumSize(QSize(16777215, 16777215));
         subTaskStatusLabel->setFont(font4);
@@ -2436,17 +2524,17 @@ public:
         editSubTaskStatus->setObjectName("editSubTaskStatus");
         editSubTaskStatus->setMinimumSize(QSize(40, 40));
         editSubTaskStatus->setMaximumSize(QSize(40, 40));
-        QPalette palette30;
-        palette30.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette30.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette30.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette30.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette30.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette30.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette30.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette30.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette30.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editSubTaskStatus->setPalette(palette30);
+        QPalette palette32;
+        palette32.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette32.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette32.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette32.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette32.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette32.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette32.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette32.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette32.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editSubTaskStatus->setPalette(palette32);
         editSubTaskStatus->setAutoFillBackground(false);
         editSubTaskStatus->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -2454,7 +2542,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editSubTaskStatus->setIcon(icon1);
+        editSubTaskStatus->setIcon(icon);
         editSubTaskStatus->setIconSize(QSize(20, 20));
 
         subTaskStatusLayout->addWidget(editSubTaskStatus);
@@ -2476,8 +2564,8 @@ public:
         subTaskPriorityLayout->setObjectName("subTaskPriorityLayout");
         subTaskProrityDescriptionLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskProrityDescriptionLabel->setObjectName("subTaskProrityDescriptionLabel");
-        sizePolicy3.setHeightForWidth(subTaskProrityDescriptionLabel->sizePolicy().hasHeightForWidth());
-        subTaskProrityDescriptionLabel->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subTaskProrityDescriptionLabel->sizePolicy().hasHeightForWidth());
+        subTaskProrityDescriptionLabel->setSizePolicy(sizePolicy5);
         subTaskProrityDescriptionLabel->setMinimumSize(QSize(95, 0));
         subTaskProrityDescriptionLabel->setMaximumSize(QSize(85, 16777215));
         subTaskProrityDescriptionLabel->setFont(font3);
@@ -2486,11 +2574,11 @@ public:
 
         subTaskPriorityLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskPriorityLabel->setObjectName("subTaskPriorityLabel");
-        QSizePolicy sizePolicy8(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-        sizePolicy8.setHorizontalStretch(0);
-        sizePolicy8.setVerticalStretch(0);
-        sizePolicy8.setHeightForWidth(subTaskPriorityLabel->sizePolicy().hasHeightForWidth());
-        subTaskPriorityLabel->setSizePolicy(sizePolicy8);
+        QSizePolicy sizePolicy10(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+        sizePolicy10.setHorizontalStretch(0);
+        sizePolicy10.setVerticalStretch(0);
+        sizePolicy10.setHeightForWidth(subTaskPriorityLabel->sizePolicy().hasHeightForWidth());
+        subTaskPriorityLabel->setSizePolicy(sizePolicy10);
         subTaskPriorityLabel->setMinimumSize(QSize(100, 30));
         subTaskPriorityLabel->setMaximumSize(QSize(16777215, 16777215));
         subTaskPriorityLabel->setFont(font4);
@@ -2501,17 +2589,17 @@ public:
         editSubTaskPriority->setObjectName("editSubTaskPriority");
         editSubTaskPriority->setMinimumSize(QSize(40, 40));
         editSubTaskPriority->setMaximumSize(QSize(40, 40));
-        QPalette palette31;
-        palette31.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette31.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette31.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette31.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette31.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette31.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette31.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette31.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette31.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editSubTaskPriority->setPalette(palette31);
+        QPalette palette33;
+        palette33.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette33.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette33.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette33.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette33.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette33.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette33.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette33.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette33.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editSubTaskPriority->setPalette(palette33);
         editSubTaskPriority->setAutoFillBackground(false);
         editSubTaskPriority->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -2519,7 +2607,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editSubTaskPriority->setIcon(icon1);
+        editSubTaskPriority->setIcon(icon);
         editSubTaskPriority->setIconSize(QSize(20, 20));
 
         subTaskPriorityLayout->addWidget(editSubTaskPriority);
@@ -2535,8 +2623,8 @@ public:
         horizontalLayout_16->setObjectName("horizontalLayout_16");
         subTaskDescription = new QLabel(subTaskDetailScrollAreaContents);
         subTaskDescription->setObjectName("subTaskDescription");
-        sizePolicy3.setHeightForWidth(subTaskDescription->sizePolicy().hasHeightForWidth());
-        subTaskDescription->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(subTaskDescription->sizePolicy().hasHeightForWidth());
+        subTaskDescription->setSizePolicy(sizePolicy5);
         subTaskDescription->setMinimumSize(QSize(50, 30));
         subTaskDescription->setMaximumSize(QSize(300, 16777215));
         subTaskDescription->setFont(font3);
@@ -2547,17 +2635,17 @@ public:
         editSubTaskDescription->setObjectName("editSubTaskDescription");
         editSubTaskDescription->setMinimumSize(QSize(40, 40));
         editSubTaskDescription->setMaximumSize(QSize(40, 40));
-        QPalette palette32;
-        palette32.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette32.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette32.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette32.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette32.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette32.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette32.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette32.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette32.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        editSubTaskDescription->setPalette(palette32);
+        QPalette palette34;
+        palette34.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette34.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette34.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette34.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette34.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette34.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette34.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette34.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette34.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        editSubTaskDescription->setPalette(palette34);
         editSubTaskDescription->setAutoFillBackground(false);
         editSubTaskDescription->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: none;\n"
@@ -2565,7 +2653,7 @@ public:
 "    background-color: rgba(0,0,0,0)\n"
 "}\n"
 ""));
-        editSubTaskDescription->setIcon(icon1);
+        editSubTaskDescription->setIcon(icon);
         editSubTaskDescription->setIconSize(QSize(20, 20));
 
         horizontalLayout_16->addWidget(editSubTaskDescription);
@@ -2579,8 +2667,8 @@ public:
 
         subTaskDescriptionLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskDescriptionLabel->setObjectName("subTaskDescriptionLabel");
-        sizePolicy4.setHeightForWidth(subTaskDescriptionLabel->sizePolicy().hasHeightForWidth());
-        subTaskDescriptionLabel->setSizePolicy(sizePolicy4);
+        sizePolicy6.setHeightForWidth(subTaskDescriptionLabel->sizePolicy().hasHeightForWidth());
+        subTaskDescriptionLabel->setSizePolicy(sizePolicy6);
         subTaskDescriptionLabel->setMinimumSize(QSize(0, 0));
         subTaskDescriptionLabel->setMaximumSize(QSize(16777214, 16777215));
         subTaskDescriptionLabel->setFont(font6);
@@ -2603,20 +2691,20 @@ public:
         subTaskBackButton->setObjectName("subTaskBackButton");
         subTaskBackButton->setGeometry(QRect(10, 10, 65, 56));
         subTaskBackButton->setMinimumSize(QSize(40, 40));
-        QPalette palette33;
-        palette33.setBrush(QPalette::Active, QPalette::Button, brush25);
-        palette33.setBrush(QPalette::Active, QPalette::Base, brush25);
-        palette33.setBrush(QPalette::Active, QPalette::Window, brush25);
-        palette33.setBrush(QPalette::Inactive, QPalette::Button, brush25);
-        palette33.setBrush(QPalette::Inactive, QPalette::Base, brush25);
-        palette33.setBrush(QPalette::Inactive, QPalette::Window, brush25);
-        palette33.setBrush(QPalette::Disabled, QPalette::Button, brush25);
-        palette33.setBrush(QPalette::Disabled, QPalette::Base, brush25);
-        palette33.setBrush(QPalette::Disabled, QPalette::Window, brush25);
-        subTaskBackButton->setPalette(palette33);
+        QPalette palette35;
+        palette35.setBrush(QPalette::Active, QPalette::Button, brush25);
+        palette35.setBrush(QPalette::Active, QPalette::Base, brush25);
+        palette35.setBrush(QPalette::Active, QPalette::Window, brush25);
+        palette35.setBrush(QPalette::Inactive, QPalette::Button, brush25);
+        palette35.setBrush(QPalette::Inactive, QPalette::Base, brush25);
+        palette35.setBrush(QPalette::Inactive, QPalette::Window, brush25);
+        palette35.setBrush(QPalette::Disabled, QPalette::Button, brush25);
+        palette35.setBrush(QPalette::Disabled, QPalette::Base, brush25);
+        palette35.setBrush(QPalette::Disabled, QPalette::Window, brush25);
+        subTaskBackButton->setPalette(palette35);
         subTaskBackButton->setAutoFillBackground(false);
         subTaskBackButton->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
-        subTaskBackButton->setIcon(icon);
+        subTaskBackButton->setIcon(icon1);
         subTaskBackButton->setIconSize(QSize(40, 40));
         locationDesc_4 = new QLabel(subTaskDetailsPage);
         locationDesc_4->setObjectName("locationDesc_4");
@@ -2746,23 +2834,23 @@ public:
         sizePolicy.setHeightForWidth(myWorkScrollArea->sizePolicy().hasHeightForWidth());
         myWorkScrollArea->setSizePolicy(sizePolicy);
         myWorkScrollArea->setMinimumSize(QSize(550, 500));
-        QPalette palette34;
-        palette34.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette34.setBrush(QPalette::Active, QPalette::Base, brush);
+        QPalette palette36;
+        palette36.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette36.setBrush(QPalette::Active, QPalette::Base, brush);
         QBrush brush38(QColor(0, 0, 0, 255));
         brush38.setStyle(Qt::NoBrush);
-        palette34.setBrush(QPalette::Active, QPalette::Window, brush38);
-        palette34.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette34.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette36.setBrush(QPalette::Active, QPalette::Window, brush38);
+        palette36.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette36.setBrush(QPalette::Inactive, QPalette::Base, brush);
         QBrush brush39(QColor(0, 0, 0, 255));
         brush39.setStyle(Qt::NoBrush);
-        palette34.setBrush(QPalette::Inactive, QPalette::Window, brush39);
-        palette34.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette34.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette36.setBrush(QPalette::Inactive, QPalette::Window, brush39);
+        palette36.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette36.setBrush(QPalette::Disabled, QPalette::Base, brush);
         QBrush brush40(QColor(0, 0, 0, 255));
         brush40.setStyle(Qt::NoBrush);
-        palette34.setBrush(QPalette::Disabled, QPalette::Window, brush40);
-        myWorkScrollArea->setPalette(palette34);
+        palette36.setBrush(QPalette::Disabled, QPalette::Window, brush40);
+        myWorkScrollArea->setPalette(palette36);
         myWorkScrollArea->setFocusPolicy(Qt::NoFocus);
         myWorkScrollArea->setStyleSheet(QString::fromUtf8("QScrollArea {\n"
 "    background-color: white;\n"
@@ -2899,17 +2987,17 @@ public:
         mainPageButton = new QPushButton(frame);
         mainPageButton->setObjectName("mainPageButton");
         mainPageButton->setMinimumSize(QSize(40, 50));
-        QPalette palette35;
-        palette35.setBrush(QPalette::Active, QPalette::Button, brush25);
-        palette35.setBrush(QPalette::Active, QPalette::Base, brush25);
-        palette35.setBrush(QPalette::Active, QPalette::Window, brush25);
-        palette35.setBrush(QPalette::Inactive, QPalette::Button, brush25);
-        palette35.setBrush(QPalette::Inactive, QPalette::Base, brush25);
-        palette35.setBrush(QPalette::Inactive, QPalette::Window, brush25);
-        palette35.setBrush(QPalette::Disabled, QPalette::Button, brush25);
-        palette35.setBrush(QPalette::Disabled, QPalette::Base, brush25);
-        palette35.setBrush(QPalette::Disabled, QPalette::Window, brush25);
-        mainPageButton->setPalette(palette35);
+        QPalette palette37;
+        palette37.setBrush(QPalette::Active, QPalette::Button, brush25);
+        palette37.setBrush(QPalette::Active, QPalette::Base, brush25);
+        palette37.setBrush(QPalette::Active, QPalette::Window, brush25);
+        palette37.setBrush(QPalette::Inactive, QPalette::Button, brush25);
+        palette37.setBrush(QPalette::Inactive, QPalette::Base, brush25);
+        palette37.setBrush(QPalette::Inactive, QPalette::Window, brush25);
+        palette37.setBrush(QPalette::Disabled, QPalette::Button, brush25);
+        palette37.setBrush(QPalette::Disabled, QPalette::Base, brush25);
+        palette37.setBrush(QPalette::Disabled, QPalette::Window, brush25);
+        mainPageButton->setPalette(palette37);
         mainPageButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
 "    border-radius: 10px 10px 0px 0px;\n"
@@ -2956,17 +3044,17 @@ public:
         projectsButton = new QPushButton(frame);
         projectsButton->setObjectName("projectsButton");
         projectsButton->setMinimumSize(QSize(40, 50));
-        QPalette palette36;
-        palette36.setBrush(QPalette::Active, QPalette::Button, brush25);
-        palette36.setBrush(QPalette::Active, QPalette::Base, brush25);
-        palette36.setBrush(QPalette::Active, QPalette::Window, brush25);
-        palette36.setBrush(QPalette::Inactive, QPalette::Button, brush25);
-        palette36.setBrush(QPalette::Inactive, QPalette::Base, brush25);
-        palette36.setBrush(QPalette::Inactive, QPalette::Window, brush25);
-        palette36.setBrush(QPalette::Disabled, QPalette::Button, brush25);
-        palette36.setBrush(QPalette::Disabled, QPalette::Base, brush25);
-        palette36.setBrush(QPalette::Disabled, QPalette::Window, brush25);
-        projectsButton->setPalette(palette36);
+        QPalette palette38;
+        palette38.setBrush(QPalette::Active, QPalette::Button, brush25);
+        palette38.setBrush(QPalette::Active, QPalette::Base, brush25);
+        palette38.setBrush(QPalette::Active, QPalette::Window, brush25);
+        palette38.setBrush(QPalette::Inactive, QPalette::Button, brush25);
+        palette38.setBrush(QPalette::Inactive, QPalette::Base, brush25);
+        palette38.setBrush(QPalette::Inactive, QPalette::Window, brush25);
+        palette38.setBrush(QPalette::Disabled, QPalette::Button, brush25);
+        palette38.setBrush(QPalette::Disabled, QPalette::Base, brush25);
+        palette38.setBrush(QPalette::Disabled, QPalette::Window, brush25);
+        projectsButton->setPalette(palette38);
         projectsButton->setAutoFillBackground(false);
         projectsButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
@@ -3018,17 +3106,17 @@ public:
         myWorkButton = new QPushButton(frame);
         myWorkButton->setObjectName("myWorkButton");
         myWorkButton->setMinimumSize(QSize(40, 50));
-        QPalette palette37;
-        palette37.setBrush(QPalette::Active, QPalette::Button, brush25);
-        palette37.setBrush(QPalette::Active, QPalette::Base, brush25);
-        palette37.setBrush(QPalette::Active, QPalette::Window, brush25);
-        palette37.setBrush(QPalette::Inactive, QPalette::Button, brush25);
-        palette37.setBrush(QPalette::Inactive, QPalette::Base, brush25);
-        palette37.setBrush(QPalette::Inactive, QPalette::Window, brush25);
-        palette37.setBrush(QPalette::Disabled, QPalette::Button, brush25);
-        palette37.setBrush(QPalette::Disabled, QPalette::Base, brush25);
-        palette37.setBrush(QPalette::Disabled, QPalette::Window, brush25);
-        myWorkButton->setPalette(palette37);
+        QPalette palette39;
+        palette39.setBrush(QPalette::Active, QPalette::Button, brush25);
+        palette39.setBrush(QPalette::Active, QPalette::Base, brush25);
+        palette39.setBrush(QPalette::Active, QPalette::Window, brush25);
+        palette39.setBrush(QPalette::Inactive, QPalette::Button, brush25);
+        palette39.setBrush(QPalette::Inactive, QPalette::Base, brush25);
+        palette39.setBrush(QPalette::Inactive, QPalette::Window, brush25);
+        palette39.setBrush(QPalette::Disabled, QPalette::Button, brush25);
+        palette39.setBrush(QPalette::Disabled, QPalette::Base, brush25);
+        palette39.setBrush(QPalette::Disabled, QPalette::Window, brush25);
+        myWorkButton->setPalette(palette39);
         myWorkButton->setAutoFillBackground(false);
         myWorkButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
@@ -3082,19 +3170,19 @@ public:
         navBarBackground = new QLabel(HomePage);
         navBarBackground->setObjectName("navBarBackground");
         navBarBackground->setGeometry(QRect(-20, 90, 101, 511));
-        QPalette palette38;
+        QPalette palette40;
         QBrush brush41(QColor(71, 173, 255, 255));
         brush41.setStyle(Qt::SolidPattern);
-        palette38.setBrush(QPalette::Active, QPalette::Button, brush41);
-        palette38.setBrush(QPalette::Active, QPalette::Base, brush41);
-        palette38.setBrush(QPalette::Active, QPalette::Window, brush41);
-        palette38.setBrush(QPalette::Inactive, QPalette::Button, brush41);
-        palette38.setBrush(QPalette::Inactive, QPalette::Base, brush41);
-        palette38.setBrush(QPalette::Inactive, QPalette::Window, brush41);
-        palette38.setBrush(QPalette::Disabled, QPalette::Button, brush41);
-        palette38.setBrush(QPalette::Disabled, QPalette::Base, brush41);
-        palette38.setBrush(QPalette::Disabled, QPalette::Window, brush41);
-        navBarBackground->setPalette(palette38);
+        palette40.setBrush(QPalette::Active, QPalette::Button, brush41);
+        palette40.setBrush(QPalette::Active, QPalette::Base, brush41);
+        palette40.setBrush(QPalette::Active, QPalette::Window, brush41);
+        palette40.setBrush(QPalette::Inactive, QPalette::Button, brush41);
+        palette40.setBrush(QPalette::Inactive, QPalette::Base, brush41);
+        palette40.setBrush(QPalette::Inactive, QPalette::Window, brush41);
+        palette40.setBrush(QPalette::Disabled, QPalette::Button, brush41);
+        palette40.setBrush(QPalette::Disabled, QPalette::Base, brush41);
+        palette40.setBrush(QPalette::Disabled, QPalette::Window, brush41);
+        navBarBackground->setPalette(palette40);
         navBarBackground->setStyleSheet(QString::fromUtf8("background-color: rgb(71, 173, 255);\n"
 "border-radius: 10px 10px 0px 0px;\n"
 "/*border-width: 1px;\n"
@@ -3113,8 +3201,8 @@ public:
         horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget1->raise();
-        layoutWidget1->raise();
+        layoutWidget->raise();
+        layoutWidget->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -3122,7 +3210,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -3132,11 +3220,13 @@ public:
     {
         HomePage->setWindowTitle(QCoreApplication::translate("HomePage", "Dialog", nullptr));
         homeTitle->setText(QCoreApplication::translate("HomePage", "Recent activity", nullptr));
-        companyNameLabel->setText(QCoreApplication::translate("HomePage", "Company", nullptr));
-        teamNameLabel->setText(QCoreApplication::translate("HomePage", "Name", nullptr));
         hashtagLabel->setText(QCoreApplication::translate("HomePage", "#", nullptr));
         joinCodeLabel->setText(QCoreApplication::translate("HomePage", "Join code", nullptr));
         companyNameLabel_2->setText(QCoreApplication::translate("HomePage", "Join code:", nullptr));
+        companyNameLabel->setText(QCoreApplication::translate("HomePage", "Company", nullptr));
+        editCompanyNameButton->setText(QString());
+        teamNameLabel->setText(QCoreApplication::translate("HomePage", "Name", nullptr));
+        editTeamNameButton->setText(QString());
         projectTitle->setText(QCoreApplication::translate("HomePage", "Projects", nullptr));
         addNewProjectButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
         backButton->setText(QString());
