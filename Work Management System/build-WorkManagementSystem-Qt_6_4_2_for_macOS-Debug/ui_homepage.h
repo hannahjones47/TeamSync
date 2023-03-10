@@ -18,6 +18,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
@@ -73,6 +74,7 @@ public:
     QHBoxLayout *statusLayout;
     QLabel *statusColourIcon;
     QLabel *statusLabel;
+    QProgressBar *projectStatusProgressBar;
     QPushButton *editProjectStatus;
     QSpacerItem *horizontalSpacer_8;
     QHBoxLayout *priorityLayout;
@@ -115,6 +117,7 @@ public:
     QHBoxLayout *epicStatusLayout;
     QLabel *epicStatusColourIcon;
     QLabel *epicStatusLabel;
+    QProgressBar *epicStatusProgressBar;
     QPushButton *editEpicStatus;
     QSpacerItem *horizontalSpacer_13;
     QHBoxLayout *epicPriorityLayout;
@@ -158,6 +161,7 @@ public:
     QHBoxLayout *storyStatusLayout;
     QLabel *storyStatusColourIcon;
     QLabel *storyStatusLabel;
+    QProgressBar *storyStatusProgressBar;
     QPushButton *editStoryStatus;
     QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *storyPriorityLayout;
@@ -203,10 +207,11 @@ public:
     QLabel *subTaskDueDateLabel;
     QPushButton *editSubTaskDueDate;
     QSpacerItem *horizontalSpacer_23;
-    QHBoxLayout *epicStatusLayout_2;
+    QHBoxLayout *subTaskStatusLayout;
     QLabel *subTaskStatusColourIcon;
     QLabel *subTaskStatusLabel;
     QPushButton *editSubTaskStatus;
+    QProgressBar *subTaskStatusProgressBar;
     QSpacerItem *horizontalSpacer_24;
     QHBoxLayout *subTaskPriorityLayout;
     QLabel *subTaskProrityDescriptionLabel;
@@ -222,6 +227,7 @@ public:
     QSpacerItem *verticalSpacer_4;
     QPushButton *subTaskBackButton;
     QLabel *locationDesc_4;
+    QLabel *colourLocationLabel_4;
     QWidget *Profile;
     QLabel *profileTitleLabel;
     QGroupBox *profileGroupBox;
@@ -971,6 +977,12 @@ public:
 
         statusLayout->addWidget(statusLabel);
 
+        projectStatusProgressBar = new QProgressBar(projectDetailScrollAreaWidgetContents);
+        projectStatusProgressBar->setObjectName("projectStatusProgressBar");
+        projectStatusProgressBar->setValue(24);
+
+        statusLayout->addWidget(projectStatusProgressBar);
+
         editProjectStatus = new QPushButton(projectDetailScrollAreaWidgetContents);
         editProjectStatus->setObjectName("editProjectStatus");
         editProjectStatus->setMinimumSize(QSize(40, 40));
@@ -1419,6 +1431,12 @@ public:
         epicStatusLabel->setFont(font4);
 
         epicStatusLayout->addWidget(epicStatusLabel);
+
+        epicStatusProgressBar = new QProgressBar(epicDetailScrollAreaContents);
+        epicStatusProgressBar->setObjectName("epicStatusProgressBar");
+        epicStatusProgressBar->setValue(24);
+
+        epicStatusLayout->addWidget(epicStatusProgressBar);
 
         editEpicStatus = new QPushButton(epicDetailScrollAreaContents);
         editEpicStatus->setObjectName("editEpicStatus");
@@ -1891,6 +1909,12 @@ public:
         storyStatusLabel->setFont(font4);
 
         storyStatusLayout->addWidget(storyStatusLabel);
+
+        storyStatusProgressBar = new QProgressBar(storyDetailScrollAreaWidgetContents);
+        storyStatusProgressBar->setObjectName("storyStatusProgressBar");
+        storyStatusProgressBar->setValue(24);
+
+        storyStatusLayout->addWidget(storyStatusProgressBar);
 
         editStoryStatus = new QPushButton(storyDetailScrollAreaWidgetContents);
         editStoryStatus->setObjectName("editStoryStatus");
@@ -2386,8 +2410,8 @@ public:
 
         verticalLayout_5->addLayout(subTaskDueDateLayout_2);
 
-        epicStatusLayout_2 = new QHBoxLayout();
-        epicStatusLayout_2->setObjectName("epicStatusLayout_2");
+        subTaskStatusLayout = new QHBoxLayout();
+        subTaskStatusLayout->setObjectName("subTaskStatusLayout");
         subTaskStatusColourIcon = new QLabel(subTaskDetailScrollAreaContents);
         subTaskStatusColourIcon->setObjectName("subTaskStatusColourIcon");
         sizePolicy3.setHeightForWidth(subTaskStatusColourIcon->sizePolicy().hasHeightForWidth());
@@ -2396,7 +2420,7 @@ public:
         subTaskStatusColourIcon->setMaximumSize(QSize(30, 50));
         subTaskStatusColourIcon->setFont(font5);
 
-        epicStatusLayout_2->addWidget(subTaskStatusColourIcon);
+        subTaskStatusLayout->addWidget(subTaskStatusColourIcon);
 
         subTaskStatusLabel = new QLabel(subTaskDetailScrollAreaContents);
         subTaskStatusLabel->setObjectName("subTaskStatusLabel");
@@ -2406,7 +2430,7 @@ public:
         subTaskStatusLabel->setMaximumSize(QSize(16777215, 16777215));
         subTaskStatusLabel->setFont(font4);
 
-        epicStatusLayout_2->addWidget(subTaskStatusLabel);
+        subTaskStatusLayout->addWidget(subTaskStatusLabel);
 
         editSubTaskStatus = new QPushButton(subTaskDetailScrollAreaContents);
         editSubTaskStatus->setObjectName("editSubTaskStatus");
@@ -2433,14 +2457,20 @@ public:
         editSubTaskStatus->setIcon(icon1);
         editSubTaskStatus->setIconSize(QSize(20, 20));
 
-        epicStatusLayout_2->addWidget(editSubTaskStatus);
+        subTaskStatusLayout->addWidget(editSubTaskStatus);
+
+        subTaskStatusProgressBar = new QProgressBar(subTaskDetailScrollAreaContents);
+        subTaskStatusProgressBar->setObjectName("subTaskStatusProgressBar");
+        subTaskStatusProgressBar->setValue(24);
+
+        subTaskStatusLayout->addWidget(subTaskStatusProgressBar);
 
         horizontalSpacer_24 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        epicStatusLayout_2->addItem(horizontalSpacer_24);
+        subTaskStatusLayout->addItem(horizontalSpacer_24);
 
 
-        verticalLayout_5->addLayout(epicStatusLayout_2);
+        verticalLayout_5->addLayout(subTaskStatusLayout);
 
         subTaskPriorityLayout = new QHBoxLayout();
         subTaskPriorityLayout->setObjectName("subTaskPriorityLayout");
@@ -2598,7 +2628,16 @@ public:
         locationDesc_4->setFont(font6);
         locationDesc_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         locationDesc_4->setWordWrap(true);
+        colourLocationLabel_4 = new QLabel(subTaskDetailsPage);
+        colourLocationLabel_4->setObjectName("colourLocationLabel_4");
+        colourLocationLabel_4->setGeometry(QRect(614, 30, 81, 24));
+        colourLocationLabel_4->setStyleSheet(QString::fromUtf8("background-color: rgb(204, 255, 234);\n"
+"border-radius: 5px 5px 5px 5px;"));
         stackedWidget->addWidget(subTaskDetailsPage);
+        colourLocationLabel_4->raise();
+        subTaskPage->raise();
+        subTaskBackButton->raise();
+        locationDesc_4->raise();
         Profile = new QWidget();
         Profile->setObjectName("Profile");
         profileTitleLabel = new QLabel(Profile);
@@ -3074,8 +3113,8 @@ public:
         horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget2->raise();
-        layoutWidget2->raise();
+        layoutWidget1->raise();
+        layoutWidget1->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -3083,7 +3122,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(8);
+        stackedWidget->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -3182,6 +3221,7 @@ public:
         subTaskDescriptionLabel->setText(QCoreApplication::translate("HomePage", "Description placeholder", nullptr));
         subTaskBackButton->setText(QString());
         locationDesc_4->setText(QCoreApplication::translate("HomePage", "Projects > Epics > Stories > Sub-task", nullptr));
+        colourLocationLabel_4->setText(QString());
         profileTitleLabel->setText(QCoreApplication::translate("HomePage", "Profile", nullptr));
         profileGroupBox->setTitle(QString());
         usernameLabel->setText(QCoreApplication::translate("HomePage", "Username", nullptr));
