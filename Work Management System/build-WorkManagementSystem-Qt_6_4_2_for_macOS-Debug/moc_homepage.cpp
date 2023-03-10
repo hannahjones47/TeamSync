@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_HomePage_t {
-    uint offsetsAndSizes[140];
+    uint offsetsAndSizes[144];
     char stringdata0[9];
     char stringdata1[26];
     char stringdata2[1];
@@ -97,6 +97,8 @@ struct qt_meta_stringdata_HomePage_t {
     char stringdata67[23];
     char stringdata68[24];
     char stringdata69[35];
+    char stringdata70[33];
+    char stringdata71[30];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_HomePage_t::offsetsAndSizes) + ofs), len 
@@ -171,7 +173,9 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
         QT_MOC_LITERAL(1497, 7),  // "Comment"
         QT_MOC_LITERAL(1505, 22),  // "onDeleteCommentClicked"
         QT_MOC_LITERAL(1528, 23),  // "on_myWorkButton_clicked"
-        QT_MOC_LITERAL(1552, 34)   // "setAllNavigationButtonsToNotA..."
+        QT_MOC_LITERAL(1552, 34),  // "setAllNavigationButtonsToNotA..."
+        QT_MOC_LITERAL(1587, 32),  // "on_editCompanyNameButton_clicked"
+        QT_MOC_LITERAL(1620, 29)   // "on_editTeamNameButton_clicked"
     },
     "HomePage",
     "on_mainPageButton_clicked",
@@ -242,7 +246,9 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "Comment",
     "onDeleteCommentClicked",
     "on_myWorkButton_clicked",
-    "setAllNavigationButtonsToNotActive"
+    "setAllNavigationButtonsToNotActive",
+    "on_editCompanyNameButton_clicked",
+    "on_editTeamNameButton_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -253,7 +259,7 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      59,   14, // methods
+      61,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -261,65 +267,67 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  368,    2, 0x0a,    1 /* Public */,
-       3,    0,  369,    2, 0x08,    2 /* Private */,
-       4,    0,  370,    2, 0x08,    3 /* Private */,
-       5,    0,  371,    2, 0x08,    4 /* Private */,
-       6,    0,  372,    2, 0x08,    5 /* Private */,
-       7,    0,  373,    2, 0x08,    6 /* Private */,
-       8,    1,  374,    2, 0x08,    7 /* Private */,
-      10,    1,  377,    2, 0x08,    9 /* Private */,
-      12,    0,  380,    2, 0x08,   11 /* Private */,
-      13,    0,  381,    2, 0x08,   12 /* Private */,
-      14,    1,  382,    2, 0x08,   13 /* Private */,
-      16,    0,  385,    2, 0x08,   15 /* Private */,
-      17,    1,  386,    2, 0x08,   16 /* Private */,
-      19,    1,  389,    2, 0x08,   18 /* Private */,
-      21,    0,  392,    2, 0x08,   20 /* Private */,
-      22,    0,  393,    2, 0x08,   21 /* Private */,
-      23,    0,  394,    2, 0x08,   22 /* Private */,
-      24,    0,  395,    2, 0x08,   23 /* Private */,
-      25,    0,  396,    2, 0x08,   24 /* Private */,
-      26,    0,  397,    2, 0x08,   25 /* Private */,
-      27,    0,  398,    2, 0x08,   26 /* Private */,
-      28,    0,  399,    2, 0x08,   27 /* Private */,
-      29,    0,  400,    2, 0x08,   28 /* Private */,
-      30,    0,  401,    2, 0x08,   29 /* Private */,
-      31,    0,  402,    2, 0x08,   30 /* Private */,
-      32,    0,  403,    2, 0x08,   31 /* Private */,
-      33,    0,  404,    2, 0x08,   32 /* Private */,
-      34,    0,  405,    2, 0x08,   33 /* Private */,
-      35,    0,  406,    2, 0x08,   34 /* Private */,
-      36,    0,  407,    2, 0x08,   35 /* Private */,
-      37,    0,  408,    2, 0x08,   36 /* Private */,
-      38,    0,  409,    2, 0x08,   37 /* Private */,
-      39,    0,  410,    2, 0x08,   38 /* Private */,
-      40,    0,  411,    2, 0x08,   39 /* Private */,
-      42,    0,  412,    2, 0x08,   40 /* Private */,
-      43,    0,  413,    2, 0x08,   41 /* Private */,
-      44,    0,  414,    2, 0x08,   42 /* Private */,
-      45,    1,  415,    2, 0x08,   43 /* Private */,
-      46,    1,  418,    2, 0x08,   45 /* Private */,
-      47,    1,  421,    2, 0x08,   47 /* Private */,
-      48,    1,  424,    2, 0x08,   49 /* Private */,
-      49,    1,  427,    2, 0x08,   51 /* Private */,
-      51,    1,  430,    2, 0x08,   53 /* Private */,
-      52,    0,  433,    2, 0x08,   55 /* Private */,
-      53,    0,  434,    2, 0x08,   56 /* Private */,
-      54,    0,  435,    2, 0x08,   57 /* Private */,
-      55,    1,  436,    2, 0x08,   58 /* Private */,
-      57,    1,  439,    2, 0x08,   60 /* Private */,
-      58,    0,  442,    2, 0x08,   62 /* Private */,
-      59,    0,  443,    2, 0x08,   63 /* Private */,
-      60,    0,  444,    2, 0x08,   64 /* Private */,
-      61,    0,  445,    2, 0x08,   65 /* Private */,
-      62,    0,  446,    2, 0x08,   66 /* Private */,
-      63,    0,  447,    2, 0x08,   67 /* Private */,
-      64,    0,  448,    2, 0x08,   68 /* Private */,
-      65,    1,  449,    2, 0x08,   69 /* Private */,
-      67,    1,  452,    2, 0x08,   71 /* Private */,
-      68,    0,  455,    2, 0x08,   73 /* Private */,
-      69,    0,  456,    2, 0x08,   74 /* Private */,
+       1,    0,  380,    2, 0x0a,    1 /* Public */,
+       3,    0,  381,    2, 0x08,    2 /* Private */,
+       4,    0,  382,    2, 0x08,    3 /* Private */,
+       5,    0,  383,    2, 0x08,    4 /* Private */,
+       6,    0,  384,    2, 0x08,    5 /* Private */,
+       7,    0,  385,    2, 0x08,    6 /* Private */,
+       8,    1,  386,    2, 0x08,    7 /* Private */,
+      10,    1,  389,    2, 0x08,    9 /* Private */,
+      12,    0,  392,    2, 0x08,   11 /* Private */,
+      13,    0,  393,    2, 0x08,   12 /* Private */,
+      14,    1,  394,    2, 0x08,   13 /* Private */,
+      16,    0,  397,    2, 0x08,   15 /* Private */,
+      17,    1,  398,    2, 0x08,   16 /* Private */,
+      19,    1,  401,    2, 0x08,   18 /* Private */,
+      21,    0,  404,    2, 0x08,   20 /* Private */,
+      22,    0,  405,    2, 0x08,   21 /* Private */,
+      23,    0,  406,    2, 0x08,   22 /* Private */,
+      24,    0,  407,    2, 0x08,   23 /* Private */,
+      25,    0,  408,    2, 0x08,   24 /* Private */,
+      26,    0,  409,    2, 0x08,   25 /* Private */,
+      27,    0,  410,    2, 0x08,   26 /* Private */,
+      28,    0,  411,    2, 0x08,   27 /* Private */,
+      29,    0,  412,    2, 0x08,   28 /* Private */,
+      30,    0,  413,    2, 0x08,   29 /* Private */,
+      31,    0,  414,    2, 0x08,   30 /* Private */,
+      32,    0,  415,    2, 0x08,   31 /* Private */,
+      33,    0,  416,    2, 0x08,   32 /* Private */,
+      34,    0,  417,    2, 0x08,   33 /* Private */,
+      35,    0,  418,    2, 0x08,   34 /* Private */,
+      36,    0,  419,    2, 0x08,   35 /* Private */,
+      37,    0,  420,    2, 0x08,   36 /* Private */,
+      38,    0,  421,    2, 0x08,   37 /* Private */,
+      39,    0,  422,    2, 0x08,   38 /* Private */,
+      40,    0,  423,    2, 0x08,   39 /* Private */,
+      42,    0,  424,    2, 0x08,   40 /* Private */,
+      43,    0,  425,    2, 0x08,   41 /* Private */,
+      44,    0,  426,    2, 0x08,   42 /* Private */,
+      45,    1,  427,    2, 0x08,   43 /* Private */,
+      46,    1,  430,    2, 0x08,   45 /* Private */,
+      47,    1,  433,    2, 0x08,   47 /* Private */,
+      48,    1,  436,    2, 0x08,   49 /* Private */,
+      49,    1,  439,    2, 0x08,   51 /* Private */,
+      51,    1,  442,    2, 0x08,   53 /* Private */,
+      52,    0,  445,    2, 0x08,   55 /* Private */,
+      53,    0,  446,    2, 0x08,   56 /* Private */,
+      54,    0,  447,    2, 0x08,   57 /* Private */,
+      55,    1,  448,    2, 0x08,   58 /* Private */,
+      57,    1,  451,    2, 0x08,   60 /* Private */,
+      58,    0,  454,    2, 0x08,   62 /* Private */,
+      59,    0,  455,    2, 0x08,   63 /* Private */,
+      60,    0,  456,    2, 0x08,   64 /* Private */,
+      61,    0,  457,    2, 0x08,   65 /* Private */,
+      62,    0,  458,    2, 0x08,   66 /* Private */,
+      63,    0,  459,    2, 0x08,   67 /* Private */,
+      64,    0,  460,    2, 0x08,   68 /* Private */,
+      65,    1,  461,    2, 0x08,   69 /* Private */,
+      67,    1,  464,    2, 0x08,   71 /* Private */,
+      68,    0,  467,    2, 0x08,   73 /* Private */,
+      69,    0,  468,    2, 0x08,   74 /* Private */,
+      70,    0,  469,    2, 0x08,   75 /* Private */,
+      71,    0,  470,    2, 0x08,   76 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -379,6 +387,8 @@ Q_CONSTINIT static const uint qt_meta_data_HomePage[] = {
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 66,    2,
     QMetaType::Void, 0x80000000 | 66,    2,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -526,6 +536,10 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         // method 'on_myWorkButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'setAllNavigationButtonsToNotActive'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editCompanyNameButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_editTeamNameButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -600,6 +614,8 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 56: _t->onDeleteCommentClicked((*reinterpret_cast< std::add_pointer_t<Comment>>(_a[1]))); break;
         case 57: _t->on_myWorkButton_clicked(); break;
         case 58: _t->setAllNavigationButtonsToNotActive(); break;
+        case 59: _t->on_editCompanyNameButton_clicked(); break;
+        case 60: _t->on_editTeamNameButton_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -635,13 +651,13 @@ int HomePage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 59)
+        if (_id < 61)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 59;
+        _id -= 61;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 59)
+        if (_id < 61)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 59;
+        _id -= 61;
     }
     return _id;
 }
