@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 CXX           = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
-DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g $(EXPORT_ARCH_ARGS) -isysroot /Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=10.14 -Wall -Wextra $(DEFINES)
 CXXFLAGS      = -pipe -stdlib=libc++ -g -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=10.14 -Wall -Wextra $(DEFINES)
-INCPATH       = -I../WorkManagementSystem -I. -I../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib
+INCPATH       = -I../WorkManagementSystem -I. -I../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I. -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Applications/Qt/6.4.2/macos/mkspecs/macx-clang -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib
 QMAKE         = /Volumes/T7/Applications/Qt/6.4.2/macos/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -40,7 +40,7 @@ DISTNAME      = WorkManagementSystem1.0.0
 DISTDIR = /Volumes/T7/CPPprojects/TeamSync/Work\ Management\ System/build-WorkManagementSystem-Qt_6_4_2_for_macOS-Debug/.tmp/WorkManagementSystem1.0.0
 LINK          = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -isysroot /Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=10.14 -Wl,-rpath,@executable_path/../Frameworks -Wl,-rpath,/Volumes/T7/Applications/Qt/6.4.2/macos/lib
-LIBS          = $(SUBLIBS) -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtSql -framework QtCore -framework IOKit -framework DiskArbitration -framework AGL -framework OpenGL   
+LIBS          = $(SUBLIBS) -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib -lcurl -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtSql -framework QtNetwork -framework QtCore -framework IOKit -framework DiskArbitration -framework AGL -framework OpenGL   
 AR            = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar cq
 RANLIB        = /Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -s
 SED           = sed
@@ -589,6 +589,7 @@ Makefile: ../WorkManagementSystem/WorkManagementSystem.pro ../../../../Applicati
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Resources/QtGui.prl \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Resources/QtSql.prl \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Resources/QtNetwork.prl \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Resources/QtCore.prl
 	$(QMAKE) -o Makefile ../WorkManagementSystem/WorkManagementSystem.pro -spec macx-clang CONFIG+=debug CONFIG+=qml_debug
 ../../../../Applications/Qt/6.4.2/macos/mkspecs/features/spec_pre.prf:
@@ -742,6 +743,7 @@ Makefile: ../WorkManagementSystem/WorkManagementSystem.pro ../../../../Applicati
 ../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl:
 ../../../../Applications/Qt/6.4.2/macos/lib/QtGui.framework/Resources/QtGui.prl:
 ../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Resources/QtSql.prl:
+../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Resources/QtNetwork.prl:
 ../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Resources/QtCore.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ../WorkManagementSystem/WorkManagementSystem.pro -spec macx-clang CONFIG+=debug CONFIG+=qml_debug
@@ -870,25 +872,25 @@ moc_homepage.cpp: ../WorkManagementSystem/Headers/Presentation/homepage.h \
 		../WorkManagementSystem/Headers/DataTransfer/subtask.h \
 		../WorkManagementSystem/Headers/DataAccess/subtaskdao.h \
 		../../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/homepage.h -o moc_homepage.cpp
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/homepage.h -o moc_homepage.cpp
 
 moc_loginwindow.cpp: ../WorkManagementSystem/Headers/Presentation/loginwindow.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/loginwindow.h -o moc_loginwindow.cpp
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/loginwindow.h -o moc_loginwindow.cpp
 
 moc_createaccountwindow.cpp: ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h -o moc_createaccountwindow.cpp
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/createaccountwindow.h -o moc_createaccountwindow.cpp
 
 moc_createteamwindow.cpp: ../WorkManagementSystem/Headers/Presentation/createteamwindow.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QDialog \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qdialog.h \
 		../../../../Applications/Qt/6.4.2/macos/libexec/moc
-	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/createteamwindow.h -o moc_createteamwindow.cpp
+	/Volumes/T7/Applications/Qt/6.4.2/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=14 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Volumes/T7/Applications/Qt/6.4.2/macos/mkspecs/macx-clang -I'/Volumes/T7/CPPprojects/TeamSync/Work Management System/WorkManagementSystem' -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtGui.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers -I/Volumes/T7/Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers -I. -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1 -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include -I/Volumes/T7/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Volumes/T7/Applications/Qt/6.4.2/macos/lib ../WorkManagementSystem/Headers/Presentation/createteamwindow.h -o moc_createteamwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -979,6 +981,51 @@ epicdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/epicdet
 		../WorkManagementSystem/Headers/global.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h \
@@ -1030,6 +1077,51 @@ mainpage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/mainpage.cpp .
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
 		../WorkManagementSystem/Headers/DataAccess/teamdao.h \
 		../WorkManagementSystem/Headers/DataTransfer/team.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/Presentation/CustomWidgets/timelineactivitywidget.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
@@ -1203,6 +1295,51 @@ projectdetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/proj
 		../WorkManagementSystem/Headers/Business/epicbl.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
@@ -1339,6 +1476,51 @@ storydetailspage.o: ../WorkManagementSystem/Sources/Presentation/Homepage/storyd
 		../WorkManagementSystem/Headers/Business/projectbl.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
@@ -1413,6 +1595,51 @@ subtaskdetails.o: ../WorkManagementSystem/Sources/Presentation/Homepage/subtaskd
 		../WorkManagementSystem/Headers/Business/storybl.h \
 		../WorkManagementSystem/Headers/Business/commentbl.h \
 		../WorkManagementSystem/Headers/DataAccess/commentdao.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/Presentation/CustomWidgets/commentwidget.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/QFrame \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtWidgets.framework/Headers/qframe.h \
@@ -1656,6 +1883,51 @@ inputcommentwidget.o: ../WorkManagementSystem/Sources/Presentation/CustomWidgets
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
 		../WorkManagementSystem/Headers/DataAccess/activitydao.h \
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/Business/userbl.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
 		../WorkManagementSystem/Headers/DataAccess/userdao.h \
@@ -2047,6 +2319,51 @@ projectbl.o: ../WorkManagementSystem/Sources/Business/projectbl.cpp ../WorkManag
 		../WorkManagementSystem/Headers/DataAccess/activitydao.h \
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/global.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdebug.h
@@ -2072,6 +2389,51 @@ epicbl.o: ../WorkManagementSystem/Sources/Business/epicbl.cpp ../WorkManagementS
 		../WorkManagementSystem/Headers/DataAccess/activitydao.h \
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o epicbl.o ../WorkManagementSystem/Sources/Business/epicbl.cpp
 
@@ -2088,6 +2450,51 @@ acceptancecriteriabl.o: ../WorkManagementSystem/Sources/Business/acceptancecrite
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../WorkManagementSystem/Headers/DataAccess/userdao.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/global.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
@@ -2127,6 +2534,51 @@ commentbl.o: ../WorkManagementSystem/Sources/Business/commentbl.cpp ../WorkManag
 		../../../../Applications/Qt/6.4.2/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
 		../WorkManagementSystem/Headers/DataAccess/activitydao.h \
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/global.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
 		../WorkManagementSystem/Headers/DataAccess/userdao.h
@@ -2186,15 +2638,110 @@ activitybl.o: ../WorkManagementSystem/Sources/Business/activitybl.cpp ../WorkMan
 		../WorkManagementSystem/Headers/DataTransfer/team.h \
 		../WorkManagementSystem/Headers/DataTransfer/user.h \
 		../WorkManagementSystem/Headers/DataAccess/userdao.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
 		../WorkManagementSystem/Headers/Business/teambl.h \
-		../WorkManagementSystem/Headers/Business/userbl.h
+		../WorkManagementSystem/Headers/Business/userbl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QObject \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qobject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o activitybl.o ../WorkManagementSystem/Sources/Business/activitybl.cpp
 
 activityeventbus.o: ../WorkManagementSystem/Sources/Business/activityeventbus.cpp ../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../WorkManagementSystem/Headers/DataTransfer/activity.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QString \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o activityeventbus.o ../WorkManagementSystem/Sources/Business/activityeventbus.cpp
 
 main.o: ../WorkManagementSystem/main.cpp ../WorkManagementSystem/Headers/Presentation/loginwindow.h \
@@ -2227,6 +2774,51 @@ userbl.o: ../WorkManagementSystem/Sources/Business/userbl.cpp ../WorkManagementS
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/global.h \
 		../WorkManagementSystem/Headers/Presentation/Validation/validationexception.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDebug \
@@ -2247,7 +2839,52 @@ teambl.o: ../WorkManagementSystem/Sources/Business/teambl.cpp ../WorkManagementS
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qdatetime.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QList \
-		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h
+		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/qlist.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teambl.o ../WorkManagementSystem/Sources/Business/teambl.cpp
 
 storybl.o: ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagementSystem/Headers/Business/storybl.h \
@@ -2270,7 +2907,52 @@ storybl.o: ../WorkManagementSystem/Sources/Business/storybl.cpp ../WorkManagemen
 		../WorkManagementSystem/Headers/DataAccess/activitydao.h \
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
-		../WorkManagementSystem/Headers/global.h
+		../WorkManagementSystem/Headers/global.h \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o storybl.o ../WorkManagementSystem/Sources/Business/storybl.cpp
 
 subtaskbl.o: ../WorkManagementSystem/Sources/Business/subtaskbl.cpp ../WorkManagementSystem/Headers/Business/subtaskbl.h \
@@ -2295,6 +2977,51 @@ subtaskbl.o: ../WorkManagementSystem/Sources/Business/subtaskbl.cpp ../WorkManag
 		../WorkManagementSystem/Headers/DataAccess/activitydao.h \
 		../WorkManagementSystem/Headers/DataTransfer/activity.h \
 		../../../../Applications/Qt/6.4.2/macos/lib/QtCore.framework/Headers/QDateTime \
+		../WorkManagementSystem/Headers/Business/activityeventbus.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/QtNetwork \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractnetworkcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdnslookup.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qdtls.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhostinfo.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhstspolicy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttp2configuration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qhttpmultipart.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qlocalsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkaccessmanager.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookie.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkcookiejar.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdatagram.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkdiskcache.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinformation.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkinterface.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkproxy.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkreply.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qocspresponse.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qpassworddigestor.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsctpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssl.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcertificateextension.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslcipher.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslconfiguration.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qssldiffiehellmanparameters.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslellipticcurve.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslerror.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslkey.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslpresharedkeyauthenticator.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qsslsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpserver.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+		../../../../Applications/Qt/6.4.2/macos/lib/QtNetwork.framework/Headers/qtnetworkversion.h \
 		../WorkManagementSystem/Headers/global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o subtaskbl.o ../WorkManagementSystem/Sources/Business/subtaskbl.cpp
 
