@@ -36,16 +36,16 @@ struct qt_meta_stringdata_HomePage_t {
     char stringdata6[22];
     char stringdata7[26];
     char stringdata8[17];
-    char stringdata9[8];
+    char stringdata9[9];
     char stringdata10[14];
-    char stringdata11[5];
+    char stringdata11[6];
     char stringdata12[22];
     char stringdata13[26];
     char stringdata14[15];
-    char stringdata15[6];
+    char stringdata15[7];
     char stringdata16[27];
     char stringdata17[17];
-    char stringdata18[8];
+    char stringdata18[9];
     char stringdata19[13];
     char stringdata20[9];
     char stringdata21[25];
@@ -77,13 +77,13 @@ struct qt_meta_stringdata_HomePage_t {
     char stringdata47[20];
     char stringdata48[23];
     char stringdata49[23];
-    char stringdata50[19];
+    char stringdata50[20];
     char stringdata51[25];
     char stringdata52[27];
     char stringdata53[28];
     char stringdata54[30];
     char stringdata55[36];
-    char stringdata56[5];
+    char stringdata56[6];
     char stringdata57[29];
     char stringdata58[27];
     char stringdata59[29];
@@ -93,7 +93,7 @@ struct qt_meta_stringdata_HomePage_t {
     char stringdata63[31];
     char stringdata64[34];
     char stringdata65[21];
-    char stringdata66[8];
+    char stringdata66[9];
     char stringdata67[23];
     char stringdata68[24];
     char stringdata69[35];
@@ -113,69 +113,69 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
         QT_MOC_LITERAL(114, 21),  // "on_teamButton_clicked"
         QT_MOC_LITERAL(136, 25),  // "on_projectsButton_clicked"
         QT_MOC_LITERAL(162, 16),  // "onProjectClicked"
-        QT_MOC_LITERAL(179, 7),  // "Project"
-        QT_MOC_LITERAL(187, 13),  // "onEpicClicked"
-        QT_MOC_LITERAL(201, 4),  // "Epic"
-        QT_MOC_LITERAL(206, 21),  // "on_backButton_clicked"
-        QT_MOC_LITERAL(228, 25),  // "on_epicBackButton_clicked"
-        QT_MOC_LITERAL(254, 14),  // "onStoryClicked"
-        QT_MOC_LITERAL(269, 5),  // "Story"
-        QT_MOC_LITERAL(275, 26),  // "on_storyBackButton_clicked"
-        QT_MOC_LITERAL(302, 16),  // "onSubTaskClicked"
-        QT_MOC_LITERAL(319, 7),  // "SubTask"
-        QT_MOC_LITERAL(327, 12),  // "deleteLayout"
-        QT_MOC_LITERAL(340, 8),  // "QLayout*"
-        QT_MOC_LITERAL(349, 24),  // "on_editStoryName_clicked"
-        QT_MOC_LITERAL(374, 27),  // "on_editStoryDueDate_clicked"
-        QT_MOC_LITERAL(402, 26),  // "on_editStoryStatus_clicked"
-        QT_MOC_LITERAL(429, 28),  // "on_editStoryPriority_clicked"
-        QT_MOC_LITERAL(458, 31),  // "on_editStoryDescription_clicked"
-        QT_MOC_LITERAL(490, 26),  // "on_editProjectName_clicked"
-        QT_MOC_LITERAL(517, 29),  // "on_editProjectDueDate_clicked"
-        QT_MOC_LITERAL(547, 28),  // "on_editProjectStatus_clicked"
-        QT_MOC_LITERAL(576, 30),  // "on_editProjectPriority_clicked"
-        QT_MOC_LITERAL(607, 33),  // "on_editProjectDescription_cli..."
-        QT_MOC_LITERAL(641, 23),  // "on_editEpicName_clicked"
-        QT_MOC_LITERAL(665, 26),  // "on_editEpicDueDate_clicked"
-        QT_MOC_LITERAL(692, 25),  // "on_editEpicStatus_clicked"
-        QT_MOC_LITERAL(718, 27),  // "on_editEpicPriority_clicked"
-        QT_MOC_LITERAL(746, 30),  // "on_editEpicDescription_clicked"
-        QT_MOC_LITERAL(777, 14),  // "getStatusInput"
-        QT_MOC_LITERAL(792, 12),  // "getDateInput"
-        QT_MOC_LITERAL(805, 16),  // "getPriorityInput"
-        QT_MOC_LITERAL(822, 30),  // "on_addNewProjectButton_clicked"
-        QT_MOC_LITERAL(853, 20),  // "getNewWorkItemInputs"
-        QT_MOC_LITERAL(874, 9),  // "WorkItem*"
-        QT_MOC_LITERAL(884, 24),  // "on_addEpicButton_clicked"
-        QT_MOC_LITERAL(909, 25),  // "on_addStoryButton_clicked"
-        QT_MOC_LITERAL(935, 27),  // "on_addSubTaskButton_clicked"
-        QT_MOC_LITERAL(963, 22),  // "onDeleteSubTaskClicked"
-        QT_MOC_LITERAL(986, 20),  // "onDeleteStoryClicked"
-        QT_MOC_LITERAL(1007, 19),  // "onDeleteEpicClicked"
-        QT_MOC_LITERAL(1027, 22),  // "onDeleteProjectClicked"
-        QT_MOC_LITERAL(1050, 22),  // "editAcceptanceCriteria"
-        QT_MOC_LITERAL(1073, 18),  // "AcceptanceCriteria"
-        QT_MOC_LITERAL(1092, 24),  // "deleteAcceptanceCriteria"
-        QT_MOC_LITERAL(1117, 26),  // "on_addEpicACButton_clicked"
-        QT_MOC_LITERAL(1144, 27),  // "on_addStoryACButton_clicked"
-        QT_MOC_LITERAL(1172, 29),  // "on_addProjectACButton_clicked"
-        QT_MOC_LITERAL(1202, 35),  // "onDemoteToStandardUserButtonC..."
-        QT_MOC_LITERAL(1238, 4),  // "User"
-        QT_MOC_LITERAL(1243, 28),  // "onTurnIntoAdminButtonClicked"
-        QT_MOC_LITERAL(1272, 26),  // "on_editSubTaskName_clicked"
-        QT_MOC_LITERAL(1299, 28),  // "on_subTaskBackButton_clicked"
-        QT_MOC_LITERAL(1328, 23),  // "on_editAssignee_clicked"
-        QT_MOC_LITERAL(1352, 29),  // "on_editSubTaskDueDate_clicked"
-        QT_MOC_LITERAL(1382, 28),  // "on_editSubTaskStatus_clicked"
-        QT_MOC_LITERAL(1411, 30),  // "on_editSubTaskPriority_clicked"
-        QT_MOC_LITERAL(1442, 33),  // "on_editSubTaskDescription_cli..."
-        QT_MOC_LITERAL(1476, 20),  // "onEditCommentClicked"
-        QT_MOC_LITERAL(1497, 7),  // "Comment"
-        QT_MOC_LITERAL(1505, 22),  // "onDeleteCommentClicked"
-        QT_MOC_LITERAL(1528, 23),  // "on_myWorkButton_clicked"
-        QT_MOC_LITERAL(1552, 34),  // "setAllNavigationButtonsToNotA..."
-        QT_MOC_LITERAL(1587, 32),  // "on_editCompanyNameButton_clicked"
-        QT_MOC_LITERAL(1620, 29)   // "on_editTeamNameButton_clicked"
+        QT_MOC_LITERAL(179, 8),  // "Project*"
+        QT_MOC_LITERAL(188, 13),  // "onEpicClicked"
+        QT_MOC_LITERAL(202, 5),  // "Epic*"
+        QT_MOC_LITERAL(208, 21),  // "on_backButton_clicked"
+        QT_MOC_LITERAL(230, 25),  // "on_epicBackButton_clicked"
+        QT_MOC_LITERAL(256, 14),  // "onStoryClicked"
+        QT_MOC_LITERAL(271, 6),  // "Story*"
+        QT_MOC_LITERAL(278, 26),  // "on_storyBackButton_clicked"
+        QT_MOC_LITERAL(305, 16),  // "onSubTaskClicked"
+        QT_MOC_LITERAL(322, 8),  // "SubTask*"
+        QT_MOC_LITERAL(331, 12),  // "deleteLayout"
+        QT_MOC_LITERAL(344, 8),  // "QLayout*"
+        QT_MOC_LITERAL(353, 24),  // "on_editStoryName_clicked"
+        QT_MOC_LITERAL(378, 27),  // "on_editStoryDueDate_clicked"
+        QT_MOC_LITERAL(406, 26),  // "on_editStoryStatus_clicked"
+        QT_MOC_LITERAL(433, 28),  // "on_editStoryPriority_clicked"
+        QT_MOC_LITERAL(462, 31),  // "on_editStoryDescription_clicked"
+        QT_MOC_LITERAL(494, 26),  // "on_editProjectName_clicked"
+        QT_MOC_LITERAL(521, 29),  // "on_editProjectDueDate_clicked"
+        QT_MOC_LITERAL(551, 28),  // "on_editProjectStatus_clicked"
+        QT_MOC_LITERAL(580, 30),  // "on_editProjectPriority_clicked"
+        QT_MOC_LITERAL(611, 33),  // "on_editProjectDescription_cli..."
+        QT_MOC_LITERAL(645, 23),  // "on_editEpicName_clicked"
+        QT_MOC_LITERAL(669, 26),  // "on_editEpicDueDate_clicked"
+        QT_MOC_LITERAL(696, 25),  // "on_editEpicStatus_clicked"
+        QT_MOC_LITERAL(722, 27),  // "on_editEpicPriority_clicked"
+        QT_MOC_LITERAL(750, 30),  // "on_editEpicDescription_clicked"
+        QT_MOC_LITERAL(781, 14),  // "getStatusInput"
+        QT_MOC_LITERAL(796, 12),  // "getDateInput"
+        QT_MOC_LITERAL(809, 16),  // "getPriorityInput"
+        QT_MOC_LITERAL(826, 30),  // "on_addNewProjectButton_clicked"
+        QT_MOC_LITERAL(857, 20),  // "getNewWorkItemInputs"
+        QT_MOC_LITERAL(878, 9),  // "WorkItem*"
+        QT_MOC_LITERAL(888, 24),  // "on_addEpicButton_clicked"
+        QT_MOC_LITERAL(913, 25),  // "on_addStoryButton_clicked"
+        QT_MOC_LITERAL(939, 27),  // "on_addSubTaskButton_clicked"
+        QT_MOC_LITERAL(967, 22),  // "onDeleteSubTaskClicked"
+        QT_MOC_LITERAL(990, 20),  // "onDeleteStoryClicked"
+        QT_MOC_LITERAL(1011, 19),  // "onDeleteEpicClicked"
+        QT_MOC_LITERAL(1031, 22),  // "onDeleteProjectClicked"
+        QT_MOC_LITERAL(1054, 22),  // "editAcceptanceCriteria"
+        QT_MOC_LITERAL(1077, 19),  // "AcceptanceCriteria*"
+        QT_MOC_LITERAL(1097, 24),  // "deleteAcceptanceCriteria"
+        QT_MOC_LITERAL(1122, 26),  // "on_addEpicACButton_clicked"
+        QT_MOC_LITERAL(1149, 27),  // "on_addStoryACButton_clicked"
+        QT_MOC_LITERAL(1177, 29),  // "on_addProjectACButton_clicked"
+        QT_MOC_LITERAL(1207, 35),  // "onDemoteToStandardUserButtonC..."
+        QT_MOC_LITERAL(1243, 5),  // "User*"
+        QT_MOC_LITERAL(1249, 28),  // "onTurnIntoAdminButtonClicked"
+        QT_MOC_LITERAL(1278, 26),  // "on_editSubTaskName_clicked"
+        QT_MOC_LITERAL(1305, 28),  // "on_subTaskBackButton_clicked"
+        QT_MOC_LITERAL(1334, 23),  // "on_editAssignee_clicked"
+        QT_MOC_LITERAL(1358, 29),  // "on_editSubTaskDueDate_clicked"
+        QT_MOC_LITERAL(1388, 28),  // "on_editSubTaskStatus_clicked"
+        QT_MOC_LITERAL(1417, 30),  // "on_editSubTaskPriority_clicked"
+        QT_MOC_LITERAL(1448, 33),  // "on_editSubTaskDescription_cli..."
+        QT_MOC_LITERAL(1482, 20),  // "onEditCommentClicked"
+        QT_MOC_LITERAL(1503, 8),  // "Comment*"
+        QT_MOC_LITERAL(1512, 22),  // "onDeleteCommentClicked"
+        QT_MOC_LITERAL(1535, 23),  // "on_myWorkButton_clicked"
+        QT_MOC_LITERAL(1559, 34),  // "setAllNavigationButtonsToNotA..."
+        QT_MOC_LITERAL(1594, 32),  // "on_editCompanyNameButton_clicked"
+        QT_MOC_LITERAL(1627, 29)   // "on_editTeamNameButton_clicked"
     },
     "HomePage",
     "on_mainPageButton_clicked",
@@ -186,16 +186,16 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "on_teamButton_clicked",
     "on_projectsButton_clicked",
     "onProjectClicked",
-    "Project",
+    "Project*",
     "onEpicClicked",
-    "Epic",
+    "Epic*",
     "on_backButton_clicked",
     "on_epicBackButton_clicked",
     "onStoryClicked",
-    "Story",
+    "Story*",
     "on_storyBackButton_clicked",
     "onSubTaskClicked",
-    "SubTask",
+    "SubTask*",
     "deleteLayout",
     "QLayout*",
     "on_editStoryName_clicked",
@@ -227,13 +227,13 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "onDeleteEpicClicked",
     "onDeleteProjectClicked",
     "editAcceptanceCriteria",
-    "AcceptanceCriteria",
+    "AcceptanceCriteria*",
     "deleteAcceptanceCriteria",
     "on_addEpicACButton_clicked",
     "on_addStoryACButton_clicked",
     "on_addProjectACButton_clicked",
     "onDemoteToStandardUserButtonClicked",
-    "User",
+    "User*",
     "onTurnIntoAdminButtonClicked",
     "on_editSubTaskName_clicked",
     "on_subTaskBackButton_clicked",
@@ -243,7 +243,7 @@ Q_CONSTINIT static const qt_meta_stringdata_HomePage_t qt_meta_stringdata_HomePa
     "on_editSubTaskPriority_clicked",
     "on_editSubTaskDescription_clicked",
     "onEditCommentClicked",
-    "Comment",
+    "Comment*",
     "onDeleteCommentClicked",
     "on_myWorkButton_clicked",
     "setAllNavigationButtonsToNotActive",
@@ -418,22 +418,22 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onProjectClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Project, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Project *, std::false_type>,
         // method 'onEpicClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Epic, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Epic *, std::false_type>,
         // method 'on_backButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_epicBackButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onStoryClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Story, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Story *, std::false_type>,
         // method 'on_storyBackButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onSubTaskClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<SubTask, std::false_type>,
+        QtPrivate::TypeAndForceComplete<SubTask *, std::false_type>,
         // method 'deleteLayout'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QLayout *, std::false_type>,
@@ -485,22 +485,22 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onDeleteSubTaskClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<SubTask, std::false_type>,
+        QtPrivate::TypeAndForceComplete<SubTask *, std::false_type>,
         // method 'onDeleteStoryClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Story, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Story *, std::false_type>,
         // method 'onDeleteEpicClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Epic, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Epic *, std::false_type>,
         // method 'onDeleteProjectClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Project, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Project *, std::false_type>,
         // method 'editAcceptanceCriteria'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<AcceptanceCriteria, std::false_type>,
+        QtPrivate::TypeAndForceComplete<AcceptanceCriteria *, std::false_type>,
         // method 'deleteAcceptanceCriteria'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<AcceptanceCriteria, std::false_type>,
+        QtPrivate::TypeAndForceComplete<AcceptanceCriteria *, std::false_type>,
         // method 'on_addEpicACButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_addStoryACButton_clicked'
@@ -509,10 +509,10 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onDemoteToStandardUserButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<User, std::false_type>,
+        QtPrivate::TypeAndForceComplete<User *, std::false_type>,
         // method 'onTurnIntoAdminButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<User, std::false_type>,
+        QtPrivate::TypeAndForceComplete<User *, std::false_type>,
         // method 'on_editSubTaskName_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_subTaskBackButton_clicked'
@@ -529,10 +529,10 @@ Q_CONSTINIT const QMetaObject HomePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onEditCommentClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Comment, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Comment *, std::false_type>,
         // method 'onDeleteCommentClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<Comment, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Comment *, std::false_type>,
         // method 'on_myWorkButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'setAllNavigationButtonsToNotActive'
@@ -557,13 +557,13 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 3: _t->on_logOutButton_clicked(); break;
         case 4: _t->on_teamButton_clicked(); break;
         case 5: _t->on_projectsButton_clicked(); break;
-        case 6: _t->onProjectClicked((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
-        case 7: _t->onEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic>>(_a[1]))); break;
+        case 6: _t->onProjectClicked((*reinterpret_cast< std::add_pointer_t<Project*>>(_a[1]))); break;
+        case 7: _t->onEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic*>>(_a[1]))); break;
         case 8: _t->on_backButton_clicked(); break;
         case 9: _t->on_epicBackButton_clicked(); break;
-        case 10: _t->onStoryClicked((*reinterpret_cast< std::add_pointer_t<Story>>(_a[1]))); break;
+        case 10: _t->onStoryClicked((*reinterpret_cast< std::add_pointer_t<Story*>>(_a[1]))); break;
         case 11: _t->on_storyBackButton_clicked(); break;
-        case 12: _t->onSubTaskClicked((*reinterpret_cast< std::add_pointer_t<SubTask>>(_a[1]))); break;
+        case 12: _t->onSubTaskClicked((*reinterpret_cast< std::add_pointer_t<SubTask*>>(_a[1]))); break;
         case 13: _t->deleteLayout((*reinterpret_cast< std::add_pointer_t<QLayout*>>(_a[1]))); break;
         case 14: _t->on_editStoryName_clicked(); break;
         case 15: _t->on_editStoryDueDate_clicked(); break;
@@ -592,17 +592,17 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 34: _t->on_addEpicButton_clicked(); break;
         case 35: _t->on_addStoryButton_clicked(); break;
         case 36: _t->on_addSubTaskButton_clicked(); break;
-        case 37: _t->onDeleteSubTaskClicked((*reinterpret_cast< std::add_pointer_t<SubTask>>(_a[1]))); break;
-        case 38: _t->onDeleteStoryClicked((*reinterpret_cast< std::add_pointer_t<Story>>(_a[1]))); break;
-        case 39: _t->onDeleteEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic>>(_a[1]))); break;
-        case 40: _t->onDeleteProjectClicked((*reinterpret_cast< std::add_pointer_t<Project>>(_a[1]))); break;
-        case 41: _t->editAcceptanceCriteria((*reinterpret_cast< std::add_pointer_t<AcceptanceCriteria>>(_a[1]))); break;
-        case 42: _t->deleteAcceptanceCriteria((*reinterpret_cast< std::add_pointer_t<AcceptanceCriteria>>(_a[1]))); break;
+        case 37: _t->onDeleteSubTaskClicked((*reinterpret_cast< std::add_pointer_t<SubTask*>>(_a[1]))); break;
+        case 38: _t->onDeleteStoryClicked((*reinterpret_cast< std::add_pointer_t<Story*>>(_a[1]))); break;
+        case 39: _t->onDeleteEpicClicked((*reinterpret_cast< std::add_pointer_t<Epic*>>(_a[1]))); break;
+        case 40: _t->onDeleteProjectClicked((*reinterpret_cast< std::add_pointer_t<Project*>>(_a[1]))); break;
+        case 41: _t->editAcceptanceCriteria((*reinterpret_cast< std::add_pointer_t<AcceptanceCriteria*>>(_a[1]))); break;
+        case 42: _t->deleteAcceptanceCriteria((*reinterpret_cast< std::add_pointer_t<AcceptanceCriteria*>>(_a[1]))); break;
         case 43: _t->on_addEpicACButton_clicked(); break;
         case 44: _t->on_addStoryACButton_clicked(); break;
         case 45: _t->on_addProjectACButton_clicked(); break;
-        case 46: _t->onDemoteToStandardUserButtonClicked((*reinterpret_cast< std::add_pointer_t<User>>(_a[1]))); break;
-        case 47: _t->onTurnIntoAdminButtonClicked((*reinterpret_cast< std::add_pointer_t<User>>(_a[1]))); break;
+        case 46: _t->onDemoteToStandardUserButtonClicked((*reinterpret_cast< std::add_pointer_t<User*>>(_a[1]))); break;
+        case 47: _t->onTurnIntoAdminButtonClicked((*reinterpret_cast< std::add_pointer_t<User*>>(_a[1]))); break;
         case 48: _t->on_editSubTaskName_clicked(); break;
         case 49: _t->on_subTaskBackButton_clicked(); break;
         case 50: _t->on_editAssignee_clicked(); break;
@@ -610,8 +610,8 @@ void HomePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 52: _t->on_editSubTaskStatus_clicked(); break;
         case 53: _t->on_editSubTaskPriority_clicked(); break;
         case 54: _t->on_editSubTaskDescription_clicked(); break;
-        case 55: _t->onEditCommentClicked((*reinterpret_cast< std::add_pointer_t<Comment>>(_a[1]))); break;
-        case 56: _t->onDeleteCommentClicked((*reinterpret_cast< std::add_pointer_t<Comment>>(_a[1]))); break;
+        case 55: _t->onEditCommentClicked((*reinterpret_cast< std::add_pointer_t<Comment*>>(_a[1]))); break;
+        case 56: _t->onDeleteCommentClicked((*reinterpret_cast< std::add_pointer_t<Comment*>>(_a[1]))); break;
         case 57: _t->on_myWorkButton_clicked(); break;
         case 58: _t->setAllNavigationButtonsToNotActive(); break;
         case 59: _t->on_editCompanyNameButton_clicked(); break;
