@@ -48,14 +48,15 @@ public:
     QLabel *hashtagLabel;
     QLabel *joinCodeLabel;
     QLabel *companyNameLabel_2;
-    QWidget *widget;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_17;
     QLabel *companyNameLabel;
     QPushButton *editCompanyNameButton;
-    QWidget *widget1;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_18;
     QLabel *teamNameLabel;
     QPushButton *editTeamNameButton;
+    QPushButton *inviteTeamMemberButton;
     QWidget *projectPage;
     QLabel *projectTitle;
     QWidget *verticalLayoutWidget_2;
@@ -282,9 +283,9 @@ public:
     QPushButton *logOutButton;
     QPushButton *logoButton;
     QLabel *navBarBackground;
-    QWidget *layoutWidget1;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_6;
-    QWidget *layoutWidget2;
+    QWidget *layoutWidget4;
     QHBoxLayout *horizontalLayout_7;
 
     void setupUi(QDialog *HomePage)
@@ -380,7 +381,7 @@ public:
         activityScrollArea->setWidgetResizable(true);
         activityScrollAreaContents = new QWidget();
         activityScrollAreaContents->setObjectName("activityScrollAreaContents");
-        activityScrollAreaContents->setGeometry(QRect(0, 0, 651, 700));
+        activityScrollAreaContents->setGeometry(QRect(0, 0, 659, 700));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -597,7 +598,7 @@ public:
         teamMemberScrollArea->setWidget(teamMemberScrollAreaWidgetContents);
         layoutWidget = new QWidget(teamPage);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(500, 70, 190, 52));
+        layoutWidget->setGeometry(QRect(500, 60, 190, 52));
         joinCodeLayout = new QHBoxLayout(layoutWidget);
         joinCodeLayout->setObjectName("joinCodeLayout");
         joinCodeLayout->setContentsMargins(0, 0, 0, 0);
@@ -624,19 +625,19 @@ public:
 
         companyNameLabel_2 = new QLabel(teamPage);
         companyNameLabel_2->setObjectName("companyNameLabel_2");
-        companyNameLabel_2->setGeometry(QRect(600, 50, 91, 21));
+        companyNameLabel_2->setGeometry(QRect(600, 40, 91, 21));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Avenir")});
         font2.setPointSize(18);
         font2.setBold(false);
         companyNameLabel_2->setFont(font2);
-        widget = new QWidget(teamPage);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(60, 100, 156, 42));
-        horizontalLayout_17 = new QHBoxLayout(widget);
+        layoutWidget1 = new QWidget(teamPage);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(60, 100, 156, 42));
+        horizontalLayout_17 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_17->setObjectName("horizontalLayout_17");
         horizontalLayout_17->setContentsMargins(0, 0, 0, 0);
-        companyNameLabel = new QLabel(widget);
+        companyNameLabel = new QLabel(layoutWidget1);
         companyNameLabel->setObjectName("companyNameLabel");
         QSizePolicy sizePolicy2(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
         sizePolicy2.setHorizontalStretch(0);
@@ -648,7 +649,7 @@ public:
 
         horizontalLayout_17->addWidget(companyNameLabel);
 
-        editCompanyNameButton = new QPushButton(widget);
+        editCompanyNameButton = new QPushButton(layoutWidget1);
         editCompanyNameButton->setObjectName("editCompanyNameButton");
         editCompanyNameButton->setMinimumSize(QSize(40, 40));
         editCompanyNameButton->setMaximumSize(QSize(40, 40));
@@ -677,13 +678,13 @@ public:
 
         horizontalLayout_17->addWidget(editCompanyNameButton);
 
-        widget1 = new QWidget(teamPage);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(60, 40, 256, 64));
-        horizontalLayout_18 = new QHBoxLayout(widget1);
+        layoutWidget2 = new QWidget(teamPage);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(60, 40, 256, 64));
+        horizontalLayout_18 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_18->setObjectName("horizontalLayout_18");
         horizontalLayout_18->setContentsMargins(0, 0, 0, 0);
-        teamNameLabel = new QLabel(widget1);
+        teamNameLabel = new QLabel(layoutWidget2);
         teamNameLabel->setObjectName("teamNameLabel");
         QSizePolicy sizePolicy3(QSizePolicy::MinimumExpanding, QSizePolicy::Expanding);
         sizePolicy3.setHorizontalStretch(0);
@@ -695,7 +696,7 @@ public:
 
         horizontalLayout_18->addWidget(teamNameLabel);
 
-        editTeamNameButton = new QPushButton(widget1);
+        editTeamNameButton = new QPushButton(layoutWidget2);
         editTeamNameButton->setObjectName("editTeamNameButton");
         editTeamNameButton->setMinimumSize(QSize(40, 40));
         editTeamNameButton->setMaximumSize(QSize(40, 40));
@@ -722,6 +723,9 @@ public:
 
         horizontalLayout_18->addWidget(editTeamNameButton);
 
+        inviteTeamMemberButton = new QPushButton(teamPage);
+        inviteTeamMemberButton->setObjectName("inviteTeamMemberButton");
+        inviteTeamMemberButton->setGeometry(QRect(489, 110, 201, 32));
         stackedWidget->addWidget(teamPage);
         projectPage = new QWidget();
         projectPage->setObjectName("projectPage");
@@ -814,7 +818,7 @@ public:
         projectScrollArea->setWidgetResizable(true);
         projectScrollAreaWidgetContents = new QWidget();
         projectScrollAreaWidgetContents->setObjectName("projectScrollAreaWidgetContents");
-        projectScrollAreaWidgetContents->setGeometry(QRect(0, 0, 655, 465));
+        projectScrollAreaWidgetContents->setGeometry(QRect(0, 0, 96, 26));
         projectScrollArea->setWidget(projectScrollAreaWidgetContents);
 
         verticalLayout_4->addWidget(projectScrollArea);
@@ -919,7 +923,7 @@ public:
         projectDetailScrollArea->setWidgetResizable(true);
         projectDetailScrollAreaWidgetContents = new QWidget();
         projectDetailScrollAreaWidgetContents->setObjectName("projectDetailScrollAreaWidgetContents");
-        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 647, 700));
+        projectDetailScrollAreaWidgetContents->setGeometry(QRect(0, 0, 659, 700));
         sizePolicy1.setHeightForWidth(projectDetailScrollAreaWidgetContents->sizePolicy().hasHeightForWidth());
         projectDetailScrollAreaWidgetContents->setSizePolicy(sizePolicy1);
         projectDetailScrollAreaWidgetContents->setMinimumSize(QSize(0, 700));
@@ -1392,7 +1396,7 @@ public:
         epicDetailScrollArea->setWidgetResizable(true);
         epicDetailScrollAreaContents = new QWidget();
         epicDetailScrollAreaContents->setObjectName("epicDetailScrollAreaContents");
-        epicDetailScrollAreaContents->setGeometry(QRect(0, 0, 647, 700));
+        epicDetailScrollAreaContents->setGeometry(QRect(0, 0, 659, 700));
         sizePolicy1.setHeightForWidth(epicDetailScrollAreaContents->sizePolicy().hasHeightForWidth());
         epicDetailScrollAreaContents->setSizePolicy(sizePolicy1);
         epicDetailScrollAreaContents->setMinimumSize(QSize(647, 700));
@@ -2337,7 +2341,7 @@ public:
         subTaskPage->setWidgetResizable(true);
         subTaskDetailScrollAreaContents = new QWidget();
         subTaskDetailScrollAreaContents->setObjectName("subTaskDetailScrollAreaContents");
-        subTaskDetailScrollAreaContents->setGeometry(QRect(0, 0, 647, 700));
+        subTaskDetailScrollAreaContents->setGeometry(QRect(0, 0, 659, 700));
         sizePolicy1.setHeightForWidth(subTaskDetailScrollAreaContents->sizePolicy().hasHeightForWidth());
         subTaskDetailScrollAreaContents->setSizePolicy(sizePolicy1);
         subTaskDetailScrollAreaContents->setMinimumSize(QSize(647, 700));
@@ -2901,7 +2905,7 @@ public:
         myWorkScrollArea->setWidgetResizable(true);
         epicDetailScrollAreaContents_2 = new QWidget();
         epicDetailScrollAreaContents_2->setObjectName("epicDetailScrollAreaContents_2");
-        epicDetailScrollAreaContents_2->setGeometry(QRect(0, 0, 647, 700));
+        epicDetailScrollAreaContents_2->setGeometry(QRect(0, 0, 659, 700));
         sizePolicy1.setHeightForWidth(epicDetailScrollAreaContents_2->sizePolicy().hasHeightForWidth());
         epicDetailScrollAreaContents_2->setSizePolicy(sizePolicy1);
         epicDetailScrollAreaContents_2->setMinimumSize(QSize(647, 700));
@@ -3189,20 +3193,20 @@ public:
 "border-style: solid;*/\n"
 "\n"
 ""));
-        layoutWidget1 = new QWidget(HomePage);
-        layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_6 = new QHBoxLayout(layoutWidget1);
+        layoutWidget3 = new QWidget(HomePage);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_6 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_6->setObjectName("horizontalLayout_6");
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
-        layoutWidget2 = new QWidget(HomePage);
-        layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_7 = new QHBoxLayout(layoutWidget2);
+        layoutWidget4 = new QWidget(HomePage);
+        layoutWidget4->setObjectName("layoutWidget4");
+        layoutWidget4->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_7 = new QHBoxLayout(layoutWidget4);
         horizontalLayout_7->setObjectName("horizontalLayout_7");
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
-        layoutWidget->raise();
-        layoutWidget->raise();
+        layoutWidget2->raise();
+        layoutWidget2->raise();
         navBarBackground->raise();
         stackedWidget->raise();
         frame->raise();
@@ -3210,7 +3214,7 @@ public:
 
         retranslateUi(HomePage);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(HomePage);
@@ -3227,6 +3231,7 @@ public:
         editCompanyNameButton->setText(QString());
         teamNameLabel->setText(QCoreApplication::translate("HomePage", "Name", nullptr));
         editTeamNameButton->setText(QString());
+        inviteTeamMemberButton->setText(QCoreApplication::translate("HomePage", "Invite someone to join the team", nullptr));
         projectTitle->setText(QCoreApplication::translate("HomePage", "Projects", nullptr));
         addNewProjectButton->setText(QCoreApplication::translate("HomePage", "Add new", nullptr));
         backButton->setText(QString());
